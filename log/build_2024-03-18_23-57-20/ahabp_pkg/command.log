@@ -1,0 +1,6 @@
+Invoking command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/ahabp_pkg -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/ahabp_pkg
+Invoked command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/ahabp_pkg -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/ahabp_pkg
+Invoking command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/ahabp_pkg -- -j4 -l4
+Invoked command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/ahabp_pkg -- -j4 -l4
+Invoking command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/ahabp_pkg
+Invoked command in '/home/anyell/ahabp_v2_ws/build/ahabp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/ahabp_pkg

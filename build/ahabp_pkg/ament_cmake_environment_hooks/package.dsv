@@ -1,0 +1,4 @@
+source;share/ahabp_pkg/local_setup.bash
+source;share/ahabp_pkg/local_setup.dsv
+source;share/ahabp_pkg/local_setup.sh
+source;share/ahabp_pkg/local_setup.zsh

@@ -1,0 +1,2 @@
+Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_msgs': /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/px4_msgs
+Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_msgs' returned '-2': /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/px4_msgs

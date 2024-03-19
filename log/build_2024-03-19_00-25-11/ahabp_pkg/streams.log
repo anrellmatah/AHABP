@@ -1,0 +1,35 @@
+[8.954s] Invoking command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data
+[12.147s] running egg_info
+[12.155s] creating ../../build/ahabp_pkg/ahabp_pkg.egg-info
+[12.156s] writing ../../build/ahabp_pkg/ahabp_pkg.egg-info/PKG-INFO
+[12.163s] writing dependency_links to ../../build/ahabp_pkg/ahabp_pkg.egg-info/dependency_links.txt
+[12.179s] writing entry points to ../../build/ahabp_pkg/ahabp_pkg.egg-info/entry_points.txt
+[12.183s] writing requirements to ../../build/ahabp_pkg/ahabp_pkg.egg-info/requires.txt
+[12.184s] writing top-level names to ../../build/ahabp_pkg/ahabp_pkg.egg-info/top_level.txt
+[12.192s] writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[12.211s] reading manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[12.212s] adding license file 'LICENSE'
+[12.215s] writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[12.216s] running build
+[12.217s] running build_py
+[12.219s] creating /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build
+[12.219s] creating /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib
+[12.220s] creating /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+[12.221s] copying ahabp_pkg/ahabp_node.py -> /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+[12.230s] copying ahabp_pkg/__init__.py -> /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+[12.231s] running install
+[12.232s] running install_lib
+[12.232s] creating /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+[12.233s] copying /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg/ahabp_node.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+[12.239s] copying /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg/__init__.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+[12.241s] byte-compiling /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/ahabp_node.py to ahabp_node.cpython-310.pyc
+[12.250s] byte-compiling /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/__init__.py to __init__.cpython-310.pyc
+[12.252s] running install_data
+[12.252s] copying resource/ahabp_pkg -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ament_index/resource_index/packages
+[12.254s] copying package.xml -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg
+[12.255s] running install_egg_info
+[12.263s] Copying ../../build/ahabp_pkg/ahabp_pkg.egg-info to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info
+[12.268s] running install_scripts
+[12.497s] Installing ahabp_node script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+[12.501s] writing list of installed files to '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log'
+[12.702s] Invoked command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg' returned '0': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data

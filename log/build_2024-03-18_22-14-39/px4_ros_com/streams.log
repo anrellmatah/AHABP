@@ -1,0 +1,181 @@
+[0.063s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/px4_ros_com
+[0.360s] -- The C compiler identification is GNU 11.4.0
+[0.636s] -- The CXX compiler identification is GNU 11.4.0
+[0.669s] -- Detecting C compiler ABI info
+[1.041s] -- Detecting C compiler ABI info - done
+[1.069s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.070s] -- Detecting C compile features
+[1.072s] -- Detecting C compile features - done
+[1.085s] -- Detecting CXX compiler ABI info
+[1.489s] -- Detecting CXX compiler ABI info - done
+[1.516s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.517s] -- Detecting CXX compile features
+[1.519s] -- Detecting CXX compile features - done
+[1.547s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.508s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.198s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[3.501s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.547s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.614s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.706s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.842s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.976s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[4.081s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[4.102s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[4.594s] -- Found px4_msgs: 2.0.1 (/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/cmake)
+[4.767s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[5.235s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.267s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.959s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[6.238s] -- Found FastRTPS: /opt/ros/humble/include  
+[6.715s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.812s] -- Looking for pthread.h
+[7.206s] -- Looking for pthread.h - found
+[7.207s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.578s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.582s] -- Found Threads: TRUE  
+[8.249s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[8.641s] -- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+[8.691s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.448s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.503s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.510s] -- Configured cppcheck include dirs: /home/anyell/ahabp_v2_ws/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/anyell/ahabp_v2_ws/src/px4_ros_com/include/px4_ros_com>
+[9.510s] -- Configured cppcheck exclude dirs and/or files: 
+[9.559s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[9.560s] -- Configured cpplint exclude dirs and/or files: 
+[9.569s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.585s] -- Added test 'lint_cmake' to check CMake code style
+[9.596s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.651s] -- Added test 'uncrustify' to check C / C++ code style
+[9.651s] -- Configured uncrustify additional arguments: 
+[9.661s] -- Added test 'xmllint' to check XML markup files
+[9.676s] -- Configuring done
+[9.843s] -- Generating done
+[9.855s] -- Build files have been written to: /home/anyell/ahabp_v2_ws/build/px4_ros_com
+[9.913s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/px4_ros_com
+[9.917s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[10.174s] [  8%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[10.184s] [ 16%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[10.223s] [ 25%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[10.252s] [ 33%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[18.098s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:214[m[K,
+[18.100s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[18.101s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[18.103s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/include/px4_ros_com/frame_transforms.h:45[m[K,
+[18.105s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/src/lib/frame_transforms.cpp:41[m[K:
+[18.107s] [01m[K/usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:[m[K In function ‘[01m[KPacket Eigen::internal::pload(const typename Eigen::internal::unpacket_traits<T>::type*) [with Packet = Eigen::internal::eigen_packet_wrapper<int, 2>; typename Eigen::internal::unpacket_traits<T>::type = signed char][m[K’:
+[18.108s] [01m[K/usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:1671:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid* memcpy(void*, const void*, size_t)[m[K’ copying an object of non-trivial type ‘[01m[KEigen::internal::Packet4c[m[K’ {aka ‘[01m[Kstruct Eigen::internal::eigen_packet_wrapper<int, 2>[m[K’} from an array of ‘[01m[Kconst int8_t[m[K’ {aka ‘[01m[Kconst signed char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wclass-memaccess-Wclass-memaccess]8;;[m[K]
+[18.109s]  1671 |   [01;35m[Kmemcpy(&res, from, sizeof(Packet4c))[m[K;
+[18.111s]       |   [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[18.113s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:172[m[K,
+[18.122s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[18.123s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[18.124s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/include/px4_ros_com/frame_transforms.h:45[m[K,
+[18.125s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/src/lib/frame_transforms.cpp:41[m[K:
+[18.125s] [01m[K/usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:159:8:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::internal::Packet4c[m[K’ {aka ‘[01m[Kstruct Eigen::internal::eigen_packet_wrapper<int, 2>[m[K’} declared here
+[18.126s]   159 | struct [01;36m[Keigen_packet_wrapper[m[K
+[18.127s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[18.136s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:214[m[K,
+[18.138s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[18.139s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[18.141s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/include/px4_ros_com/frame_transforms.h:45[m[K,
+[18.142s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/src/lib/frame_transforms.cpp:41[m[K:
+[18.144s] [01m[K/usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:[m[K In function ‘[01m[KPacket Eigen::internal::ploadu(const typename Eigen::internal::unpacket_traits<T>::type*) [with Packet = Eigen::internal::eigen_packet_wrapper<int, 2>; typename Eigen::internal::unpacket_traits<T>::type = signed char][m[K’:
+[18.162s] [01m[K/usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:1716:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid* memcpy(void*, const void*, size_t)[m[K’ copying an object of non-trivial type ‘[01m[KEigen::internal::Packet4c[m[K’ {aka ‘[01m[Kstruct Eigen::internal::eigen_packet_wrapper<int, 2>[m[K’} from an array of ‘[01m[Kconst int8_t[m[K’ {aka ‘[01m[Kconst signed char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wclass-memaccess-Wclass-memaccess]8;;[m[K]
+[18.163s]  1716 |   [01;35m[Kmemcpy(&res, from, sizeof(Packet4c))[m[K;
+[18.164s]       |   [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[18.165s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:172[m[K,
+[18.166s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[18.166s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[18.167s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/include/px4_ros_com/frame_transforms.h:45[m[K,
+[18.168s]                  from [01m[K/home/anyell/ahabp_v2_ws/src/px4_ros_com/src/lib/frame_transforms.cpp:41[m[K:
+[18.169s] [01m[K/usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:159:8:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::internal::Packet4c[m[K’ {aka ‘[01m[Kstruct Eigen::internal::eigen_packet_wrapper<int, 2>[m[K’} declared here
+[18.178s]   159 | struct [01;36m[Keigen_packet_wrapper[m[K
+[18.186s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[52.652s] [ 41%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[55.221s] [ 41%] Built target debug_vect_advertiser
+[72.002s] [ 50%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[73.776s] [ 50%] Built target frame_transforms
+[78.201s] [ 58%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[79.647s] [ 66%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[80.734s] [ 66%] Built target vehicle_gps_position_listener
+[81.827s] [ 66%] Built target sensor_combined_listener
+[81.953s] [ 66%] Built target ament_cmake_python_copy_px4_ros_com
+[82.047s] [ 75%] [32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o[0m
+[111.249s] [ 83%] [32m[1mLinking CXX executable offboard_control_srv[0m
+[112.610s] [ 83%] Built target offboard_control_srv
+[112.723s] [ 91%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[114.502s] running egg_info
+[114.506s] creating px4_ros_com.egg-info
+[114.513s] writing px4_ros_com.egg-info/PKG-INFO
+[114.524s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[114.525s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[114.528s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[114.532s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[114.536s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[114.728s] [ 91%] Built target ament_cmake_python_build_px4_ros_com_egg
+[138.270s] [100%] [32m[1mLinking CXX executable offboard_control[0m
+[139.478s] [100%] Built target offboard_control
+[139.529s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[139.780s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com
+[139.812s] -- Install configuration: ""
+[139.813s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[139.839s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[139.840s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[139.866s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[139.867s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[139.877s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[139.878s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[139.891s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[139.891s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[139.907s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv" to ""
+[139.909s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[139.910s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[139.912s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com
+[139.912s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[139.914s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/libframe_transforms.so
+[139.944s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[139.944s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch
+[139.945s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[139.946s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[139.947s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test
+[139.948s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[139.949s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[139.950s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[139.951s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[139.953s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[139.954s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[139.955s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info
+[139.956s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[139.958s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[139.959s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[139.960s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[139.962s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com
+[139.962s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[139.964s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[140.145s] Listing '/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[140.147s] Compiling '/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...
+[140.148s] Compiling '/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...
+[140.174s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[140.176s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[140.178s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[140.179s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[140.181s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[140.182s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[140.183s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[140.185s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[140.186s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[140.187s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[140.189s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[140.190s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv
+[140.192s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[140.193s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[140.201s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[140.202s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[140.203s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[140.204s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[140.205s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[140.206s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[140.207s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[140.207s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.xml
+[140.216s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com

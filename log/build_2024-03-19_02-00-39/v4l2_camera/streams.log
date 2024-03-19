@@ -1,0 +1,106 @@
+[4.104s] Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/v4l2_camera -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/v4l2_camera
+[4.676s] -- The C compiler identification is GNU 11.4.0
+[5.265s] -- The CXX compiler identification is GNU 11.4.0
+[5.373s] -- Detecting C compiler ABI info
+[6.202s] -- Detecting C compiler ABI info - done
+[6.237s] -- Check for working C compiler: /usr/bin/cc - skipped
+[6.239s] -- Detecting C compile features
+[6.241s] -- Detecting C compile features - done
+[6.267s] -- Detecting CXX compiler ABI info
+[7.106s] -- Detecting CXX compiler ABI info - done
+[7.231s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[7.235s] -- Detecting CXX compile features
+[7.239s] -- Detecting CXX compile features - done
+[7.295s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[9.789s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[12.013s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[12.263s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[13.191s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[13.306s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[13.449s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[13.708s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[14.077s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[15.318s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[15.363s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[16.332s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[16.647s] -- Found FastRTPS: /opt/ros/humble/include  
+[17.180s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[17.303s] -- Looking for pthread.h
+[17.985s] -- Looking for pthread.h - found
+[18.004s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[18.685s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[18.692s] -- Found Threads: TRUE  
+[19.811s] -- Found rclcpp_components: 16.0.8 (/opt/ros/humble/share/rclcpp_components/cmake)
+[20.375s] -- Found camera_info_manager: 3.1.8 (/opt/ros/humble/share/camera_info_manager/cmake)
+[21.497s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[21.635s] -- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+[22.171s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[23.551s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[23.554s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/anyell/ahabp_v2_ws/src/v4l2_camera/include>
+[23.555s] -- Configured cppcheck exclude dirs and/or files: 
+[23.637s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[23.641s] -- Configured cpplint exclude dirs and/or files: 
+[23.678s] -- Added test 'lint_cmake' to check CMake code style
+[23.811s] -- Added test 'uncrustify' to check C / C++ code style
+[23.812s] -- Configured uncrustify additional arguments: 
+[23.824s] -- Added test 'xmllint' to check XML markup files
+[23.982s] -- Configuring done
+[24.459s] -- Generating done
+[24.494s] -- Build files have been written to: /home/anyell/ahabp_v2_ws/build/v4l2_camera
+[24.642s] Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/anyell/ahabp_v2_ws/src/v4l2_camera -DCMAKE_INSTALL_PREFIX=/home/anyell/ahabp_v2_ws/install/v4l2_camera
+[24.662s] Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
+[25.113s] [ 12%] [32mBuilding CXX object CMakeFiles/v4l2_camera.dir/src/v4l2_camera.cpp.o[0m
+[25.152s] [ 25%] [32mBuilding CXX object CMakeFiles/v4l2_camera.dir/src/v4l2_camera_device.cpp.o[0m
+[25.192s] [ 37%] [32mBuilding CXX object CMakeFiles/v4l2_camera.dir/src/parameters.cpp.o[0m
+[151.647s] [ 50%] [32m[1mLinking CXX shared library libv4l2_camera.so[0m
+[155.481s] [ 50%] Built target v4l2_camera
+[155.593s] [ 62%] [32mBuilding CXX object CMakeFiles/v4l2_camera_node.dir/src/v4l2_camera_node.cpp.o[0m
+[175.717s] [ 75%] [32m[1mLinking CXX executable v4l2_camera_node[0m
+[179.270s] [ 75%] Built target v4l2_camera_node
+[179.416s] [ 87%] [32mBuilding CXX object CMakeFiles/v4l2_camera_compose_test.dir/src/v4l2_camera_compose_test.cpp.o[0m
+[230.087s] [100%] [32m[1mLinking CXX executable v4l2_camera_compose_test[0m
+[234.358s] [100%] Built target v4l2_camera_compose_test
+[234.433s] Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
+[234.688s] Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/v4l2_camera
+[234.724s] -- Install configuration: ""
+[234.725s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include
+[234.725s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera
+[234.727s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/pixel_format.hpp
+[234.728s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/image_format.hpp
+[234.730s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/visibility_control.h
+[234.731s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/v4l2_camera_device.hpp
+[234.732s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/v4l2_camera.hpp
+[234.733s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/fourcc.hpp
+[234.734s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/control.hpp
+[234.736s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/include/v4l2_camera/parameters.hpp
+[234.737s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/libv4l2_camera.so
+[234.809s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/libv4l2_camera.so" to ""
+[234.809s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/v4l2_camera/v4l2_camera_node
+[234.811s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/v4l2_camera/v4l2_camera_node" to ""
+[234.813s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/v4l2_camera/v4l2_camera_compose_test
+[234.849s] -- Set runtime path of "/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/v4l2_camera/v4l2_camera_compose_test" to ""
+[234.850s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/library_path.sh
+[234.854s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/library_path.dsv
+[234.857s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/ament_index/resource_index/package_run_dependencies/v4l2_camera
+[234.860s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/ament_index/resource_index/parent_prefix_path/v4l2_camera
+[234.862s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/ament_prefix_path.sh
+[234.865s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/ament_prefix_path.dsv
+[234.867s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/path.sh
+[234.869s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/environment/path.dsv
+[234.871s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/local_setup.bash
+[234.873s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/local_setup.sh
+[234.875s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/local_setup.zsh
+[234.890s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/local_setup.dsv
+[234.896s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.dsv
+[234.898s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/ament_index/resource_index/packages/v4l2_camera
+[234.900s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/ament_index/resource_index/rclcpp_components/v4l2_camera
+[234.901s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/export_v4l2_cameraExport.cmake
+[234.906s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/export_v4l2_cameraExport-noconfig.cmake
+[234.906s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+[234.907s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/ament_cmake_export_targets-extras.cmake
+[234.911s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[234.917s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[234.919s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/v4l2_cameraConfig.cmake
+[234.920s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/cmake/v4l2_cameraConfig-version.cmake
+[234.921s] -- Installing: /home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.xml
+[234.941s] Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/v4l2_camera

@@ -1,0 +1,37 @@
+[10.320s] Invoking command in '/home/anyell/ahabp_v2_ws/src/py_pubsub': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
+[14.679s] running egg_info
+[14.685s] creating ../../build/py_pubsub/py_pubsub.egg-info
+[14.685s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[14.690s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[14.693s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[14.694s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[14.710s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[14.713s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[14.719s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[14.727s] adding license file 'LICENSE'
+[14.737s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[14.741s] running build
+[14.747s] running build_py
+[14.748s] creating /home/anyell/ahabp_v2_ws/build/py_pubsub/build
+[14.748s] creating /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib
+[14.749s] creating /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib/py_pubsub
+[14.750s] copying py_pubsub/publisher_member_function.py -> /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib/py_pubsub
+[14.754s] copying py_pubsub/__init__.py -> /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib/py_pubsub
+[14.756s] running install
+[14.757s] running install_lib
+[14.758s] creating /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[14.772s] copying /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib/py_pubsub/publisher_member_function.py -> /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[14.779s] copying /home/anyell/ahabp_v2_ws/build/py_pubsub/build/lib/py_pubsub/__init__.py -> /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[14.780s] byte-compiling /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+[14.780s] byte-compiling /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/__init__.py to __init__.cpython-310.pyc
+[14.781s] running install_data
+[14.782s] creating /home/anyell/ahabp_v2_ws/install/py_pubsub/share/ament_index
+[14.800s] creating /home/anyell/ahabp_v2_ws/install/py_pubsub/share/ament_index/resource_index
+[14.800s] creating /home/anyell/ahabp_v2_ws/install/py_pubsub/share/ament_index/resource_index/packages
+[14.801s] copying resource/py_pubsub -> /home/anyell/ahabp_v2_ws/install/py_pubsub/share/ament_index/resource_index/packages
+[14.814s] copying package.xml -> /home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub
+[14.818s] running install_egg_info
+[14.822s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info
+[14.832s] running install_scripts
+[14.991s] writing list of installed files to '/home/anyell/ahabp_v2_ws/build/py_pubsub/install.log'
+[15.307s] Invoked command in '/home/anyell/ahabp_v2_ws/src/py_pubsub' returned '0': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
