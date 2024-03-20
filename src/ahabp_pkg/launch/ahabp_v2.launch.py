@@ -33,6 +33,21 @@ print('Hello from ahabp_v2.launch.py')
 def generate_launch_description():
     package_dir = get_package_share_directory('ahabp_pkg')
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
+    microXRCE_Agent_node = ExecuteProcess(
+        cmd=[['MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 6']],
+        shell=True
+    )
+    sensor_combined_listener_node = Node(
+        package='px4_ros_com',
+        executable='sensor_combined_listener',
+        output='screen',
+        shell=True,
+    )
+#    v4l2_node = ExecuteProcess(
+#        cmd=[['ros2 run v4l2_camera v4l2_camera_node -ros-args -p image_size:="[640,480]"']],
+#        shell=True
+#    )
+
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
 #        Node(
@@ -55,12 +70,26 @@ def generate_launch_description():
             name='vehicle_gps_position_listener',
             prefix='gnome-terminal --',
         ),
+        Node(
+            package='ahabp_pkg',
+            namespace='ahabp_pkg',
+            executable='ahabp_node_opencv',
+            name='ahabp_node_opencv',
+            prefix='gnome-terminal --',
+        ),
 #        Node(   # MicroXRCE Agent
 #            package='Micro-XRCE-DDS-Agent',
 #            namespace='Micro-XRCE-DDS-Agent',
 #            executable='velocity_control',
 #            name='velocity'
 #        ),
+        Node(
+            package='px4_ros_com',
+            namespace='px4_ros_com',
+            executable='offboard_control',
+            name='offboard_control',
+            prefix='gnome-terminal --',
+        ),
     ])
 
 

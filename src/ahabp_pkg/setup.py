@@ -28,7 +28,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'ahabp_node = ahabp_pkg.ahabp_node:main'
+            'ahabp_node = ahabp_pkg.ahabp_node:main',
+            'ahabp_node_opencv = ahabp_pkg.ahabp_node_opencv:main'
             #add more console scripts
             #[executable/node] = [package].[executable/node]:main
         ],

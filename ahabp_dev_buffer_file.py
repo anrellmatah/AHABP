@@ -96,3 +96,45 @@ def generate_launch_description():
        sensor_combined_listener_node
    ])
 
+
+
+class MinimalPublisher(Node):
+
+
+   def __init__(self):
+       super().__init__('minimal_publisher') #calls the Node class’s constructor and gives it your node name, in this case minimal_publisher.
+       self.publisher_ = self.create_publisher(String, 'topic', 10) #declares that the node publishes messages of type.
+       timer_period = 0.5  # seconds
+       self.timer = self.create_timer(timer_period, self.timer_callback)
+       self.i = 0
+
+
+   def timer_callback(self): #timer is created with a callback to execute every 0.5 seconds. self.i is a counter used in the callback.
+       msg = String()
+       msg.data = 'Hello World: %d' % self.i
+       self.publisher_.publish(msg)
+       self.get_logger().info('Publishing: "%s"' % msg.data)
+       self.i += 1
+
+
+def main(args=None): #First the rclpy library is initialized, then the node is created, and then it “spins” the node so its callbacks are called.
+   print('Here at start of main.')
+   rclpy.init(args=args)
+
+
+   minimal_publisher = MinimalPublisher()
+
+
+   rclpy.spin(minimal_publisher)
+
+
+   # Destroy the node explicitly
+   # (optional - otherwise it will be done automatically
+   # when the garbage collector destroys the node object)
+   minimal_publisher.destroy_node()
+   rclpy.shutdown()
+   print('Here at end of main.')
+
+
+if __name__ == '__main__':
+   main()

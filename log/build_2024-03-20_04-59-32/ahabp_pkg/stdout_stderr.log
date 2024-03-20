@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/ahabp_pkg/ahabp_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/ahabp_pkg/ahabp_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/ahabp_pkg/ahabp_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/ahabp_pkg/ahabp_pkg.egg-info/requires.txt
+writing top-level names to ../../build/ahabp_pkg/ahabp_pkg.egg-info/top_level.txt
+reading manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ahabp_pkg/ahabp_node_opencv.py -> /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+running install
+running install_lib
+copying /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg/ahabp_node_opencv.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+byte-compiling /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/ahabp_node_opencv.py to ahabp_node_opencv.cpython-310.pyc
+running install_data
+copying launch/ahabp_v2.launch.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg
+running install_egg_info
+removing '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ahabp_pkg/ahabp_pkg.egg-info to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ahabp_node script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+writing list of installed files to '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log'
