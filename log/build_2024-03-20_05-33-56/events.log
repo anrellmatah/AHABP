@@ -5317,3 +5317,360 @@
 [92.116959] (-) TimerEvent: {}
 [92.221025] (-) TimerEvent: {}
 [92.323034] (-) TimerEvent: {}
+[92.424951] (-) TimerEvent: {}
+[92.526476] (-) TimerEvent: {}
+[92.627500] (-) TimerEvent: {}
+[92.728455] (-) TimerEvent: {}
+[92.830320] (-) TimerEvent: {}
+[92.933063] (-) TimerEvent: {}
+[93.034919] (-) TimerEvent: {}
+[93.136381] (-) TimerEvent: {}
+[93.237757] (-) TimerEvent: {}
+[93.339501] (-) TimerEvent: {}
+[93.446287] (-) TimerEvent: {}
+[93.555889] (-) TimerEvent: {}
+[93.658849] (-) TimerEvent: {}
+[93.763604] (-) TimerEvent: {}
+[93.865702] (-) TimerEvent: {}
+[93.967042] (-) TimerEvent: {}
+[94.069010] (-) TimerEvent: {}
+[94.171750] (-) TimerEvent: {}
+[94.274530] (-) TimerEvent: {}
+[94.376709] (-) TimerEvent: {}
+[94.480401] (-) TimerEvent: {}
+[94.582387] (-) TimerEvent: {}
+[94.688991] (-) TimerEvent: {}
+[94.792413] (-) TimerEvent: {}
+[94.893990] (-) TimerEvent: {}
+[94.996301] (-) TimerEvent: {}
+[95.097685] (-) TimerEvent: {}
+[95.198798] (-) TimerEvent: {}
+[95.301883] (-) TimerEvent: {}
+[95.404686] (-) TimerEvent: {}
+[95.508299] (-) TimerEvent: {}
+[95.610622] (-) TimerEvent: {}
+[95.713369] (-) TimerEvent: {}
+[95.815993] (-) TimerEvent: {}
+[95.919287] (-) TimerEvent: {}
+[96.022684] (-) TimerEvent: {}
+[96.126757] (-) TimerEvent: {}
+[96.229472] (-) TimerEvent: {}
+[96.330779] (-) TimerEvent: {}
+[96.432664] (-) TimerEvent: {}
+[96.535720] (-) TimerEvent: {}
+[96.638652] (-) TimerEvent: {}
+[96.740222] (-) TimerEvent: {}
+[96.844185] (-) TimerEvent: {}
+[96.946975] (-) TimerEvent: {}
+[97.052606] (-) TimerEvent: {}
+[97.157702] (-) TimerEvent: {}
+[97.259566] (-) TimerEvent: {}
+[97.361215] (-) TimerEvent: {}
+[97.463034] (-) TimerEvent: {}
+[97.564518] (-) TimerEvent: {}
+[97.667349] (-) TimerEvent: {}
+[97.769955] (-) TimerEvent: {}
+[97.871818] (-) TimerEvent: {}
+[97.978373] (-) TimerEvent: {}
+[98.080812] (-) TimerEvent: {}
+[98.182705] (-) TimerEvent: {}
+[98.285045] (-) TimerEvent: {}
+[98.387568] (-) TimerEvent: {}
+[98.489418] (-) TimerEvent: {}
+[98.591231] (-) TimerEvent: {}
+[98.694299] (-) TimerEvent: {}
+[98.795857] (-) TimerEvent: {}
+[98.898251] (-) TimerEvent: {}
+[99.000584] (-) TimerEvent: {}
+[99.101999] (-) TimerEvent: {}
+[99.203793] (-) TimerEvent: {}
+[99.307618] (-) TimerEvent: {}
+[99.412152] (-) TimerEvent: {}
+[99.517253] (-) TimerEvent: {}
+[99.619899] (-) TimerEvent: {}
+[99.721676] (-) TimerEvent: {}
+[99.823922] (-) TimerEvent: {}
+[99.929618] (-) TimerEvent: {}
+[100.034121] (-) TimerEvent: {}
+[100.139079] (-) TimerEvent: {}
+[100.241939] (-) TimerEvent: {}
+[100.343818] (-) TimerEvent: {}
+[100.446428] (-) TimerEvent: {}
+[100.547500] (-) TimerEvent: {}
+[100.649030] (-) TimerEvent: {}
+[100.751931] (-) TimerEvent: {}
+[100.854170] (-) TimerEvent: {}
+[100.958481] (-) TimerEvent: {}
+[101.061472] (-) TimerEvent: {}
+[101.163797] (-) TimerEvent: {}
+[101.265068] (-) TimerEvent: {}
+[101.366608] (-) TimerEvent: {}
+[101.468410] (-) TimerEvent: {}
+[101.571781] (-) TimerEvent: {}
+[101.674140] (-) TimerEvent: {}
+[101.777022] (-) TimerEvent: {}
+[101.879522] (-) TimerEvent: {}
+[101.981117] (-) TimerEvent: {}
+[102.084466] (-) TimerEvent: {}
+[102.186782] (-) TimerEvent: {}
+[102.288549] (-) TimerEvent: {}
+[102.390809] (-) TimerEvent: {}
+[102.493874] (-) TimerEvent: {}
+[102.595352] (-) TimerEvent: {}
+[102.698347] (-) TimerEvent: {}
+[102.800947] (-) TimerEvent: {}
+[102.901737] (-) TimerEvent: {}
+[103.003020] (-) TimerEvent: {}
+[103.104503] (-) TimerEvent: {}
+[103.205510] (-) TimerEvent: {}
+[103.307692] (-) TimerEvent: {}
+[103.408551] (-) TimerEvent: {}
+[103.509495] (-) TimerEvent: {}
+[103.611119] (-) TimerEvent: {}
+[103.712810] (-) TimerEvent: {}
+[103.814974] (-) TimerEvent: {}
+[103.915998] (-) TimerEvent: {}
+[104.017091] (-) TimerEvent: {}
+[104.118424] (-) TimerEvent: {}
+[104.219479] (-) TimerEvent: {}
+[104.320449] (-) TimerEvent: {}
+[104.421929] (-) TimerEvent: {}
+[104.522722] (-) TimerEvent: {}
+[104.623625] (-) TimerEvent: {}
+[104.724320] (-) TimerEvent: {}
+[104.825014] (-) TimerEvent: {}
+[104.925804] (-) TimerEvent: {}
+[105.026535] (-) TimerEvent: {}
+[105.127359] (-) TimerEvent: {}
+[105.228029] (-) TimerEvent: {}
+[105.328705] (-) TimerEvent: {}
+[105.429471] (-) TimerEvent: {}
+[105.530211] (-) TimerEvent: {}
+[105.631296] (-) TimerEvent: {}
+[105.732119] (-) TimerEvent: {}
+[105.832817] (-) TimerEvent: {}
+[105.933560] (-) TimerEvent: {}
+[106.034226] (-) TimerEvent: {}
+[106.134979] (-) TimerEvent: {}
+[106.235721] (-) TimerEvent: {}
+[106.336512] (-) TimerEvent: {}
+[106.437420] (-) TimerEvent: {}
+[106.538217] (-) TimerEvent: {}
+[106.639049] (-) TimerEvent: {}
+[106.739883] (-) TimerEvent: {}
+[106.840834] (-) TimerEvent: {}
+[106.941589] (-) TimerEvent: {}
+[107.042299] (-) TimerEvent: {}
+[107.142950] (-) TimerEvent: {}
+[107.243703] (-) TimerEvent: {}
+[107.344465] (-) TimerEvent: {}
+[107.445882] (-) TimerEvent: {}
+[107.546588] (-) TimerEvent: {}
+[107.647422] (-) TimerEvent: {}
+[107.748414] (-) TimerEvent: {}
+[107.849089] (-) TimerEvent: {}
+[107.949925] (-) TimerEvent: {}
+[108.051292] (-) TimerEvent: {}
+[108.152012] (-) TimerEvent: {}
+[108.252766] (-) TimerEvent: {}
+[108.354098] (-) TimerEvent: {}
+[108.454966] (-) TimerEvent: {}
+[108.555768] (-) TimerEvent: {}
+[108.656452] (-) TimerEvent: {}
+[108.757197] (-) TimerEvent: {}
+[108.858143] (-) TimerEvent: {}
+[108.958875] (-) TimerEvent: {}
+[109.059882] (-) TimerEvent: {}
+[109.160761] (-) TimerEvent: {}
+[109.261873] (-) TimerEvent: {}
+[109.362842] (-) TimerEvent: {}
+[109.463499] (-) TimerEvent: {}
+[109.564218] (-) TimerEvent: {}
+[109.665003] (-) TimerEvent: {}
+[109.765906] (-) TimerEvent: {}
+[109.866627] (-) TimerEvent: {}
+[109.967799] (-) TimerEvent: {}
+[110.068693] (-) TimerEvent: {}
+[110.169420] (-) TimerEvent: {}
+[110.270237] (-) TimerEvent: {}
+[110.370941] (-) TimerEvent: {}
+[110.471696] (-) TimerEvent: {}
+[110.572427] (-) TimerEvent: {}
+[110.673518] (-) TimerEvent: {}
+[110.774409] (-) TimerEvent: {}
+[110.875203] (-) TimerEvent: {}
+[110.976346] (-) TimerEvent: {}
+[111.077049] (-) TimerEvent: {}
+[111.177873] (-) TimerEvent: {}
+[111.278567] (-) TimerEvent: {}
+[111.379528] (-) TimerEvent: {}
+[111.480567] (-) TimerEvent: {}
+[111.581581] (-) TimerEvent: {}
+[111.682306] (-) TimerEvent: {}
+[111.783013] (-) TimerEvent: {}
+[111.883688] (-) TimerEvent: {}
+[111.984642] (-) TimerEvent: {}
+[112.085725] (-) TimerEvent: {}
+[112.186492] (-) TimerEvent: {}
+[112.287408] (-) TimerEvent: {}
+[112.388126] (-) TimerEvent: {}
+[112.488886] (-) TimerEvent: {}
+[112.589758] (-) TimerEvent: {}
+[112.690458] (-) TimerEvent: {}
+[112.791306] (-) TimerEvent: {}
+[112.875920] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 0}
+[112.879974] (ahabp_pkg) JobStarted: {'identifier': 'ahabp_pkg'}
+[112.891513] (-) TimerEvent: {}
+[112.913372] (px4_ros_com) JobStarted: {'identifier': 'px4_ros_com'}
+[112.991777] (-) TimerEvent: {}
+[113.092785] (-) TimerEvent: {}
+[113.193581] (-) TimerEvent: {}
+[113.294406] (-) TimerEvent: {}
+[113.395180] (-) TimerEvent: {}
+[113.495917] (-) TimerEvent: {}
+[113.596763] (-) TimerEvent: {}
+[113.697522] (-) TimerEvent: {}
+[113.798268] (-) TimerEvent: {}
+[113.899000] (-) TimerEvent: {}
+[113.999714] (-) TimerEvent: {}
+[114.100468] (-) TimerEvent: {}
+[114.201424] (-) TimerEvent: {}
+[114.279271] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'cmake'}
+[114.282708] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'build'}
+[114.289592] (px4_ros_com) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/anyell/ahabp_v2_ws/build/px4_ros_com', '--', '-j4', '-l4'], 'cwd': '/home/anyell/ahabp_v2_ws/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'anyell'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anyell'), ('OLDPWD', '/home/anyell'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1440'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anyell'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anyell'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahabp-rpi4:@/tmp/.ICE-unix/1405,unix/ahabp-rpi4:/tmp/.ICE-unix/1405'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4b31090_3cac_43f9_888a_11e7c082ae26'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H3ZVK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.241'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anyell/ahabp_v2_ws/build/px4_ros_com'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble')]), 'shell': False}
+[114.302590] (-) TimerEvent: {}
+[114.407529] (-) TimerEvent: {}
+[114.508405] (-) TimerEvent: {}
+[114.562472] (px4_ros_com) StdoutLine: {'line': b'[ 16%] Built target frame_transforms\n'}
+[114.608689] (-) TimerEvent: {}
+[114.691225] (px4_ros_com) StdoutLine: {'line': b'[ 33%] Built target debug_vect_advertiser\n'}
+[114.708874] (-) TimerEvent: {}
+[114.809815] (-) TimerEvent: {}
+[114.826907] (px4_ros_com) StdoutLine: {'line': b'[ 50%] Built target offboard_control\n'}
+[114.909995] (-) TimerEvent: {}
+[114.957913] (px4_ros_com) StdoutLine: {'line': b'[ 66%] Built target offboard_control_srv\n'}
+[115.010260] (-) TimerEvent: {}
+[115.097678] (px4_ros_com) StdoutLine: {'line': b'[ 66%] Built target ament_cmake_python_copy_px4_ros_com\n'}
+[115.110446] (-) TimerEvent: {}
+[115.211783] (-) TimerEvent: {}
+[115.221180] (px4_ros_com) StdoutLine: {'line': b'[ 83%] Built target vehicle_gps_position_listener\n'}
+[115.311941] (-) TimerEvent: {}
+[115.412832] (-) TimerEvent: {}
+[115.513835] (-) TimerEvent: {}
+[115.614841] (-) TimerEvent: {}
+[115.715685] (-) TimerEvent: {}
+[115.816614] (-) TimerEvent: {}
+[115.917547] (-) TimerEvent: {}
+[116.018463] (-) TimerEvent: {}
+[116.120171] (-) TimerEvent: {}
+[116.182540] (ahabp_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ahabp_pkg', 'build', '--build-base', '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/build', 'install', '--record', '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/anyell/ahabp_v2_ws/src/ahabp_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'anyell', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/anyell', 'OLDPWD': '/home/anyell', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1440', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble/', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/anyell/ahabp_v2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'anyell', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'anyell', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ahabp-rpi4:@/tmp/.ICE-unix/1405,unix/ahabp-rpi4:/tmp/.ICE-unix/1405', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e4b31090_3cac_43f9_888a_11e7c082ae26', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.H3ZVK2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.241', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/anyell/ahabp_v2_ws/build/ahabp_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent'}, 'shell': False}
+[116.220377] (-) TimerEvent: {}
+[116.321358] (-) TimerEvent: {}
+[116.422236] (-) TimerEvent: {}
+[116.523142] (-) TimerEvent: {}
+[116.624098] (-) TimerEvent: {}
+[116.724924] (-) TimerEvent: {}
+[116.772551] (px4_ros_com) StdoutLine: {'line': b'running egg_info\n'}
+[116.775969] (px4_ros_com) StdoutLine: {'line': b'writing px4_ros_com.egg-info/PKG-INFO\n'}
+[116.777415] (px4_ros_com) StdoutLine: {'line': b'writing dependency_links to px4_ros_com.egg-info/dependency_links.txt\n'}
+[116.778808] (px4_ros_com) StdoutLine: {'line': b'writing top-level names to px4_ros_com.egg-info/top_level.txt\n'}
+[116.790613] (px4_ros_com) StdoutLine: {'line': b"reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'\n"}
+[116.793210] (px4_ros_com) StdoutLine: {'line': b"writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'\n"}
+[116.825209] (-) TimerEvent: {}
+[116.926930] (-) TimerEvent: {}
+[116.948513] (px4_ros_com) StdoutLine: {'line': b'[ 83%] Built target ament_cmake_python_build_px4_ros_com_egg\n'}
+[117.027236] (-) TimerEvent: {}
+[117.076800] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target sensor_combined_listener\n'}
+[117.126892] (px4_ros_com) CommandEnded: {'returncode': 0}
+[117.129646] (-) TimerEvent: {}
+[117.234536] (-) TimerEvent: {}
+[117.335357] (-) TimerEvent: {}
+[117.406659] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'install'}
+[117.407885] (px4_ros_com) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/anyell/ahabp_v2_ws/build/px4_ros_com'], 'cwd': '/home/anyell/ahabp_v2_ws/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'anyell'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anyell'), ('OLDPWD', '/home/anyell'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1440'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anyell'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anyell'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahabp-rpi4:@/tmp/.ICE-unix/1405,unix/ahabp-rpi4:/tmp/.ICE-unix/1405'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4b31090_3cac_43f9_888a_11e7c082ae26'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H3ZVK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.241'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anyell/ahabp_v2_ws/build/px4_ros_com'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble')]), 'shell': False}
+[117.435653] (-) TimerEvent: {}
+[117.447975] (px4_ros_com) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[117.449640] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener\n'}
+[117.452108] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener\n'}
+[117.455284] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser\n'}
+[117.457706] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control\n'}
+[117.460498] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv\n'}
+[117.474080] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh\n'}
+[117.474767] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv\n'}
+[117.475406] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com\n'}
+[117.476609] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h\n'}
+[117.477099] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/libframe_transforms.so\n'}
+[117.477885] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch\n'}
+[117.478377] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py\n'}
+[117.478849] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml\n'}
+[117.479326] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test\n'}
+[117.479928] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py\n'}
+[117.480554] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py\n'}
+[117.481239] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py\n'}
+[117.482735] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py\n'}
+[117.483276] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh\n'}
+[117.483672] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv\n'}
+[117.484064] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info\n'}
+[117.484659] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[117.485529] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[117.486026] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[117.486440] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[117.486958] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com\n'}
+[117.487367] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py\n'}
+[117.487785] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py\n'}
+[117.535812] (-) TimerEvent: {}
+[117.622696] (ahabp_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[117.626092] (ahabp_pkg) StdoutLine: {'line': b'writing ../../build/ahabp_pkg/ahabp_pkg.egg-info/PKG-INFO\n'}
+[117.627746] (ahabp_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/ahabp_pkg/ahabp_pkg.egg-info/dependency_links.txt\n'}
+[117.629576] (ahabp_pkg) StdoutLine: {'line': b'writing entry points to ../../build/ahabp_pkg/ahabp_pkg.egg-info/entry_points.txt\n'}
+[117.630812] (ahabp_pkg) StdoutLine: {'line': b'writing requirements to ../../build/ahabp_pkg/ahabp_pkg.egg-info/requires.txt\n'}
+[117.632070] (ahabp_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/ahabp_pkg/ahabp_pkg.egg-info/top_level.txt\n'}
+[117.635983] (-) TimerEvent: {}
+[117.640304] (ahabp_pkg) StdoutLine: {'line': b"reading manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'\n"}
+[117.641847] (ahabp_pkg) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[117.644727] (ahabp_pkg) StdoutLine: {'line': b"writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'\n"}
+[117.645649] (ahabp_pkg) StdoutLine: {'line': b'running build\n'}
+[117.646613] (ahabp_pkg) StdoutLine: {'line': b'running build_py\n'}
+[117.648710] (ahabp_pkg) StdoutLine: {'line': b'running install\n'}
+[117.651510] (px4_ros_com) StdoutLine: {'line': b"Listing '/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...\n"}
+[117.652977] (ahabp_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[117.669618] (ahabp_pkg) StdoutLine: {'line': b'running install_data\n'}
+[117.671207] (ahabp_pkg) StdoutLine: {'line': b'copying launch/ahabp_v2.launch.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg\n'}
+[117.672493] (ahabp_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[117.681675] (ahabp_pkg) StdoutLine: {'line': b"removing '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[117.693497] (ahabp_pkg) StdoutLine: {'line': b'Copying ../../build/ahabp_pkg/ahabp_pkg.egg-info to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info\n'}
+[117.694369] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control.py\n'}
+[117.694985] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com\n'}
+[117.695971] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com\n'}
+[117.697369] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh\n'}
+[117.698284] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv\n'}
+[117.702788] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh\n'}
+[117.706081] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv\n'}
+[117.706878] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash\n'}
+[117.707489] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh\n'}
+[117.708651] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh\n'}
+[117.710259] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv\n'}
+[117.711465] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv\n'}
+[117.712101] (ahabp_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[117.712714] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com\n'}
+[117.713493] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake\n'}
+[117.714136] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake\n'}
+[117.714805] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[117.715708] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[117.716329] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[117.717025] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[117.717836] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake\n'}
+[117.719388] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake\n'}
+[117.720785] (px4_ros_com) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.xml\n'}
+[117.734385] (px4_ros_com) CommandEnded: {'returncode': 0}
+[117.736210] (-) TimerEvent: {}
+[117.802001] (ahabp_pkg) StdoutLine: {'line': b'Installing ahabp_node script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg\n'}
+[117.803232] (ahabp_pkg) StdoutLine: {'line': b'Installing ahabp_node_opencv script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg\n'}
+[117.806032] (ahabp_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log'\n"}
+[117.836590] (-) TimerEvent: {}
+[117.938110] (-) TimerEvent: {}
+[117.945359] (ahabp_pkg) CommandEnded: {'returncode': 0}
+[117.993897] (ahabp_pkg) JobEnded: {'identifier': 'ahabp_pkg', 'rc': 0}
+[118.038388] (-) TimerEvent: {}
+[118.139368] (-) TimerEvent: {}
+[118.145270] (px4_ros_com) JobEnded: {'identifier': 'px4_ros_com', 'rc': 0}
+[118.148424] (-) EventReactorShutdown: {}

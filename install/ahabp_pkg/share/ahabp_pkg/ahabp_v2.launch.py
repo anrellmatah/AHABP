@@ -37,6 +37,16 @@ def generate_launch_description():
         cmd=[['MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 6']],
         shell=True
     )
+    sensor_combined_listener_node = Node(
+        package='px4_ros_com',
+        executable='sensor_combined_listener',
+        output='screen',
+        shell=True,
+    )
+#    v4l2_node = ExecuteProcess(
+#        cmd=[['ros2 run v4l2_camera v4l2_camera_node -ros-args -p image_size:="[640,480]"']],
+#        shell=True
+#    )
 
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),

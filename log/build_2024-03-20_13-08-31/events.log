@@ -1,0 +1,727 @@
+[0.000000] (-) TimerEvent: {}
+[0.001126] (microxrcedds_agent) JobQueued: {'identifier': 'microxrcedds_agent', 'dependencies': OrderedDict()}
+[0.001703] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.002263] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.002459] (v4l2_camera) JobQueued: {'identifier': 'v4l2_camera', 'dependencies': OrderedDict()}
+[0.002844] (ahabp_pkg) JobQueued: {'identifier': 'ahabp_pkg', 'dependencies': OrderedDict([('px4_msgs', '/home/anyell/ahabp_v2_ws/install/px4_msgs')])}
+[0.002971] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict([('px4_msgs', '/home/anyell/ahabp_v2_ws/install/px4_msgs')])}
+[0.003081] (microxrcedds_agent) JobStarted: {'identifier': 'microxrcedds_agent'}
+[0.052979] (microxrcedds_agent) JobProgress: {'identifier': 'microxrcedds_agent', 'progress': 'cmake'}
+[0.055963] (microxrcedds_agent) JobProgress: {'identifier': 'microxrcedds_agent', 'progress': 'build'}
+[0.059848] (microxrcedds_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent', '--', '-j4', '-l4'], 'cwd': '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'anyell'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anyell'), ('OLDPWD', '/home/anyell'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1422'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anyell'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anyell'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahabp-rpi4:@/tmp/.ICE-unix/1393,unix/ahabp-rpi4:/tmp/.ICE-unix/1393'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f8892d4f_f7fa_4c57_aabf_2414398d54ba'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QZ5KK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent')]), 'shell': False}
+[0.099158] (-) TimerEvent: {}
+[0.200026] (-) TimerEvent: {}
+[0.301169] (-) TimerEvent: {}
+[0.402482] (-) TimerEvent: {}
+[0.446209] (microxrcedds_agent) StdoutLine: {'line': b'[ 96%] Built target microxrcedds_agent\n'}
+[0.502683] (-) TimerEvent: {}
+[0.567542] (microxrcedds_agent) StdoutLine: {'line': b'[100%] Built target MicroXRCEAgent\n'}
+[0.602921] (-) TimerEvent: {}
+[0.621614] (microxrcedds_agent) CommandEnded: {'returncode': 0}
+[0.703136] (-) TimerEvent: {}
+[0.804260] (-) TimerEvent: {}
+[0.904983] (-) TimerEvent: {}
+[1.005797] (-) TimerEvent: {}
+[1.107046] (-) TimerEvent: {}
+[1.207769] (-) TimerEvent: {}
+[1.308509] (-) TimerEvent: {}
+[1.409218] (-) TimerEvent: {}
+[1.509974] (-) TimerEvent: {}
+[1.562072] (microxrcedds_agent) JobProgress: {'identifier': 'microxrcedds_agent', 'progress': 'install'}
+[1.604276] (microxrcedds_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent'], 'cwd': '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'anyell'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anyell'), ('OLDPWD', '/home/anyell'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1422'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anyell'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anyell'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahabp-rpi4:@/tmp/.ICE-unix/1393,unix/ahabp-rpi4:/tmp/.ICE-unix/1393'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f8892d4f_f7fa_4c57_aabf_2414398d54ba'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QZ5KK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent')]), 'shell': False}
+[1.610611] (-) TimerEvent: {}
+[1.639679] (microxrcedds_agent) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.641673] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib/libmicroxrcedds_agent.so.2.4.2\n'}
+[1.642583] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib/libmicroxrcedds_agent.so.2.4\n'}
+[1.643420] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib/libmicroxrcedds_agent.so\n'}
+[1.644678] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent\n'}
+[1.645984] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/Agent.hpp\n'}
+[1.647626] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/replier\n'}
+[1.649952] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/replier/Replier.hpp\n'}
+[1.650746] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/participant\n'}
+[1.651345] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/participant/Participant.hpp\n'}
+[1.652194] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client\n'}
+[1.652770] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session\n'}
+[1.653314] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session/Session.hpp\n'}
+[1.653902] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session/stream\n'}
+[1.654651] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session/stream/OutputStream.hpp\n'}
+[1.655208] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session/stream/InputStream.hpp\n'}
+[1.655789] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/session/SessionInfo.hpp\n'}
+[1.656402] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/client/ProxyClient.hpp\n'}
+[1.656953] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils\n'}
+[1.657475] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/SharedMutexPriority.hpp\n'}
+[1.658419] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/TokenBucket.hpp\n'}
+[1.659287] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/Color.hpp\n'}
+[1.660389] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/ArgumentParser.hpp\n'}
+[1.660933] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/Time.hpp\n'}
+[1.662270] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/Functions.hpp\n'}
+[1.662835] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/SharedMutex.hpp\n'}
+[1.663380] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/Conversion.hpp\n'}
+[1.664093] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/utils/SeqNum.hpp\n'}
+[1.664646] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/scheduler\n'}
+[1.665248] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/scheduler/PacketScheduler.hpp\n'}
+[1.665777] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/scheduler/Scheduler.hpp\n'}
+[1.666429] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware\n'}
+[1.667063] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fastdds\n'}
+[1.667637] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fastdds/FastDDSEntities.hpp\n'}
+[1.668202] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fastdds/FastDDSMiddleware.hpp\n'}
+[1.668685] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/utils\n'}
+[1.669185] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/utils/Callbacks.hpp\n'}
+[1.669731] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/Middleware.hpp\n'}
+[1.670198] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fast\n'}
+[1.670861] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fast/FastEntities.hpp\n'}
+[1.671494] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/fast/FastMiddleware.hpp\n'}
+[1.672172] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/ced\n'}
+[1.672790] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/ced/CedEntities.hpp\n'}
+[1.673368] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/middleware/ced/CedMiddleware.hpp\n'}
+[1.673979] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/publisher\n'}
+[1.674632] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/publisher/Publisher.hpp\n'}
+[1.675181] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/topic\n'}
+[1.675804] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/topic/Topic.hpp\n'}
+[1.676393] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/subscriber\n'}
+[1.676917] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/subscriber/Subscriber.hpp\n'}
+[1.677533] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/visibility.hpp\n'}
+[1.678829] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types\n'}
+[1.679481] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types/Optional.hpp\n'}
+[1.680103] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types/MessageHeader.hpp\n'}
+[1.680709] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types/TopicPubSubType.hpp\n'}
+[1.681308] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types/XRCETypes.hpp\n'}
+[1.681893] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/types/SubMessageHeader.hpp\n'}
+[1.682608] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport\n'}
+[1.683397] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/stream_framing\n'}
+[1.684101] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/stream_framing/StreamFramingProtocol.hpp\n'}
+[1.685107] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/util\n'}
+[1.687440] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/util/InterfaceLinux.hpp\n'}
+[1.688376] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/util/InterfaceWindows.hpp\n'}
+[1.689538] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/discovery\n'}
+[1.690325] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/discovery/DiscoveryServer.hpp\n'}
+[1.691261] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/discovery/DiscoveryServerLinux.hpp\n'}
+[1.692512] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/discovery/DiscoveryServerWindows.hpp\n'}
+[1.693845] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/TransportRc.hpp\n'}
+[1.694840] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial\n'}
+[1.695562] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/PseudoTerminalAgentLinux.hpp\n'}
+[1.696466] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/baud_rate_table_linux.h\n'}
+[1.697314] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/MultiSerialAgentLinux.hpp\n'}
+[1.699523] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/SerialAgentLinux.hpp\n'}
+[1.701369] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/MultiTermiosAgentLinux.hpp\n'}
+[1.702023] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/serial/TermiosAgentLinux.hpp\n'}
+[1.703287] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp\n'}
+[1.704918] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPv6AgentLinux.hpp\n'}
+[1.706448] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPv6AgentWindows.hpp\n'}
+[1.707416] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPv4AgentLinux.hpp\n'}
+[1.708360] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPv4AgentWindows.hpp\n'}
+[1.709293] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPConnection.hpp\n'}
+[1.710008] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/tcp/TCPServerBase.hpp\n'}
+[1.711027] (-) TimerEvent: {}
+[1.711508] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/SessionManager.hpp\n'}
+[1.712532] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/udp\n'}
+[1.713479] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/udp/UDPv4AgentLinux.hpp\n'}
+[1.714372] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/udp/UDPv4AgentWindows.hpp\n'}
+[1.716020] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/udp/UDPv6AgentLinux.hpp\n'}
+[1.717966] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/udp/UDPv6AgentWindows.hpp\n'}
+[1.720689] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/can\n'}
+[1.722513] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/can/CanAgentLinux.hpp\n'}
+[1.723781] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/Server.hpp\n'}
+[1.725095] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/custom\n'}
+[1.727113] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/custom/CustomAgent.hpp\n'}
+[1.727975] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint\n'}
+[1.728617] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/MultiSerialEndPoint.hpp\n'}
+[1.729363] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/SerialEndPoint.hpp\n'}
+[1.730219] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/IPv6EndPoint.hpp\n'}
+[1.730816] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/CustomEndPoint.hpp\n'}
+[1.731588] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/CanEndPoint.hpp\n'}
+[1.732407] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/endpoint/IPv4EndPoint.hpp\n'}
+[1.732989] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/p2p\n'}
+[1.733738] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/p2p/AgentDiscovererLinux.hpp\n'}
+[1.735666] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/transport/p2p/AgentDiscoverer.hpp\n'}
+[1.737279] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/AgentInstance.hpp\n'}
+[1.738079] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/reader\n'}
+[1.738884] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/reader/Reader.hpp\n'}
+[1.739781] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/processor\n'}
+[1.740566] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/processor/Processor.hpp\n'}
+[1.741290] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/message\n'}
+[1.741958] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/message/Packet.hpp\n'}
+[1.742832] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/message/InputMessage.hpp\n'}
+[1.743946] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/message/OutputMessage.hpp\n'}
+[1.744665] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/Root.hpp\n'}
+[1.745335] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/logger\n'}
+[1.746066] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/logger/Logger.hpp\n'}
+[1.746864] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/datawriter\n'}
+[1.747811] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/datawriter/DataWriter.hpp\n'}
+[1.750004] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/datareader\n'}
+[1.752393] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/datareader/DataReader.hpp\n'}
+[1.754899] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/object\n'}
+[1.756201] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/object/XRCEObject.hpp\n'}
+[1.758418] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/p2p\n'}
+[1.759606] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/p2p/InternalClientManager.hpp\n'}
+[1.760399] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/p2p/InternalClient.hpp\n'}
+[1.761731] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/requester\n'}
+[1.763778] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/requester/Requester.hpp\n'}
+[1.764377] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake\n'}
+[1.765986] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets-release.cmake\n'}
+[1.767439] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin/MicroXRCEAgent\n'}
+[1.769447] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/include/uxr/agent/config.hpp\n'}
+[1.770865] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/LICENSE\n'}
+[1.771687] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfig.cmake\n'}
+[1.772648] (microxrcedds_agent) StdoutLine: {'line': b'-- Up-to-date: /home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfigVersion.cmake\n'}
+[1.774605] (microxrcedds_agent) CommandEnded: {'returncode': 0}
+[1.811283] (-) TimerEvent: {}
+[1.833172] (microxrcedds_agent) JobEnded: {'identifier': 'microxrcedds_agent', 'rc': 0}
+[1.838072] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[1.872271] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[1.877960] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[1.886626] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/anyell/ahabp_v2_ws/build/px4_msgs', '--', '-j4', '-l4'], 'cwd': '/home/anyell/ahabp_v2_ws/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'anyell'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/anyell'), ('OLDPWD', '/home/anyell'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1422'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'anyell'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'anyell'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/anyell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahabp-rpi4:@/tmp/.ICE-unix/1393,unix/ahabp-rpi4:/tmp/.ICE-unix/1393'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f8892d4f_f7fa_4c57_aabf_2414398d54ba'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QZ5KK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/anyell/ahabp_v2_ws/build/px4_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble')]), 'shell': False}
+[1.911897] (-) TimerEvent: {}
+[2.013441] (-) TimerEvent: {}
+[2.114329] (-) TimerEvent: {}
+[2.215292] (-) TimerEvent: {}
+[2.316298] (-) TimerEvent: {}
+[2.417389] (-) TimerEvent: {}
+[2.518418] (-) TimerEvent: {}
+[2.619438] (-) TimerEvent: {}
+[2.720456] (-) TimerEvent: {}
+[2.821519] (-) TimerEvent: {}
+[2.922569] (-) TimerEvent: {}
+[3.023579] (-) TimerEvent: {}
+[3.124875] (-) TimerEvent: {}
+[3.225934] (-) TimerEvent: {}
+[3.327018] (-) TimerEvent: {}
+[3.428118] (-) TimerEvent: {}
+[3.529122] (-) TimerEvent: {}
+[3.630210] (-) TimerEvent: {}
+[3.731268] (-) TimerEvent: {}
+[3.832322] (-) TimerEvent: {}
+[3.933357] (-) TimerEvent: {}
+[4.034475] (-) TimerEvent: {}
+[4.135528] (-) TimerEvent: {}
+[4.236587] (-) TimerEvent: {}
+[4.337595] (-) TimerEvent: {}
+[4.438711] (-) TimerEvent: {}
+[4.539821] (-) TimerEvent: {}
+[4.641176] (-) TimerEvent: {}
+[4.742314] (-) TimerEvent: {}
+[4.843369] (-) TimerEvent: {}
+[4.944433] (-) TimerEvent: {}
+[5.023817] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.044658] (-) TimerEvent: {}
+[5.145722] (-) TimerEvent: {}
+[5.246968] (-) TimerEvent: {}
+[5.347750] (-) TimerEvent: {}
+[5.448775] (-) TimerEvent: {}
+[5.549573] (-) TimerEvent: {}
+[5.645134] (px4_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.649781] (-) TimerEvent: {}
+[5.688466] (px4_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[5.750013] (-) TimerEvent: {}
+[5.850878] (-) TimerEvent: {}
+[5.861508] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.872357] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.902456] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.951081] (-) TimerEvent: {}
+[5.954387] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.031274] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.051434] (-) TimerEvent: {}
+[6.119442] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[6.152536] (-) TimerEvent: {}
+[6.253326] (-) TimerEvent: {}
+[6.354163] (-) TimerEvent: {}
+[6.454986] (-) TimerEvent: {}
+[6.555750] (-) TimerEvent: {}
+[6.656532] (-) TimerEvent: {}
+[6.757255] (-) TimerEvent: {}
+[6.858073] (-) TimerEvent: {}
+[6.958855] (-) TimerEvent: {}
+[7.059562] (-) TimerEvent: {}
+[7.160310] (-) TimerEvent: {}
+[7.261058] (-) TimerEvent: {}
+[7.361772] (-) TimerEvent: {}
+[7.462534] (-) TimerEvent: {}
+[7.563307] (-) TimerEvent: {}
+[7.664050] (-) TimerEvent: {}
+[7.764739] (-) TimerEvent: {}
+[7.865481] (-) TimerEvent: {}
+[7.966292] (-) TimerEvent: {}
+[8.067057] (-) TimerEvent: {}
+[8.167790] (-) TimerEvent: {}
+[8.268510] (-) TimerEvent: {}
+[8.369268] (-) TimerEvent: {}
+[8.470006] (-) TimerEvent: {}
+[8.570805] (-) TimerEvent: {}
+[8.671531] (-) TimerEvent: {}
+[8.772236] (-) TimerEvent: {}
+[8.872998] (-) TimerEvent: {}
+[8.973768] (-) TimerEvent: {}
+[9.074598] (-) TimerEvent: {}
+[9.175358] (-) TimerEvent: {}
+[9.276080] (-) TimerEvent: {}
+[9.376825] (-) TimerEvent: {}
+[9.477544] (-) TimerEvent: {}
+[9.578287] (-) TimerEvent: {}
+[9.679047] (-) TimerEvent: {}
+[9.779783] (-) TimerEvent: {}
+[9.880540] (-) TimerEvent: {}
+[9.981286] (-) TimerEvent: {}
+[10.082003] (-) TimerEvent: {}
+[10.182771] (-) TimerEvent: {}
+[10.283603] (-) TimerEvent: {}
+[10.384300] (-) TimerEvent: {}
+[10.485052] (-) TimerEvent: {}
+[10.585784] (-) TimerEvent: {}
+[10.686631] (-) TimerEvent: {}
+[10.787433] (-) TimerEvent: {}
+[10.888204] (-) TimerEvent: {}
+[10.988941] (-) TimerEvent: {}
+[11.089741] (-) TimerEvent: {}
+[11.190515] (-) TimerEvent: {}
+[11.291294] (-) TimerEvent: {}
+[11.392181] (-) TimerEvent: {}
+[11.492918] (-) TimerEvent: {}
+[11.593643] (-) TimerEvent: {}
+[11.694376] (-) TimerEvent: {}
+[11.795142] (-) TimerEvent: {}
+[11.896096] (-) TimerEvent: {}
+[11.997043] (-) TimerEvent: {}
+[12.097903] (-) TimerEvent: {}
+[12.198648] (-) TimerEvent: {}
+[12.299439] (-) TimerEvent: {}
+[12.400152] (-) TimerEvent: {}
+[12.501064] (-) TimerEvent: {}
+[12.601873] (-) TimerEvent: {}
+[12.702669] (-) TimerEvent: {}
+[12.803458] (-) TimerEvent: {}
+[12.904152] (-) TimerEvent: {}
+[13.004892] (-) TimerEvent: {}
+[13.105617] (-) TimerEvent: {}
+[13.206378] (-) TimerEvent: {}
+[13.307116] (-) TimerEvent: {}
+[13.407942] (-) TimerEvent: {}
+[13.508772] (-) TimerEvent: {}
+[13.609575] (-) TimerEvent: {}
+[13.710387] (-) TimerEvent: {}
+[13.811286] (-) TimerEvent: {}
+[13.912011] (-) TimerEvent: {}
+[14.012971] (-) TimerEvent: {}
+[14.114288] (-) TimerEvent: {}
+[14.187545] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.12.10 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)\n'}
+[14.190821] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.12.10 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)\n'}
+[14.193941] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.12.10 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)\n'}
+[14.197913] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[14.214487] (-) TimerEvent: {}
+[14.315408] (-) TimerEvent: {}
+[14.416371] (-) TimerEvent: {}
+[14.517270] (-) TimerEvent: {}
+[14.618316] (-) TimerEvent: {}
+[14.719158] (-) TimerEvent: {}
+[14.819885] (-) TimerEvent: {}
+[14.920621] (-) TimerEvent: {}
+[15.021421] (-) TimerEvent: {}
+[15.122253] (-) TimerEvent: {}
+[15.223172] (-) TimerEvent: {}
+[15.323914] (-) TimerEvent: {}
+[15.424649] (-) TimerEvent: {}
+[15.525415] (-) TimerEvent: {}
+[15.626199] (-) TimerEvent: {}
+[15.726973] (-) TimerEvent: {}
+[15.827806] (-) TimerEvent: {}
+[15.929281] (-) TimerEvent: {}
+[16.030090] (-) TimerEvent: {}
+[16.130949] (-) TimerEvent: {}
+[16.231692] (-) TimerEvent: {}
+[16.332439] (-) TimerEvent: {}
+[16.385704] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[16.432650] (-) TimerEvent: {}
+[16.533466] (-) TimerEvent: {}
+[16.634424] (-) TimerEvent: {}
+[16.735212] (-) TimerEvent: {}
+[16.835975] (-) TimerEvent: {}
+[16.936807] (-) TimerEvent: {}
+[17.037525] (-) TimerEvent: {}
+[17.138465] (-) TimerEvent: {}
+[17.239330] (-) TimerEvent: {}
+[17.241504] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[17.339657] (-) TimerEvent: {}
+[17.380290] (px4_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[17.439820] (-) TimerEvent: {}
+[17.507165] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[17.508137] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[17.508739] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[17.540048] (-) TimerEvent: {}
+[17.640881] (-) TimerEvent: {}
+[17.741600] (-) TimerEvent: {}
+[17.755238] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.12.10 (/opt/ros/humble/share/ament_cmake_flake8/cmake)\n'}
+[17.758459] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.12.10 (/opt/ros/humble/share/ament_cmake_pep257/cmake)\n'}
+[17.841783] (-) TimerEvent: {}
+[17.942509] (-) TimerEvent: {}
+[18.043234] (-) TimerEvent: {}
+[18.094062] (px4_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[18.143417] (-) TimerEvent: {}
+[18.244134] (-) TimerEvent: {}
+[18.344994] (-) TimerEvent: {}
+[18.445780] (-) TimerEvent: {}
+[18.546648] (-) TimerEvent: {}
+[18.647397] (-) TimerEvent: {}
+[18.748152] (-) TimerEvent: {}
+[18.849014] (-) TimerEvent: {}
+[18.949764] (-) TimerEvent: {}
+[19.050551] (-) TimerEvent: {}
+[19.151294] (-) TimerEvent: {}
+[19.252043] (-) TimerEvent: {}
+[19.352775] (-) TimerEvent: {}
+[19.453677] (-) TimerEvent: {}
+[19.554403] (-) TimerEvent: {}
+[19.655234] (-) TimerEvent: {}
+[19.720636] (px4_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[19.740440] (px4_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/anyell/ahabp_v2_ws/build/px4_msgs\n'}
+[19.755608] (-) TimerEvent: {}
+[19.857267] (-) TimerEvent: {}
+[19.958259] (-) TimerEvent: {}
+[19.978000] (px4_msgs) StderrLine: {'line': b"failed to create symbolic link '/home/anyell/ahabp_v2_ws/build/px4_msgs/ament_cmake_python/px4_msgs/px4_msgs' because existing path cannot be removed: Is a directory\n"}
+[19.981260] (px4_msgs) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_px4_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_px4_msgs] Error 1\n'}
+[19.984142] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_px4_msgs.dir/all] Error 2\n'}
+[20.002478] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[20.058442] (-) TimerEvent: {}
+[20.113008] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target px4_msgs__cpp\n'}
+[20.144303] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target px4_msgs__rosidl_generator_c\x1b[0m\n'}
+[20.158663] (-) TimerEvent: {}
+[20.259523] (-) TimerEvent: {}
+[20.360295] (-) TimerEvent: {}
+[20.461126] (-) TimerEvent: {}
+[20.561916] (-) TimerEvent: {}
+[20.585474] (px4_msgs) StdoutLine: {'line': b'[ 12%] Built target px4_msgs__rosidl_generator_c\n'}
+[20.590543] (px4_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[20.600006] (px4_msgs) CommandEnded: {'returncode': 2}
+[20.662163] (-) TimerEvent: {}
+[20.762999] (-) TimerEvent: {}
+[20.863999] (-) TimerEvent: {}
+[20.965021] (-) TimerEvent: {}
+[21.066074] (-) TimerEvent: {}
+[21.167128] (-) TimerEvent: {}
+[21.268179] (-) TimerEvent: {}
+[21.369240] (-) TimerEvent: {}
+[21.470312] (-) TimerEvent: {}
+[21.571328] (-) TimerEvent: {}
+[21.672408] (-) TimerEvent: {}
+[21.773472] (-) TimerEvent: {}
+[21.874555] (-) TimerEvent: {}
+[21.975379] (-) TimerEvent: {}
+[22.076471] (-) TimerEvent: {}
+[22.177516] (-) TimerEvent: {}
+[22.278587] (-) TimerEvent: {}
+[22.379687] (-) TimerEvent: {}
+[22.480755] (-) TimerEvent: {}
+[22.581812] (-) TimerEvent: {}
+[22.682954] (-) TimerEvent: {}
+[22.784069] (-) TimerEvent: {}
+[22.885418] (-) TimerEvent: {}
+[22.986562] (-) TimerEvent: {}
+[23.087564] (-) TimerEvent: {}
+[23.188640] (-) TimerEvent: {}
+[23.289739] (-) TimerEvent: {}
+[23.390841] (-) TimerEvent: {}
+[23.491933] (-) TimerEvent: {}
+[23.593079] (-) TimerEvent: {}
+[23.694087] (-) TimerEvent: {}
+[23.795018] (-) TimerEvent: {}
+[23.895736] (-) TimerEvent: {}
+[23.996481] (-) TimerEvent: {}
+[24.097430] (-) TimerEvent: {}
+[24.198229] (-) TimerEvent: {}
+[24.298947] (-) TimerEvent: {}
+[24.399750] (-) TimerEvent: {}
+[24.500562] (-) TimerEvent: {}
+[24.601349] (-) TimerEvent: {}
+[24.702292] (-) TimerEvent: {}
+[24.803100] (-) TimerEvent: {}
+[24.904293] (-) TimerEvent: {}
+[25.005061] (-) TimerEvent: {}
+[25.105923] (-) TimerEvent: {}
+[25.206762] (-) TimerEvent: {}
+[25.307550] (-) TimerEvent: {}
+[25.408606] (-) TimerEvent: {}
+[25.509529] (-) TimerEvent: {}
+[25.610267] (-) TimerEvent: {}
+[25.711028] (-) TimerEvent: {}
+[25.812042] (-) TimerEvent: {}
+[25.913011] (-) TimerEvent: {}
+[26.013761] (-) TimerEvent: {}
+[26.114495] (-) TimerEvent: {}
+[26.215300] (-) TimerEvent: {}
+[26.316049] (-) TimerEvent: {}
+[26.416984] (-) TimerEvent: {}
+[26.518004] (-) TimerEvent: {}
+[26.618721] (-) TimerEvent: {}
+[26.719562] (-) TimerEvent: {}
+[26.820278] (-) TimerEvent: {}
+[26.920971] (-) TimerEvent: {}
+[27.021758] (-) TimerEvent: {}
+[27.122959] (-) TimerEvent: {}
+[27.224119] (-) TimerEvent: {}
+[27.324884] (-) TimerEvent: {}
+[27.425597] (-) TimerEvent: {}
+[27.526489] (-) TimerEvent: {}
+[27.627413] (-) TimerEvent: {}
+[27.728430] (-) TimerEvent: {}
+[27.829479] (-) TimerEvent: {}
+[27.930255] (-) TimerEvent: {}
+[28.031388] (-) TimerEvent: {}
+[28.132112] (-) TimerEvent: {}
+[28.232825] (-) TimerEvent: {}
+[28.333539] (-) TimerEvent: {}
+[28.434224] (-) TimerEvent: {}
+[28.534957] (-) TimerEvent: {}
+[28.635718] (-) TimerEvent: {}
+[28.736454] (-) TimerEvent: {}
+[28.837243] (-) TimerEvent: {}
+[28.938098] (-) TimerEvent: {}
+[29.039043] (-) TimerEvent: {}
+[29.139902] (-) TimerEvent: {}
+[29.240623] (-) TimerEvent: {}
+[29.341425] (-) TimerEvent: {}
+[29.442167] (-) TimerEvent: {}
+[29.542938] (-) TimerEvent: {}
+[29.643681] (-) TimerEvent: {}
+[29.744393] (-) TimerEvent: {}
+[29.845218] (-) TimerEvent: {}
+[29.946092] (-) TimerEvent: {}
+[30.046949] (-) TimerEvent: {}
+[30.148455] (-) TimerEvent: {}
+[30.249493] (-) TimerEvent: {}
+[30.350257] (-) TimerEvent: {}
+[30.451010] (-) TimerEvent: {}
+[30.551692] (-) TimerEvent: {}
+[30.652370] (-) TimerEvent: {}
+[30.753069] (-) TimerEvent: {}
+[30.853765] (-) TimerEvent: {}
+[30.954526] (-) TimerEvent: {}
+[31.055546] (-) TimerEvent: {}
+[31.156303] (-) TimerEvent: {}
+[31.257046] (-) TimerEvent: {}
+[31.357812] (-) TimerEvent: {}
+[31.458548] (-) TimerEvent: {}
+[31.559420] (-) TimerEvent: {}
+[31.660629] (-) TimerEvent: {}
+[31.761340] (-) TimerEvent: {}
+[31.862385] (-) TimerEvent: {}
+[31.963140] (-) TimerEvent: {}
+[32.063865] (-) TimerEvent: {}
+[32.164634] (-) TimerEvent: {}
+[32.265479] (-) TimerEvent: {}
+[32.366609] (-) TimerEvent: {}
+[32.467860] (-) TimerEvent: {}
+[32.568588] (-) TimerEvent: {}
+[32.669335] (-) TimerEvent: {}
+[32.770033] (-) TimerEvent: {}
+[32.870901] (-) TimerEvent: {}
+[32.971722] (-) TimerEvent: {}
+[33.072552] (-) TimerEvent: {}
+[33.173304] (-) TimerEvent: {}
+[33.274676] (-) TimerEvent: {}
+[33.375361] (-) TimerEvent: {}
+[33.476303] (-) TimerEvent: {}
+[33.577015] (-) TimerEvent: {}
+[33.678011] (-) TimerEvent: {}
+[33.778744] (-) TimerEvent: {}
+[33.879860] (-) TimerEvent: {}
+[33.980657] (-) TimerEvent: {}
+[34.081520] (-) TimerEvent: {}
+[34.182305] (-) TimerEvent: {}
+[34.283264] (-) TimerEvent: {}
+[34.384292] (-) TimerEvent: {}
+[34.485022] (-) TimerEvent: {}
+[34.586202] (-) TimerEvent: {}
+[34.687395] (-) TimerEvent: {}
+[34.788319] (-) TimerEvent: {}
+[34.889065] (-) TimerEvent: {}
+[34.989832] (-) TimerEvent: {}
+[35.090971] (-) TimerEvent: {}
+[35.191763] (-) TimerEvent: {}
+[35.292520] (-) TimerEvent: {}
+[35.393246] (-) TimerEvent: {}
+[35.494005] (-) TimerEvent: {}
+[35.594883] (-) TimerEvent: {}
+[35.695912] (-) TimerEvent: {}
+[35.796738] (-) TimerEvent: {}
+[35.897508] (-) TimerEvent: {}
+[35.998276] (-) TimerEvent: {}
+[36.098987] (-) TimerEvent: {}
+[36.199756] (-) TimerEvent: {}
+[36.300745] (-) TimerEvent: {}
+[36.401488] (-) TimerEvent: {}
+[36.502257] (-) TimerEvent: {}
+[36.603063] (-) TimerEvent: {}
+[36.704041] (-) TimerEvent: {}
+[36.804909] (-) TimerEvent: {}
+[36.905651] (-) TimerEvent: {}
+[37.006548] (-) TimerEvent: {}
+[37.108062] (-) TimerEvent: {}
+[37.208777] (-) TimerEvent: {}
+[37.309489] (-) TimerEvent: {}
+[37.410303] (-) TimerEvent: {}
+[37.511091] (-) TimerEvent: {}
+[37.611935] (-) TimerEvent: {}
+[37.712676] (-) TimerEvent: {}
+[37.813374] (-) TimerEvent: {}
+[37.914172] (-) TimerEvent: {}
+[38.015220] (-) TimerEvent: {}
+[38.115942] (-) TimerEvent: {}
+[38.216650] (-) TimerEvent: {}
+[38.317421] (-) TimerEvent: {}
+[38.418207] (-) TimerEvent: {}
+[38.518974] (-) TimerEvent: {}
+[38.620028] (-) TimerEvent: {}
+[38.720813] (-) TimerEvent: {}
+[38.821560] (-) TimerEvent: {}
+[38.922439] (-) TimerEvent: {}
+[39.023190] (-) TimerEvent: {}
+[39.124373] (-) TimerEvent: {}
+[39.225305] (-) TimerEvent: {}
+[39.326059] (-) TimerEvent: {}
+[39.426837] (-) TimerEvent: {}
+[39.527572] (-) TimerEvent: {}
+[39.628391] (-) TimerEvent: {}
+[39.729419] (-) TimerEvent: {}
+[39.830744] (-) TimerEvent: {}
+[39.931633] (-) TimerEvent: {}
+[40.032436] (-) TimerEvent: {}
+[40.133191] (-) TimerEvent: {}
+[40.234333] (-) TimerEvent: {}
+[40.335193] (-) TimerEvent: {}
+[40.435929] (-) TimerEvent: {}
+[40.536702] (-) TimerEvent: {}
+[40.637623] (-) TimerEvent: {}
+[40.738417] (-) TimerEvent: {}
+[40.839220] (-) TimerEvent: {}
+[40.940100] (-) TimerEvent: {}
+[41.041250] (-) TimerEvent: {}
+[41.141960] (-) TimerEvent: {}
+[41.242789] (-) TimerEvent: {}
+[41.343580] (-) TimerEvent: {}
+[41.444422] (-) TimerEvent: {}
+[41.545194] (-) TimerEvent: {}
+[41.645874] (-) TimerEvent: {}
+[41.746682] (-) TimerEvent: {}
+[41.847466] (-) TimerEvent: {}
+[41.948202] (-) TimerEvent: {}
+[42.048928] (-) TimerEvent: {}
+[42.149654] (-) TimerEvent: {}
+[42.250404] (-) TimerEvent: {}
+[42.351174] (-) TimerEvent: {}
+[42.451854] (-) TimerEvent: {}
+[42.552609] (-) TimerEvent: {}
+[42.653298] (-) TimerEvent: {}
+[42.754047] (-) TimerEvent: {}
+[42.854858] (-) TimerEvent: {}
+[42.955676] (-) TimerEvent: {}
+[43.056383] (-) TimerEvent: {}
+[43.157112] (-) TimerEvent: {}
+[43.257845] (-) TimerEvent: {}
+[43.358657] (-) TimerEvent: {}
+[43.459484] (-) TimerEvent: {}
+[43.560573] (-) TimerEvent: {}
+[43.661348] (-) TimerEvent: {}
+[43.762183] (-) TimerEvent: {}
+[43.863671] (-) TimerEvent: {}
+[43.965483] (-) TimerEvent: {}
+[44.066656] (-) TimerEvent: {}
+[44.167413] (-) TimerEvent: {}
+[44.268616] (-) TimerEvent: {}
+[44.369631] (-) TimerEvent: {}
+[44.470322] (-) TimerEvent: {}
+[44.571127] (-) TimerEvent: {}
+[44.672080] (-) TimerEvent: {}
+[44.772845] (-) TimerEvent: {}
+[44.873757] (-) TimerEvent: {}
+[44.974625] (-) TimerEvent: {}
+[45.075567] (-) TimerEvent: {}
+[45.176719] (-) TimerEvent: {}
+[45.277569] (-) TimerEvent: {}
+[45.378503] (-) TimerEvent: {}
+[45.479260] (-) TimerEvent: {}
+[45.580443] (-) TimerEvent: {}
+[45.681183] (-) TimerEvent: {}
+[45.781867] (-) TimerEvent: {}
+[45.882628] (-) TimerEvent: {}
+[45.983362] (-) TimerEvent: {}
+[46.084201] (-) TimerEvent: {}
+[46.185009] (-) TimerEvent: {}
+[46.285819] (-) TimerEvent: {}
+[46.387091] (-) TimerEvent: {}
+[46.487963] (-) TimerEvent: {}
+[46.588999] (-) TimerEvent: {}
+[46.690155] (-) TimerEvent: {}
+[46.791323] (-) TimerEvent: {}
+[46.892364] (-) TimerEvent: {}
+[46.993121] (-) TimerEvent: {}
+[47.093916] (-) TimerEvent: {}
+[47.194844] (-) TimerEvent: {}
+[47.295959] (-) TimerEvent: {}
+[47.396733] (-) TimerEvent: {}
+[47.497460] (-) TimerEvent: {}
+[47.598329] (-) TimerEvent: {}
+[47.699467] (-) TimerEvent: {}
+[47.800218] (-) TimerEvent: {}
+[47.900956] (-) TimerEvent: {}
+[48.001768] (-) TimerEvent: {}
+[48.102883] (-) TimerEvent: {}
+[48.204004] (-) TimerEvent: {}
+[48.304862] (-) TimerEvent: {}
+[48.406786] (-) TimerEvent: {}
+[48.507844] (-) TimerEvent: {}
+[48.608806] (-) TimerEvent: {}
+[48.709882] (-) TimerEvent: {}
+[48.810895] (-) TimerEvent: {}
+[48.911723] (-) TimerEvent: {}
+[49.012445] (-) TimerEvent: {}
+[49.113178] (-) TimerEvent: {}
+[49.213914] (-) TimerEvent: {}
+[49.314692] (-) TimerEvent: {}
+[49.415431] (-) TimerEvent: {}
+[49.516259] (-) TimerEvent: {}
+[49.617359] (-) TimerEvent: {}
+[49.718606] (-) TimerEvent: {}
+[49.819433] (-) TimerEvent: {}
+[49.920392] (-) TimerEvent: {}
+[50.021321] (-) TimerEvent: {}
+[50.122084] (-) TimerEvent: {}
+[50.223068] (-) TimerEvent: {}
+[50.323920] (-) TimerEvent: {}
+[50.424602] (-) TimerEvent: {}
+[50.525393] (-) TimerEvent: {}
+[50.626326] (-) TimerEvent: {}
+[50.727344] (-) TimerEvent: {}
+[50.828278] (-) TimerEvent: {}
+[50.929881] (-) TimerEvent: {}
+[51.030772] (-) TimerEvent: {}
+[51.131612] (-) TimerEvent: {}
+[51.232430] (-) TimerEvent: {}
+[51.333242] (-) TimerEvent: {}
+[51.434751] (-) TimerEvent: {}
+[51.535903] (-) TimerEvent: {}
+[51.636866] (-) TimerEvent: {}
+[51.737651] (-) TimerEvent: {}
+[51.838373] (-) TimerEvent: {}
+[51.939134] (-) TimerEvent: {}
+[52.039958] (-) TimerEvent: {}
+[52.140681] (-) TimerEvent: {}
+[52.242048] (-) TimerEvent: {}
+[52.343229] (-) TimerEvent: {}
+[52.443943] (-) TimerEvent: {}
+[52.544653] (-) TimerEvent: {}
+[52.645380] (-) TimerEvent: {}
+[52.746113] (-) TimerEvent: {}
+[52.846944] (-) TimerEvent: {}
+[52.947812] (-) TimerEvent: {}
+[53.048935] (-) TimerEvent: {}
+[53.149811] (-) TimerEvent: {}
+[53.250655] (-) TimerEvent: {}
+[53.351473] (-) TimerEvent: {}
+[53.452287] (-) TimerEvent: {}
+[53.553405] (-) TimerEvent: {}
+[53.654252] (-) TimerEvent: {}
+[53.753349] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 2}
+[53.757338] (-) TimerEvent: {}
+[53.757882] (py_pubsub) JobSkipped: {'identifier': 'py_pubsub'}
+[53.758273] (v4l2_camera) JobSkipped: {'identifier': 'v4l2_camera'}
+[53.758467] (ahabp_pkg) JobSkipped: {'identifier': 'ahabp_pkg'}
+[53.758593] (px4_ros_com) JobSkipped: {'identifier': 'px4_ros_com'}
+[53.758685] (-) EventReactorShutdown: {}
