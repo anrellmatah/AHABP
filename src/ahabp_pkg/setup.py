@@ -1,7 +1,5 @@
-##Start edit
 import os
 from glob import glob
-##Stop edit
 from setuptools import find_packages, setup
 
 package_name = 'ahabp_pkg'
@@ -31,6 +29,8 @@ setup(
     entry_points={
         'console_scripts': [
             'ahabp_node = ahabp_pkg.ahabp_node:main'
+            #add more console scripts
+            #[executable/node] = [package].[executable/node]:main
         ],
     },
 )

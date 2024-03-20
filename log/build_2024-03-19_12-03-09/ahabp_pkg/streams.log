@@ -1,0 +1,22 @@
+[7.939s] Invoking command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data
+[9.704s] running egg_info
+[9.708s] writing ../../build/ahabp_pkg/ahabp_pkg.egg-info/PKG-INFO
+[9.710s] writing dependency_links to ../../build/ahabp_pkg/ahabp_pkg.egg-info/dependency_links.txt
+[9.711s] writing entry points to ../../build/ahabp_pkg/ahabp_pkg.egg-info/entry_points.txt
+[9.713s] writing requirements to ../../build/ahabp_pkg/ahabp_pkg.egg-info/requires.txt
+[9.713s] writing top-level names to ../../build/ahabp_pkg/ahabp_pkg.egg-info/top_level.txt
+[9.725s] reading manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[9.727s] adding license file 'LICENSE'
+[9.731s] writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[9.736s] running build
+[9.737s] running build_py
+[9.738s] running install
+[9.739s] running install_lib
+[9.744s] running install_data
+[9.745s] running install_egg_info
+[9.755s] removing '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[9.757s] Copying ../../build/ahabp_pkg/ahabp_pkg.egg-info to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info
+[9.773s] running install_scripts
+[9.899s] Installing ahabp_node script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+[9.901s] writing list of installed files to '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log'
+[10.131s] Invoked command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg' returned '0': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data

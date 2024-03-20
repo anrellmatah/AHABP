@@ -12,7 +12,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License.
+# limitations under the License.-b  
 
 __author__ = "Anyell Mata"
 __contact__ = "anyellmata@gmail.com"
@@ -35,32 +35,32 @@ def generate_launch_description():
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
-        Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
-            executable='visualizer',
-            name='visualizer'
+#        Node(
+#            package='px4_offboard',
+#            namespace='px4_offboard',
+#            executable='visualizer',
+#            name='visualizer'
+#        ),
+        Node( # v4l2 node - home/ahabp_v2_ws/src/v4l2_camera/src
+            package='v4l2_camera',
+            namespace='v4l2_camera',
+            executable='v4l2_camera_node',  #.cpp
+            name='v4l2_camera_node',
+            prefix='gnome-terminal --', # This will launch the node in a new terminal.
         ),
         Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
-            executable='processes',
-            name='processes',
-            prefix='gnome-terminal --'
-        ),
-        Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
-            executable='control',
-            name='control',
+            package='px4_ros_com',
+            namespace='px4_ros_com',
+            executable='vehicle_gps_position_listener',
+            name='vehicle_gps_position_listener',
             prefix='gnome-terminal --',
         ),
-        Node(   # MicroXRCE Agent
-            package='Micro-XRCE-DDS-Agent',
-            namespace='Micro-XRCE-DDS-Agent',
-            executable='velocity_control',
-            name='velocity'
-        ),
+#        Node(   # MicroXRCE Agent
+#            package='Micro-XRCE-DDS-Agent',
+#            namespace='Micro-XRCE-DDS-Agent',
+#            executable='velocity_control',
+#            name='velocity'
+#        ),
     ])
 
 
