@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.-b  
 
+# This launch file will run nodes: MicroXRCEAgent, v4l2, PX4-ROS comms, Scott's OpenCV code,
+# and AHABP node.
+
 __author__ = "Anyell Mata"
 __contact__ = "anyellmata@gmail.com"
 
