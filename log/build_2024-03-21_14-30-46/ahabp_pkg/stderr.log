@@ -1,0 +1,5 @@
+  File "/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/ahabp_node.py", line 12
+    uxrce_cmd = os.system.('MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 6')
+                          ^
+SyntaxError: invalid syntax
+

@@ -1,0 +1,30 @@
+[4.589s] Invoking command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data
+[6.266s] running egg_info
+[6.269s] writing ../../build/ahabp_pkg/ahabp_pkg.egg-info/PKG-INFO
+[6.270s] writing dependency_links to ../../build/ahabp_pkg/ahabp_pkg.egg-info/dependency_links.txt
+[6.275s] writing entry points to ../../build/ahabp_pkg/ahabp_pkg.egg-info/entry_points.txt
+[6.275s] writing requirements to ../../build/ahabp_pkg/ahabp_pkg.egg-info/requires.txt
+[6.276s] writing top-level names to ../../build/ahabp_pkg/ahabp_pkg.egg-info/top_level.txt
+[6.284s] reading manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[6.286s] adding license file 'LICENSE'
+[6.292s] writing manifest file '../../build/ahabp_pkg/ahabp_pkg.egg-info/SOURCES.txt'
+[6.293s] running build
+[6.294s] running build_py
+[6.298s] copying ahabp_pkg/ahabp_node.py -> /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+[6.304s] copying ahabp_pkg/ahabp_node_opencv.py -> /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg
+[6.311s] running install
+[6.312s] running install_lib
+[6.316s] copying /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg/ahabp_node.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+[6.317s] copying /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build/lib/ahabp_pkg/ahabp_node_opencv.py -> /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg
+[6.318s] byte-compiling /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/ahabp_node.py to ahabp_node.cpython-310.pyc
+[6.319s] byte-compiling /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg/ahabp_node_opencv.py to ahabp_node_opencv.cpython-310.pyc
+[6.323s] running install_data
+[6.324s] running install_egg_info
+[6.336s] removing '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[6.337s] Copying ../../build/ahabp_pkg/ahabp_pkg.egg-info to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info
+[6.352s] running install_scripts
+[6.480s] Installing ahabp_node script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+[6.482s] Installing ahabp_node_opencv script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+[6.484s] Installing ahabp_node_tracking script to /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg
+[6.487s] writing list of installed files to '/home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log'
+[6.703s] Invoked command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg' returned '0': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data

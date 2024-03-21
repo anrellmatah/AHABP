@@ -2,10 +2,14 @@ import cv2 as cv
 import time
 import datetime
 
-print('Hello from ahabp_node_opencv.py')
+print('####Hello from ahabp_node_opencv.py')
+print("began at", datetime.datetime.now())
 
 # camera servo can only go between 0 and 130 degrees
 angle = 80
+
+# Folder to store images within workspace
+path = '/home/ahabp_v2_ws/Images'
 
 capture = cv.VideoCapture(0)
 
@@ -21,7 +25,7 @@ i = 0
 while True:
     istrue, frame = capture.read()
     date = datetime.datetime.now()
-    #gray = cv.rotate(frame, cv.ROTATE_180)
+    #gray = cv.rotate(frame, cv.ROTATE_180) # If image is upside down, uncomment
     #frame = cv.rotate(frame, cv.ROTATE_180)
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     thresholding, thresh = cv.threshold(gray, minimum, 255, cv.THRESH_BINARY)
@@ -38,13 +42,14 @@ while True:
     vx = targx - cx
     vy = targy - cy
 
-    cv.putText(frame, "target", (targx - 35, targy + 35), cv.FONT_HERSHEY_SIMPLEX, 2, (100, 255, 100), 2)
-    cv.circle(frame, [targx, targy], 25, (255, 255, 32), 2)
-    cv.arrowedLine(frame, [cx, cy], [targx, targy], (255, 255, 0), 2) # center >> target
+    # place vector arrow and label
+    cv.putText(frame, "target", (targx - 45, targy + 45), cv.FONT_HERSHEY_SIMPLEX, 1, (25, 25, 255), 2)
+    cv.circle(frame, [targx, targy], 25, (25, 25, 255), 2)
+    cv.arrowedLine(frame, [cx, cy], [targx, targy], (25, 25, 255), 2) # center >> target
     
     ### Output screens ###
-    #cv.imshow('Output', thresh)
-    #cv.imshow('Camera', frame)
+    cv.imshow('Output', thresh)
+    cv.imshow('Camera', frame)
     
     if (vy/10) > 0:
         if angle >= 5:
@@ -61,8 +66,8 @@ while True:
         break
 
     if i >= 900:
-        cv.imwrite("thresh_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg", thresh)
-        cv.imwrite("frame_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg", frame)
+        cv.imwrite(os.path.join(path, "thresh_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresh)
+        cv.imwrite(os.path.join(path, "frame_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), frame)
         print(f"Saved picture {picture} at {date}")
         i = 0
         picture += 1

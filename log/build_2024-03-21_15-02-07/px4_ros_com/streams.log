@@ -1,0 +1,70 @@
+[0.076s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[0.450s] [ 16%] Built target frame_transforms
+[0.473s] [ 33%] Built target vehicle_gps_position_listener
+[0.484s] [ 50%] Built target sensor_combined_listener
+[0.601s] [ 66%] Built target debug_vect_advertiser
+[0.732s] [ 83%] Built target offboard_control
+[0.743s] [100%] Built target offboard_control_srv
+[0.778s] [100%] Built target ament_cmake_python_copy_px4_ros_com
+[2.410s] running egg_info
+[2.413s] writing px4_ros_com.egg-info/PKG-INFO
+[2.415s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[2.416s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[2.427s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[2.429s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[2.631s] [100%] Built target ament_cmake_python_build_px4_ros_com_egg
+[2.695s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[3.087s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com
+[3.139s] -- Install configuration: ""
+[3.142s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[3.145s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[3.148s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[3.151s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[3.154s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[3.155s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[3.156s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[3.157s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com
+[3.158s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[3.158s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/libframe_transforms.so
+[3.162s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch
+[3.163s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[3.164s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[3.164s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test
+[3.165s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[3.166s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[3.170s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[3.171s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[3.171s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[3.172s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[3.173s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info
+[3.173s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[3.174s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[3.175s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[3.176s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[3.176s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com
+[3.177s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[3.178s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[3.461s] Listing '/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[3.503s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[3.504s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[3.505s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[3.505s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[3.506s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[3.507s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[3.507s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[3.508s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[3.508s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[3.509s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[3.514s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[3.514s] -- Installing: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv
+[3.515s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[3.515s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[3.516s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[3.517s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.517s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[3.518s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.519s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[3.530s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[3.534s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[3.537s] -- Up-to-date: /home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.xml
+[3.540s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com

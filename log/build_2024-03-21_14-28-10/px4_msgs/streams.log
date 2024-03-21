@@ -1,0 +1,41 @@
+[0.217s] Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_msgs -- -j4 -l4
+[9.931s] [  0%] Built target ament_cmake_python_symlink_px4_msgs
+[10.240s] [  0%] Built target px4_msgs__cpp
+[11.113s] [ 12%] Built target px4_msgs__rosidl_generator_c
+[11.819s] [ 24%] Built target px4_msgs__rosidl_typesupport_cpp
+[12.212s] [ 36%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp
+[12.842s] [ 49%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[13.639s] [ 62%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[13.714s] [ 86%] Built target px4_msgs__rosidl_typesupport_fastrtps_c
+[13.724s] [ 88%] Built target px4_msgs__rosidl_typesupport_c
+[14.010s] [ 88%] Built target px4_msgs
+[14.363s] [ 88%] Built target px4_msgs__py
+[15.583s] running egg_info
+[15.601s] writing px4_msgs.egg-info/PKG-INFO
+[15.610s] writing dependency_links to px4_msgs.egg-info/dependency_links.txt
+[15.612s] writing top-level names to px4_msgs.egg-info/top_level.txt
+[15.715s] reading manifest file 'px4_msgs.egg-info/SOURCES.txt'
+[15.741s] writing manifest file 'px4_msgs.egg-info/SOURCES.txt'
+[15.862s] [100%] Built target px4_msgs__rosidl_generator_py
+[16.282s] [100%] Built target ament_cmake_python_build_px4_msgs_egg
+[16.347s] [100%] Built target px4_msgs__rosidl_typesupport_c__pyext
+[16.366s] [100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[16.367s] [100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext
+[16.510s] Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_msgs -- -j4 -l4
+[58.555s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 110, in build
+    if await has_target(args.build_base, 'install'):
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 57, in has_target
+    return target in await get_makefile_targets(path)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 77, in get_makefile_targets
+    output = await check_output([
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/cmake', '--build', '/home/anyell/ahabp_v2_ws/build/px4_msgs', '--target', 'help'] to pass: gmake: *** [Makefile:45799: help] Segmentation fault (core dumped)
+

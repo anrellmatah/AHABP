@@ -41,7 +41,7 @@ import cv2 as cv # Scott
 from datetime import datetime, timezone # Dr.Das
 import math # Dr.Das
 
-print('Hello from ahabp_dev_buffer_file.')
+print('Hello from ahabp_dev_buffer_file. This code does nothing; its just a placeholder file.')
 
 def generate_launch_description():
    print('Here at launch description.')
@@ -138,3 +138,5 @@ def main(args=None): #First the rclpy library is initialized, then the node is c
 
 if __name__ == '__main__':
    main()
+
+# Hello from AM-Laptop
