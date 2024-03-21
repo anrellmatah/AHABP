@@ -1,0 +1,11 @@
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include):
+  include could not find requested file:
+
+    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_symlink_install-extras.cmake
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:20 (find_package)
+
+[0m
+gmake: *** [Makefile:403: cmake_check_build_system] Error 1

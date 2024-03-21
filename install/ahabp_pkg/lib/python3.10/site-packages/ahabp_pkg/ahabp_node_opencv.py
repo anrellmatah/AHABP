@@ -1,5 +1,6 @@
 import cv2 as cv
 import time
+import datetime
 
 print('Hello from ahabp_node_opencv.py')
 
@@ -19,7 +20,7 @@ picture = 1
 i = 0
 while True:
     istrue, frame = capture.read()
-    
+    date = datetime.datetime.now()
     #gray = cv.rotate(frame, cv.ROTATE_180)
     #frame = cv.rotate(frame, cv.ROTATE_180)
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -49,19 +50,20 @@ while True:
         if angle >= 5:
             angle -= 1
         #servo.ChangeDutyCycle(2 + (angle/18)) # This is where the actuator stuff goes
-        print(vy/10, "pitch DOWN", angle)
+        #print(vy/10, "pitch DOWN", angle)
     elif (vy/10) < 0:
         if angle <= 95:
             angle += 1
         #servo.ChangeDutyCycle(2 + (angle/18))
-        print(vy/10, "pitch UP", angle)
+        #print(vy/10, "pitch UP", angle)
     
     if cv.waitKey(20) & 0xFF==ord('d'):
         break
 
     if i >= 900:
-        cv.imwrite("thresh_" + str(picture) + ".jpg", thresh)
-        cv.imwrite("frame_" + str(picture) + ".jpg", frame)
+        cv.imwrite("thresh_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg", thresh)
+        cv.imwrite("frame_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg", frame)
+        print(f"Saved picture {picture} at {date}")
         i = 0
         picture += 1
     

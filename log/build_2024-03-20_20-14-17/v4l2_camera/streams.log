@@ -1,0 +1,40 @@
+[2.400s] Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
+[2.631s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.095s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include):
+[4.097s]   include could not find requested file:
+[4.098s] 
+[4.098s]     /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_symlink_install-extras.cmake
+[4.099s] Call Stack (most recent call first):
+[4.100s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[4.100s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[4.101s]   CMakeLists.txt:20 (find_package)
+[4.118s] 
+[4.119s] [0m
+[4.194s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[4.249s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[4.676s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.699s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.759s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.858s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.138s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.404s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.413s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[6.699s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.466s] -- Found rclcpp_components: 16.0.8 (/opt/ros/humble/share/rclcpp_components/cmake)
+[7.753s] -- Found camera_info_manager: 3.1.8 (/opt/ros/humble/share/camera_info_manager/cmake)
+[8.501s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[8.556s] -- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+[8.829s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.237s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.238s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/anyell/ahabp_v2_ws/src/v4l2_camera/include>
+[9.239s] -- Configured cppcheck exclude dirs and/or files: 
+[9.276s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[9.278s] -- Configured cpplint exclude dirs and/or files: 
+[9.292s] -- Added test 'lint_cmake' to check CMake code style
+[9.333s] -- Added test 'uncrustify' to check C / C++ code style
+[9.333s] -- Configured uncrustify additional arguments: 
+[9.339s] -- Added test 'xmllint' to check XML markup files
+[9.353s] -- Configuring incomplete, errors occurred!
+[9.353s] See also "/home/anyell/ahabp_v2_ws/build/v4l2_camera/CMakeFiles/CMakeOutput.log".
+[9.393s] gmake: *** [Makefile:403: cmake_check_build_system] Error 1
+[9.399s] Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
