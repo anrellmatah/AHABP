@@ -9,7 +9,7 @@ print("began at", datetime.datetime.now())
 angle = 80
 
 # Folder to store images within workspace
-path = '/home/ahabp_v2_ws/Images'
+path = '/home/anyell/ahabp_v2_ws/Images'
 
 capture = cv.VideoCapture(0)
 

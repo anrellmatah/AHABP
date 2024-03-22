@@ -10,6 +10,10 @@
 <!--Start edit-->
   <depend>px4_msgs</depend>
   <exec_depend>ros2launch</exec_depend>
+  <exec_depend>Micro-XRCE-DDS-Agent</exec_depend>
+  <exec_depend>px4_ros_com</exec_depend>
+  <exec_depend>py_pubsub</exec_depend> 
+  <exec_depend>v4l2_camera</exec_depend>
 <!--end edit-->
 
   <test_depend>ament_copyright</test_depend>

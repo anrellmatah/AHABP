@@ -36,80 +36,80 @@ print('This .launch.py file is only meant to launch the nodes after reboot.')
 
 def generate_launch_description():
     package_dir = get_package_share_directory('ahabp_pkg')
-    # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
-#    microXRCE_Agent_node = ExecuteProcess(
-#        cmd=[['MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 6']],
-#        shell=True
-#    )
-    sensor_combined_listener_node = Node(
+
+    microxrce_agent=ExecuteProcess(
+        cmd=[['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5']],
+        shell=True
+    ),
+    veh_gps_pos=ExecuteProcess(
+        cmd=[['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps']],
+        shell=True
+    ),
+ 
+# Put ahabp_node python files after this to keep organized.
+    ahabp_pkg_node=Node(
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node',
+        name='ahabp_node',
+        prefix='gnome-terminal --'  # This will launch the node in a new terminal.
+    ),
+    ahabp_pkg_opencv_node=Node(
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_opencv',
+        name='ahabp_node_opencv',
+        prefix='gnome-terminal --'
+    ),
+    ahabp_pkg_tracking_node=Node(
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_tracking',
+        name='ahabp_node_tracking',
+        prefix='gnome-terminal --'
+    ),
+    vehicle_gps_position_listener_node=Node(
+        package='px4_ros_com',
+        namespace='px4_ros_com',
+        executable='vehicle_gps_position_listener',
+        name='vehicle_gps_position_listener',
+        prefix='gnome-terminal --'
+    ),
+    offboard_control_node=Node(
+        package='px4_ros_com',
+        namespace='px4_ros_com',
+        executable='offboard_control',
+        name='offboard_control',
+        prefix='gnome-terminal --'
+    ),
+    sensor_combined_listener_node=Node(
         package='px4_ros_com',
         executable='sensor_combined_listener',
         output='screen',
-        shell=True,
+        shell=True
     )
-#    v4l2_node = ExecuteProcess(
-#        cmd=[['ros2 run v4l2_camera v4l2_camera_node -ros-args -p image_size:="[640,480]"']],
-#        shell=True
-#    )
-    print('Getting into launch description.')
-    return LaunchDescription([
-### Put ahabp_node python files after this to keep organized.
-        Node(
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node',
-            name='ahabp_node',
-            prefix='gnome-terminal --',
-        ),
-        Node(
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node_opencv',
-            name='ahabp_node_opencv',
-            prefix='gnome-terminal --',
-        ),
-        Node(
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node_tracking',
-            name='ahabp_node_tracking',
-            prefix='gnome-terminal --',
-        ),
-        # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
-#        Node(
-#            package='px4_offboard',
-#            namespace='px4_offboard',
-#            executable='visualizer',
-#            name='visualizer'
-#        ),
+    
+
+    # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
 #        Node( # v4l2 node - home/ahabp_v2_ws/src/v4l2_camera/src
 #            package='v4l2_camera',
 #            namespace='v4l2_camera',
 #            executable='v4l2_camera_node',  #.cpp
 #            name='v4l2_camera_node',
-#            prefix='gnome-terminal --', # This will launch the node in a new terminal.
+#            prefix='gnome-terminal --',
 #        ),
-        Node(
-            package='px4_ros_com',
-            namespace='px4_ros_com',
-            executable='vehicle_gps_position_listener',
-            name='vehicle_gps_position_listener',
-            prefix='gnome-terminal --',
-        ),
+    # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
 
-#        Node(   # MicroXRCE Agent
-#            package='Micro-XRCE-DDS-Agent',
-#            namespace='Micro-XRCE-DDS-Agent',
-#            executable='velocity_control',
-#            name='velocity'
-#        ),
-        Node(
-            package='px4_ros_com',
-            namespace='px4_ros_com',
-            executable='offboard_control',
-            name='offboard_control',
-            prefix='gnome-terminal --',
-        ),
+    print('Getting into launch description.')
+    return LaunchDescription([ # Return the LaunchDescription object, which now contains all nodes to launch.
+	    #microxrce_agent,
+	    #veh_gps_pos,
+	    ahabp_pkg_node,
+	    ahabp_pkg_opencv_node,
+	    ahabp_pkg_tracking_node,
+	    vehicle_gps_position_listener_node,
+	    offboard_control_node,
+	    sensor_combined_listener_node
     ])
 
 

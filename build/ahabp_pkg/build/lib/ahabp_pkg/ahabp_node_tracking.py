@@ -29,21 +29,25 @@ class PodAttitudeControl(Node):
         super().__init__("att_ctrller")
         self.br = CvBridge()
 ##        self.actuator_control_pub = self.create_publisher(AttitudeTarget, '/mavros/setpoint_raw/attitude', 10)
+        
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
             history=HistoryPolicy.KEEP_LAST,
             depth=10  # Adjust the depth as needed
         )
+        
         self.subscription = self.create_subscription(
             Imu,
             '/mavros/imu/data',
             self.imu_callback,
             qos_profile_sensor_data)
+        
         self.publisher = self.create_publisher(
             MountControl,
             '/mavros/mount_control/command',
             qos_profile)
+       
         self.current_orientation = None  # Field to store current orientation
         self.attitude_setpoint = AttitudeTarget()
         self.attitude_setpoint.type_mask = 7
