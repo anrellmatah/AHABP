@@ -46,50 +46,6 @@ def generate_launch_description():
         shell=True
     ),
  
-# Put ahabp_node python files after this to keep organized.
-    ahabp_pkg_node=Node(
-        package='ahabp_pkg',
-        namespace='ahabp_pkg',
-        executable='ahabp_node',
-        name='ahabp_node',
-        prefix='gnome-terminal --'  # This will launch the node in a new terminal.
-    ),
-    ahabp_pkg_opencv_node=Node(
-        package='ahabp_pkg',
-        namespace='ahabp_pkg',
-        executable='ahabp_node_opencv',
-        name='ahabp_node_opencv',
-        prefix='gnome-terminal --'
-    ),
-    ahabp_pkg_tracking_node=Node(
-        package='ahabp_pkg',
-        namespace='ahabp_pkg',
-        executable='ahabp_node_tracking',
-        name='ahabp_node_tracking',
-        prefix='gnome-terminal --'
-    ),
-    vehicle_gps_position_listener_node=Node(
-        package='px4_ros_com',
-        namespace='px4_ros_com',
-        executable='vehicle_gps_position_listener',
-        name='vehicle_gps_position_listener',
-        prefix='gnome-terminal --'
-    ),
-    offboard_control_node=Node(
-        package='px4_ros_com',
-        namespace='px4_ros_com',
-        executable='offboard_control',
-        name='offboard_control',
-        prefix='gnome-terminal --'
-    ),
-    sensor_combined_listener_node=Node(
-        package='px4_ros_com',
-        executable='sensor_combined_listener',
-        output='screen',
-        shell=True
-    )
-    
-
     # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
 #        Node( # v4l2 node - home/ahabp_v2_ws/src/v4l2_camera/src
 #            package='v4l2_camera',
@@ -102,14 +58,55 @@ def generate_launch_description():
 
     print('Getting into launch description.')
     return LaunchDescription([ # Return the LaunchDescription object, which now contains all nodes to launch.
-	    #microxrce_agent,
+# Put ahabp_node python files after this to keep organized.
+        Node(
+            package='ahabp_pkg',
+            namespace='ahabp_pkg',
+            executable='ahabp_node',
+            name='ahabp_node',
+            prefix='gnome-terminal --',  # This will launch the node in a new terminal.
+        ),
+        Node(
+            package='ahabp_pkg',
+            namespace='ahabp_pkg',
+            executable='ahabp_node_opencv',
+            name='ahabp_node_opencv',
+            prefix='gnome-terminal --',
+        ),
+        Node(
+            package='ahabp_pkg',
+            namespace='ahabp_pkg',
+            executable='ahabp_node_tracking',
+            name='ahabp_node_tracking',
+            prefix='gnome-terminal --',
+        ),
+        Node(
+            package='px4_ros_com',
+            namespace='px4_ros_com',
+            executable='vehicle_gps_position_listener',
+            name='vehicle_gps_position_listener',
+            prefix='gnome-terminal --',
+        ),
+        Node(
+            package='px4_ros_com',
+            namespace='px4_ros_com',
+            executable='offboard_control',
+            name='offboard_control',
+            prefix='gnome-terminal --',
+        ),
+        Node(
+            package='px4_ros_com',
+            executable='sensor_combined_listener',
+            output='screen',
+            shell=True,
+        )
+        ])
+
+        #microxrce_agent,
 	    #veh_gps_pos,
-	    ahabp_pkg_node,
-	    ahabp_pkg_opencv_node,
-	    ahabp_pkg_tracking_node,
-	    vehicle_gps_position_listener_node,
-	    offboard_control_node,
-	    sensor_combined_listener_node
-    ])
-
-
+	    #ahabp_pkg_node,
+	    #ahabp_pkg_opencv_node,
+	    #ahabp_pkg_tracking_node,
+	    #vehicle_gps_position_listener_node,
+	    #offboard_control_node,
+	    #sensor_combined_listener_node

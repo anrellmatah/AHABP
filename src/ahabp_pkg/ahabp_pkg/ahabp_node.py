@@ -10,9 +10,9 @@ print('####Hi from ahabp_node.py')
 
 def main():
     print('befor uxrce_cmd')
-#    uxrce_cmd = os.system('MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 5')
-#    uxrce_cmd = subprocess.Popen('MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 5')
-    #uxrce_cmd = subprocess.call('MicroXRCEAgent serial -b 57600 -D /dev/ttyAMA0 -v 5')
+#    uxrce_cmd = os.system('MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5')
+#    uxrce_cmd = subprocess.Popen('MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5')
+    #uxrce_cmd = subprocess.call('MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5')
     print('after uxrce_cmd')
 
     print('before gps_msg_cmd')

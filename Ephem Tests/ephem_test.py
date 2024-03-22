@@ -41,38 +41,29 @@ def movement_needed(payload_heading, azimuth_angle, zenith_angle):
 if __name__ == "__main__":
 
     # Tempe, AZ lat/long
-    # actual location needs to be streamed from the GPS
     #latitude = 33.427204
     #longitude = -111.939896
 
-    # Austin, TX lat/long
-    latitude = 30.266666
-    longitude = -97.733330
 
-    # actual payload heading in degrees
-    payload_heading = 88
-
-    # actual camera pitch in degrees
     # 0 is horizontal
     # +76 is maximum
     # -28 is minimum
-    camera_angle = 0
+    
+    
+    while True:
+        ### TO DO ###
+        # get real time GPS lat/long here
+        # get real time compass heading here
+        # get real time servo pitch angle here
+        latitude = 30.266666
+        longitude = -97.733330
+        payload_heading = 88   # in degrees
+        camera_angle = 0  # in degrees
 
-    # date format: '2024-03-12 12:00:00'
-    date = datetime.datetime(2024, 4, 8, 13, 35, 1, 130320, tzinfo=datetime.timezone.utc)
-    zenith_angle, azimuth_angle, compass_direction = sun_angle_and_direction(latitude, longitude, date)
-    yaw, pitch = movement_needed(payload_heading, azimuth_angle, zenith_angle)
+        date = datetime.datetime.now()
+        zenith_angle, azimuth_angle, compass_direction = sun_angle_and_direction(latitude, longitude, date)
+        yaw, pitch = movement_needed(payload_heading, azimuth_angle, zenith_angle)
 
-    # print out the given information
-    # not to be used in actual operation
-    print("Date", date)
-    print("Latitude:", latitude)
-    print("Longitude:", longitude)
-    print("Sun's zenith angle:", round(zenith_angle, 2), "degrees")
-    print("Sun's azimuth angle:", round(azimuth_angle, 2), "degrees")
-    print("Sun's compass direction:", compass_direction)
-    print()
-    print("Payload's heading", payload_heading, "degrees")
-    print("Camera's angle", camera_angle, "degrees")
-    print("Yaw needed", yaw, "degrees")
-    print("Pitch needed", pitch, "degrees")
+        # print out the given information    
+        #print("GPS Lat/Long:", latitude, " ", longitude)
+        print(f"Zenith: {round(zenith_angle, 2)}\tAzimuth: {round(azimuth_angle, 2)}\tHeading: {payload_heading}\tYaw: {yaw}\tCamera: {camera_angle}\tPitch: {pitch}", end="\r")
