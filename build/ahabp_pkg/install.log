@@ -23,5 +23,8 @@
 /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info/zip-safe
 /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages/ahabp_pkg-0.0.0-py3.10.egg-info/PKG-INFO
 /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node
+/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node_ephem
+/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node_offboard
 /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node_opencv
+/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node_robot_upstart
 /home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/ahabp_pkg/ahabp_node_tracking

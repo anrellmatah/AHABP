@@ -45,20 +45,13 @@ def generate_launch_description():
         cmd=[['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps']],
         shell=True
     ),
- 
-    # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
-#        Node( # v4l2 node - home/ahabp_v2_ws/src/v4l2_camera/src
-#            package='v4l2_camera',
-#            namespace='v4l2_camera',
-#            executable='v4l2_camera_node',  #.cpp
-#            name='v4l2_camera_node',
-#            prefix='gnome-terminal --',
-#        ),
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
 
     print('Getting into launch description.')
     return LaunchDescription([ # Return the LaunchDescription object, which now contains all nodes to launch.
 # Put ahabp_node python files after this to keep organized.
+        microxrce_agent,
+	    veh_gps_pos,
         Node(
             package='ahabp_pkg',
             namespace='ahabp_pkg',
@@ -70,6 +63,7 @@ def generate_launch_description():
             package='ahabp_pkg',
             namespace='ahabp_pkg',
             executable='ahabp_node_opencv',
+            output='screen',
             name='ahabp_node_opencv',
             prefix='gnome-terminal --',
         ),

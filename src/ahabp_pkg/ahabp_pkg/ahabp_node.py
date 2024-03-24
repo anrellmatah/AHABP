@@ -21,27 +21,13 @@ def main():
     #gps_msg_cmd = subprocess.call('ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps')
     print('after gps_msg_cmd')
 
-class OffboardControl(Node):
-    """Node for controlling a vehicle in offboard mode."""
-
-    def __init__(self) -> None:
-        super().__init__('offboard_control_takeoff_and_land')
-
-        # Configure QoS profile for publishing and subscribing
-        qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            durability=DurabilityPolicy.TRANSIENT_LOCAL,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=1
-        )
-
-def main(args=None) -> None:
-    print('Starting offboard control node...')
-    rclpy.init(args=args)
-    offboard_control = OffboardControl()
-    rclpy.spin(offboard_control)
-    offboard_control.destroy_node()
-    rclpy.shutdown()
+# def main(args=None) -> None:
+#     print('Starting offboard control node...')
+#     #rclpy.init(args=args)
+#     #offboard_control = OffboardControl()
+#     #rclpy.spin(offboard_control)
+#     #offboard_control.destroy_node()
+#     rclpy.shutdown()
 
 if __name__ == '__main__':
     try:

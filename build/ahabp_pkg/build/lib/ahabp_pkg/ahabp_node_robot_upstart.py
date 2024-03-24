@@ -5,16 +5,16 @@ from std_msgs.msg import Int64
 
 print('####Hi from ahabp_node_robot_upstart.py')
 
-if __name__ == "__main__":
-    rospy.init_node("counter_publisher")
+# if __name__ == "__main__":
+#     rospy.init_node("counter_publisher")
 
-    rate = rospy.get_param("/counter_publisher_rate")
-    counter = 0
-    pub = rospy.Publisher("counter", Int64, queue_size=1)
-    rate = rospy.Rate(rate)
-    rospy.loginfo("Starting publishing...")
+#     rate = rospy.get_param("/counter_publisher_rate")
+#     counter = 0
+#     pub = rospy.Publisher("counter", Int64, queue_size=1)
+#     rate = rospy.Rate(rate)
+#     rospy.loginfo("Starting publishing...")
 
-    while not rospy.is_shutdown():
-        pub.publish(counter)
-        counter += 1
-        rate.sleep()
+#     while not rospy.is_shutdown():
+#         pub.publish(counter)
+#         counter += 1
+#         rate.sleep()

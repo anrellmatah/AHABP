@@ -30,7 +30,10 @@ setup(
         'console_scripts': [
             'ahabp_node = ahabp_pkg.ahabp_node:main',
             'ahabp_node_opencv = ahabp_pkg.ahabp_node_opencv:main',
-            'ahabp_node_tracking = ahabp_pkg.ahabp_node_tracking:main'
+            'ahabp_node_tracking = ahabp_pkg.ahabp_node_tracking:main',
+            'ahabp_node_offboard = ahabp_pkg.ahabp_node_offboard:main',
+            'ahabp_node_robot_upstart = ahabp_pkg.ahabp_node_robot_upstart:main',
+            'ahabp_node_ephem = ahabp_pkg.ahabp_node_ephem:main'
             #add more console scripts
             #[executable/node] = [package].[executable/node]:main
         ],
