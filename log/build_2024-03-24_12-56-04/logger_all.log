@@ -1,0 +1,581 @@
+[1.258s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.259s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa8478bb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa85b1780>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa85b1780>>)
+[3.454s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.455s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/anyell/ahabp_v2_ws'
+[3.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.459s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.461s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.463s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.463s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.566s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.566s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.566s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.567s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.567s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.568s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['ignore', 'ignore_ament_install']
+[3.569s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'ignore'
+[3.569s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'ignore_ament_install'
+[3.570s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['colcon_pkg']
+[3.570s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'colcon_pkg'
+[3.571s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['colcon_meta']
+[3.571s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'colcon_meta'
+[3.571s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['ros']
+[3.572s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'ros'
+[3.573s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['cmake', 'python']
+[3.573s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'cmake'
+[3.574s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'python'
+[3.574s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extensions ['python_setup_py']
+[3.574s] Level 1:colcon.colcon_core.package_identification:_identify(Ephem Tests) by extension 'python_setup_py'
+[3.575s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['ignore', 'ignore_ament_install']
+[3.576s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'ignore'
+[3.577s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'ignore_ament_install'
+[3.577s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['colcon_pkg']
+[3.578s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'colcon_pkg'
+[3.578s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['colcon_meta']
+[3.578s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'colcon_meta'
+[3.579s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['ros']
+[3.579s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'ros'
+[3.580s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['cmake', 'python']
+[3.580s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'cmake'
+[3.581s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'python'
+[3.581s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extensions ['python_setup_py']
+[3.582s] Level 1:colcon.colcon_core.package_identification:_identify(IMU Test Rig) by extension 'python_setup_py'
+[3.582s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['ignore', 'ignore_ament_install']
+[3.583s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ignore'
+[3.583s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ignore_ament_install'
+[3.584s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['colcon_pkg']
+[3.584s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'colcon_pkg'
+[3.585s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['colcon_meta']
+[3.586s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'colcon_meta'
+[3.586s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['ros']
+[3.586s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ros'
+[3.587s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['cmake', 'python']
+[3.588s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'cmake'
+[3.588s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'python'
+[3.589s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['python_setup_py']
+[3.589s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'python_setup_py'
+[3.590s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['ignore', 'ignore_ament_install']
+[3.591s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'ignore'
+[3.592s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'ignore_ament_install'
+[3.593s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['colcon_pkg']
+[3.595s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'colcon_pkg'
+[3.596s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['colcon_meta']
+[3.596s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'colcon_meta'
+[3.597s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['ros']
+[3.597s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'ros'
+[3.598s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['cmake', 'python']
+[3.598s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'cmake'
+[3.599s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'python'
+[3.599s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extensions ['python_setup_py']
+[3.600s] Level 1:colcon.colcon_core.package_identification:_identify(OpenCV Tests) by extension 'python_setup_py'
+[3.600s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['ignore', 'ignore_ament_install']
+[3.601s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'ignore'
+[3.601s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'ignore_ament_install'
+[3.602s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['colcon_pkg']
+[3.603s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'colcon_pkg'
+[3.603s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['colcon_meta']
+[3.604s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'colcon_meta'
+[3.605s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['ros']
+[3.606s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'ros'
+[3.607s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['cmake', 'python']
+[3.607s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'cmake'
+[3.608s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'python'
+[3.609s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extensions ['python_setup_py']
+[3.610s] Level 1:colcon.colcon_core.package_identification:_identify(Other) by extension 'python_setup_py'
+[3.611s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['ignore', 'ignore_ament_install']
+[3.612s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'ignore'
+[3.613s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'ignore_ament_install'
+[3.613s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['colcon_pkg']
+[3.614s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'colcon_pkg'
+[3.615s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['colcon_meta']
+[3.615s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'colcon_meta'
+[3.616s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['ros']
+[3.616s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'ros'
+[3.617s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['cmake', 'python']
+[3.617s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'cmake'
+[3.617s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'python'
+[3.618s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extensions ['python_setup_py']
+[3.618s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig) by extension 'python_setup_py'
+[3.619s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['ignore', 'ignore_ament_install']
+[3.619s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'ignore'
+[3.620s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'ignore_ament_install'
+[3.620s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['colcon_pkg']
+[3.620s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'colcon_pkg'
+[3.621s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['colcon_meta']
+[3.621s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'colcon_meta'
+[3.621s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['ros']
+[3.622s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'ros'
+[3.622s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['cmake', 'python']
+[3.622s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'cmake'
+[3.623s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'python'
+[3.623s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extensions ['python_setup_py']
+[3.623s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Micropython) by extension 'python_setup_py'
+[3.624s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['ignore', 'ignore_ament_install']
+[3.625s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'ignore'
+[3.625s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'ignore_ament_install'
+[3.625s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['colcon_pkg']
+[3.626s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'colcon_pkg'
+[3.626s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['colcon_meta']
+[3.626s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'colcon_meta'
+[3.627s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['ros']
+[3.627s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'ros'
+[3.629s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['cmake', 'python']
+[3.629s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'cmake'
+[3.630s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'python'
+[3.630s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extensions ['python_setup_py']
+[3.631s] Level 1:colcon.colcon_core.package_identification:_identify(PWM-RPM Test Rig/Python) by extension 'python_setup_py'
+[3.633s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['ignore', 'ignore_ament_install']
+[3.634s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'ignore'
+[3.635s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'ignore_ament_install'
+[3.636s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['colcon_pkg']
+[3.636s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'colcon_pkg'
+[3.637s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['colcon_meta']
+[3.637s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'colcon_meta'
+[3.638s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['ros']
+[3.638s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'ros'
+[3.639s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['cmake', 'python']
+[3.639s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'cmake'
+[3.640s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'python'
+[3.641s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extensions ['python_setup_py']
+[3.641s] Level 1:colcon.colcon_core.package_identification:_identify(PySolar Tests) by extension 'python_setup_py'
+[3.642s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.642s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.643s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.644s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.645s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.646s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.648s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.648s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.649s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.650s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.651s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.651s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.656s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.657s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/Micro-XRCE-DDS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[3.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/Micro-XRCE-DDS-Agent) by extension 'ignore'
+[3.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/Micro-XRCE-DDS-Agent) by extension 'ignore_ament_install'
+[3.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/Micro-XRCE-DDS-Agent) by extensions ['colcon_pkg']
+[3.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/Micro-XRCE-DDS-Agent) by extension 'colcon_pkg'
+[3.672s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Setting type 'cmake' of package 'src/Micro-XRCE-DDS-Agent' from colcon.pkg
+[3.673s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Setting name 'microxrcedds_agent' of package 'src/Micro-XRCE-DDS-Agent' from colcon.pkg
+[3.673s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Micro-XRCE-DDS-Agent' with type 'cmake' and name 'microxrcedds_agent'
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extensions ['ignore', 'ignore_ament_install']
+[3.674s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extension 'ignore'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extension 'ignore_ament_install'
+[3.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extensions ['colcon_pkg']
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extension 'colcon_pkg'
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extensions ['colcon_meta']
+[3.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extension 'colcon_meta'
+[3.677s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extensions ['ros']
+[3.677s] Level 1:colcon.colcon_core.package_identification:_identify(src/ahabp_pkg) by extension 'ros'
+[3.702s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ahabp_pkg' with type 'ros.ament_python' and name 'ahabp_pkg'
+[3.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[3.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[3.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[3.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[3.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[3.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[3.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[3.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[3.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[3.713s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[3.714s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[3.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[3.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[3.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[3.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[3.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[3.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[3.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[3.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[3.734s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[3.735s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['ignore', 'ignore_ament_install']
+[3.737s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ignore'
+[3.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ignore_ament_install'
+[3.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['colcon_pkg']
+[3.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'colcon_pkg'
+[3.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['colcon_meta']
+[3.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'colcon_meta'
+[3.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['ros']
+[3.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ros'
+[3.746s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_pubsub' with type 'ros.ament_python' and name 'py_pubsub'
+[3.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extensions ['ignore', 'ignore_ament_install']
+[3.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extension 'ignore'
+[3.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extension 'ignore_ament_install'
+[3.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extensions ['colcon_pkg']
+[3.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extension 'colcon_pkg'
+[3.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extensions ['colcon_meta']
+[3.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extension 'colcon_meta'
+[3.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extensions ['ros']
+[3.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/v4l2_camera) by extension 'ros'
+[3.764s] DEBUG:colcon.colcon_core.package_identification:Package 'src/v4l2_camera' with type 'ros.ament_cmake' and name 'v4l2_camera'
+[3.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.952s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'src/Micro-XRCE-DDS-Agent' from colcon.pkg: {'name': 'microxrcedds_agent', 'type': 'cmake', 'dependencies': ['fastcdr', 'fastrtps'], 'cmake-args': ['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON']}
+[4.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.061s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/anyell/ahabp_v2_ws/install
+[4.072s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[4.082s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[4.439s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_args' from command line to 'None'
+[4.440s] Level 5:colcon.colcon_core.verb:overwrite package 'microxrcedds_agent' build argument 'cmake_args' from package metadata with '['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON']' (before: 'None')
+[4.440s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_target' from command line to 'None'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_clean_first' from command line to 'False'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_force_configure' from command line to 'False'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'ament_cmake_args' from command line to 'None'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[4.441s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.441s] DEBUG:colcon.colcon_core.verb:Building package 'microxrcedds_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/Micro-XRCE-DDS-Agent', 'symlink_install': False, 'test_result_base': None}
+[4.443s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[4.444s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[4.444s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.445s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[4.445s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[4.445s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[4.446s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[4.446s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[4.446s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.447s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/px4_msgs', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[4.449s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_args' from command line to 'None'
+[4.450s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_target' from command line to 'None'
+[4.450s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.450s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_clean_cache' from command line to 'False'
+[4.450s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_clean_first' from command line to 'False'
+[4.451s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_force_configure' from command line to 'False'
+[4.451s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'ament_cmake_args' from command line to 'None'
+[4.451s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'catkin_cmake_args' from command line to 'None'
+[4.451s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.452s] DEBUG:colcon.colcon_core.verb:Building package 'py_pubsub' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/py_pubsub', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/py_pubsub', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/py_pubsub', 'symlink_install': False, 'test_result_base': None}
+[4.454s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_args' from command line to 'None'
+[4.454s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_target' from command line to 'None'
+[4.454s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.454s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[4.455s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_clean_first' from command line to 'False'
+[4.455s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'cmake_force_configure' from command line to 'False'
+[4.455s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'ament_cmake_args' from command line to 'None'
+[4.455s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[4.455s] Level 5:colcon.colcon_core.verb:set package 'v4l2_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.455s] DEBUG:colcon.colcon_core.verb:Building package 'v4l2_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/v4l2_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/v4l2_camera', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/v4l2_camera', 'symlink_install': False, 'test_result_base': None}
+[4.457s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[4.457s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[4.457s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[4.458s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[4.459s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.459s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/px4_ros_com', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[4.461s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_args' from command line to 'None'
+[4.461s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_target' from command line to 'None'
+[4.461s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.461s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[4.462s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[4.462s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[4.462s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[4.462s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[4.462s] Level 5:colcon.colcon_core.verb:set package 'ahabp_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.462s] DEBUG:colcon.colcon_core.verb:Building package 'ahabp_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/anyell/ahabp_v2_ws/build/ahabp_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/anyell/ahabp_v2_ws/install/ahabp_pkg', 'merge_install': False, 'path': '/home/anyell/ahabp_v2_ws/src/ahabp_pkg', 'symlink_install': False, 'test_result_base': None}
+[4.463s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.468s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anyell/ahabp_v2_ws/src/px4_msgs' with build type 'ament_cmake'
+[4.470s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anyell/ahabp_v2_ws/src/px4_msgs'
+[4.493s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[4.494s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.494s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.522s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/anyell/ahabp_v2_ws/src/py_pubsub' with build type 'ament_python'
+[4.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_pubsub', 'ament_prefix_path')
+[4.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.ps1'
+[4.529s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.dsv'
+[4.532s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.sh'
+[4.538s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.538s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.565s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anyell/ahabp_v2_ws/src/v4l2_camera' with build type 'ament_cmake'
+[4.566s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anyell/ahabp_v2_ws/src/v4l2_camera'
+[4.567s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.613s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anyell/ahabp_v2_ws/src/Micro-XRCE-DDS-Agent'
+[4.615s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.615s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_msgs -- -j4 -l4
+[7.589s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/anyell/ahabp_v2_ws/src/py_pubsub'
+[7.591s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
+[7.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent': /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/microxrcedds_agent -- -j4 -l4
+[9.646s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/v4l2_camera -- -j4 -l4
+[9.683s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent' returned '0': /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/microxrcedds_agent -- -j4 -l4
+[10.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/v4l2_camera
+[10.594s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v4l2_camera)
+[10.598s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/v4l2_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/v4l2_camera
+[10.744s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera' for CMake module files
+[10.759s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera' for CMake config files
+[10.763s] Level 1:colcon.colcon_core.shell:create_environment_hook('v4l2_camera', 'cmake_prefix_path')
+[10.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.ps1'
+[10.776s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.dsv'
+[10.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.sh'
+[10.812s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib'
+[10.814s] Level 1:colcon.colcon_core.shell:create_environment_hook('v4l2_camera', 'ld_library_path_lib')
+[10.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.ps1'
+[10.843s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.dsv'
+[10.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.sh'
+[10.857s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/bin'
+[10.866s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/pkgconfig/v4l2_camera.pc'
+[10.869s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/python3.10/site-packages'
+[10.878s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/bin'
+[10.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.ps1'
+[10.913s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.dsv'
+[10.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.sh'
+[10.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.bash'
+[10.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.zsh'
+[10.976s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/colcon-core/packages/v4l2_camera)
+[11.827s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v4l2_camera)
+[11.835s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera' for CMake module files
+[11.851s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera' for CMake config files
+[11.866s] Level 1:colcon.colcon_core.shell:create_environment_hook('v4l2_camera', 'cmake_prefix_path')
+[11.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.ps1'
+[11.881s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.dsv'
+[11.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/cmake_prefix_path.sh'
+[11.899s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib'
+[11.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('v4l2_camera', 'ld_library_path_lib')
+[11.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.ps1'
+[11.921s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.dsv'
+[11.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/hook/ld_library_path_lib.sh'
+[11.931s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/bin'
+[11.932s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/pkgconfig/v4l2_camera.pc'
+[11.934s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib/python3.10/site-packages'
+[11.936s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/v4l2_camera/bin'
+[11.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.ps1'
+[11.946s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.dsv'
+[11.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.sh'
+[11.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.bash'
+[11.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/v4l2_camera/package.zsh'
+[11.966s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/v4l2_camera/share/colcon-core/packages/v4l2_camera)
+[12.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent': /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/microxrcedds_agent
+[12.923s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(microxrcedds_agent)
+[12.925s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent' for CMake module files
+[12.933s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent' for CMake config files
+[12.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'cmake_prefix_path')
+[12.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.ps1'
+[12.979s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.dsv'
+[12.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.sh'
+[13.019s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib'
+[13.019s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'ld_library_path_lib')
+[13.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.ps1'
+[13.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.dsv'
+[13.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.sh'
+[13.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/microxrcedds_agent' returned '0': /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/microxrcedds_agent
+[13.048s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin'
+[13.049s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'path')
+[13.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.ps1'
+[13.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.dsv'
+[13.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.sh'
+[13.088s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib/pkgconfig/microxrcedds_agent.pc'
+[13.090s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib/python3.10/site-packages'
+[13.092s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/bin'
+[13.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'pythonscriptspath')
+[13.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.ps1'
+[13.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.dsv'
+[13.112s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.sh'
+[13.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/package.ps1'
+[13.134s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/package.dsv'
+[13.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/package.sh'
+[13.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/package.bash'
+[13.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/microxrcedds_agent/package.zsh'
+[13.163s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/share/colcon-core/packages/microxrcedds_agent)
+[14.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/src/py_pubsub': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
+[17.720s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub' for CMake module files
+[17.727s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub' for CMake config files
+[17.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/src/py_pubsub' returned '0': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
+[17.733s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib'
+[17.734s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub/bin'
+[17.735s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/pkgconfig/py_pubsub.pc'
+[17.748s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages'
+[17.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_pubsub', 'pythonpath')
+[17.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/pythonpath.ps1'
+[17.762s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/pythonpath.dsv'
+[17.774s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/hook/pythonpath.sh'
+[17.780s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/py_pubsub/bin'
+[17.781s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_pubsub)
+[17.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/package.ps1'
+[17.789s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/package.dsv'
+[17.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/package.sh'
+[17.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/package.bash'
+[17.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/py_pubsub/share/py_pubsub/package.zsh'
+[17.802s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/py_pubsub/share/colcon-core/packages/py_pubsub)
+[17.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_msgs -- -j4 -l4
+[59.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_msgs
+[63.595s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[63.597s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs' for CMake module files
+[63.621s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs' for CMake config files
+[63.653s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[63.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[63.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[63.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[63.677s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib'
+[63.678s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[63.679s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[63.688s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[63.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[63.700s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/bin'
+[63.701s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[63.703s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib/python3.10/site-packages'
+[63.705s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/bin'
+[63.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[63.713s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[63.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[63.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[63.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[63.737s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[64.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_msgs
+[106.286s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[106.288s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs' for CMake module files
+[106.293s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs' for CMake config files
+[106.300s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[106.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[106.304s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[106.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[106.311s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib'
+[106.312s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[106.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[106.316s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[106.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[106.323s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/bin'
+[106.324s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[106.325s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/lib/python3.10/site-packages'
+[106.327s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_msgs/bin'
+[106.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[106.332s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[106.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[106.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[106.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[106.343s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[106.346s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/anyell/ahabp_v2_ws/src/px4_ros_com' with build type 'ament_cmake'
+[106.346s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/anyell/ahabp_v2_ws/src/px4_ros_com'
+[106.348s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[106.348s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[106.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[109.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/px4_ros_com -- -j4 -l4
+[110.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com
+[110.534s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[110.535s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com' for CMake module files
+[110.540s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com' for CMake config files
+[110.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[110.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[110.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent:/home/anyell/ahabp_v2_ws/install/py_pubsub:/opt/ros/humble LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/px4_ros_com
+[110.549s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[110.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[110.555s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib'
+[110.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[110.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[110.560s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[110.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[110.565s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/bin'
+[110.566s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[110.567s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[110.569s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/bin'
+[110.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[110.574s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[110.577s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[110.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[110.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[110.586s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[110.908s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[110.910s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com' for CMake module files
+[110.914s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com' for CMake config files
+[110.916s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[110.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[110.921s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[110.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[110.927s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib'
+[110.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[110.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[110.932s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[110.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[110.937s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/bin'
+[110.937s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[110.939s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[110.940s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/px4_ros_com/bin'
+[110.942s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[110.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[110.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[110.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[110.958s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[110.961s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[110.963s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg' with build type 'ament_python'
+[110.964s] Level 1:colcon.colcon_core.shell:create_environment_hook('ahabp_pkg', 'ament_prefix_path')
+[110.967s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/ament_prefix_path.ps1'
+[110.970s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/ament_prefix_path.dsv'
+[110.973s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/ament_prefix_path.sh'
+[110.976s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[110.977s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[113.222s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg'
+[113.223s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[113.224s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[115.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data
+[118.044s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg' for CMake module files
+[118.054s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg' for CMake config files
+[118.058s] Level 1:colcon.colcon_core.shell:create_environment_hook('ahabp_pkg', 'cmake_prefix_path')
+[118.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/cmake_prefix_path.ps1'
+[118.062s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/anyell/ahabp_v2_ws/src/ahabp_pkg' returned '0': AMENT_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/py_pubsub:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/px4_msgs:/opt/ros/humble CMAKE_PREFIX_PATH=/home/anyell/ahabp_v2_ws/install/px4_ros_com:/home/anyell/ahabp_v2_ws/install/v4l2_camera:/home/anyell/ahabp_v2_ws/install/px4_msgs:/home/anyell/ahabp_v2_ws/install/ahabp_pkg:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent LD_LIBRARY_PATH=/home/anyell/ahabp_v2_ws/install/px4_ros_com/lib:/home/anyell/ahabp_v2_ws/install/v4l2_camera/lib:/home/anyell/ahabp_v2_ws/install/px4_msgs/lib:/home/anyell/ahabp_v2_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/anyell/ahabp_v2_ws/build/ahabp_pkg/prefix_override:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages:/home/anyell/ahabp_v2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/anyell/ahabp_v2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ahabp_pkg build --build-base /home/anyell/ahabp_v2_ws/build/ahabp_pkg/build install --record /home/anyell/ahabp_v2_ws/build/ahabp_pkg/install.log --single-version-externally-managed install_data
+[118.069s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/cmake_prefix_path.dsv'
+[118.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/cmake_prefix_path.sh'
+[118.077s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib'
+[118.078s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/bin'
+[118.079s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/pkgconfig/ahabp_pkg.pc'
+[118.081s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/lib/python3.10/site-packages'
+[118.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('ahabp_pkg', 'pythonpath')
+[118.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/pythonpath.ps1'
+[118.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/pythonpath.dsv'
+[118.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/hook/pythonpath.sh'
+[118.095s] Level 1:colcon.colcon_core.environment:checking '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/bin'
+[118.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ahabp_pkg)
+[118.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/package.ps1'
+[118.103s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/package.dsv'
+[118.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/package.sh'
+[118.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/package.bash'
+[118.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/ahabp_pkg/package.zsh'
+[118.119s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/anyell/ahabp_v2_ws/install/ahabp_pkg/share/colcon-core/packages/ahabp_pkg)
+[118.124s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[118.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[118.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[118.128s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[118.175s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[118.175s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[118.176s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[118.187s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[118.188s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[118.190s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anyell/ahabp_v2_ws/install/local_setup.ps1'
+[118.196s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/anyell/ahabp_v2_ws/install/_local_setup_util_ps1.py'
+[118.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anyell/ahabp_v2_ws/install/setup.ps1'
+[118.222s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anyell/ahabp_v2_ws/install/local_setup.sh'
+[118.227s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/anyell/ahabp_v2_ws/install/_local_setup_util_sh.py'
+[118.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anyell/ahabp_v2_ws/install/setup.sh'
+[118.240s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anyell/ahabp_v2_ws/install/local_setup.bash'
+[118.251s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anyell/ahabp_v2_ws/install/setup.bash'
+[118.260s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/anyell/ahabp_v2_ws/install/local_setup.zsh'
+[118.266s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/anyell/ahabp_v2_ws/install/setup.zsh'

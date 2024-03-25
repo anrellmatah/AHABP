@@ -4,6 +4,8 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPo
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are types of topics. Check 'dds_topics.yaml'
 import cv2 as cv
 from cv_bridge import CvBridge
+import time
+
 
 print('####Hi from ahabp_node_offboard.py####')
 
@@ -58,7 +60,8 @@ class OffboardModePublisher(Node):
         self.takeoff_height = -1.0 # in meters [m]
 
         # Create a timer to publish control commands
-        self.timer = self.create_timer(0.1, self.timer_callback) # 4 Hz
+        self.timer = self.create_timer(0.25, self.timer_callback) # 4 Hz
+    
 
 ##### The function definition portion #####
     # Callback function for vehicle_local_position topic subscriber.
@@ -129,7 +132,7 @@ class OffboardModePublisher(Node):
         msg.param4 = params.get("param4", 0.0)
         msg.param5 = params.get("param5", 0.0)
         msg.param6 = params.get("param6", 0.0)
-        msg.param7 = params.get("param7", 0.0)
+        msg.param7 = params.get("param7", 1.0)
         msg.target_system = 1
         msg.target_component = 1
         msg.source_system = 1
@@ -148,9 +151,11 @@ class OffboardModePublisher(Node):
         if self.offboard_setpoint_counter == 10:
             print('Engaging offboard...')
             self.engage_offboard_mode()
+            time.sleep(2)
             print('Arming...')
             self.arm()
             print('Done arming...')
+        print('Leaving timer callback...')
 
 # https://discuss.px4.io/t/switching-modes-in-px4-using-ros2-and-uxrce-dds/37137/3
 # self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_DO_SET_MODE, param1 = 1.0, param2 = 4.0, param3 =3.0)
@@ -176,6 +181,8 @@ class OffboardModePublisher(Node):
             print('Setpoint countering...')
             self.offboard_setpoint_counter += 1
 
+    print('Leaving publisher node...')
+
 def main(args=None) -> None:
     print('Initialzing arguments...')
     rclpy.init(args=args) # Starts
@@ -196,8 +203,14 @@ if __name__ == '__main__':
         print('Print exception...')
         print(e)
 
-# class OffboardControl(Node):
-#     def __init__(self) -> None:
-#         super().__init__('Offboard_attitude_controller')
-#         self.br = CvBridge()
-#         # Configure QoS profile for publishing and subscribing
+
+#     def publish_offboard_control_heartbeat_signal(self):
+#         """Publish the offboard control mode."""
+#         msg = OffboardControlMode()
+#         msg.position = True
+#         msg.velocity = False
+#         msg.acceleration = False
+#         msg.attitude = False
+#         msg.body_rate = False
+#         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
+#         self.offboard_control_mode_publisher.publish(msg)
