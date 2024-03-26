@@ -20,16 +20,17 @@
 __author__ = "Anyell Mata"
 __contact__ = "anyellmata@gmail.com"
 
-import rclpy #Humble docs
+# https://github.com/ros2/launch/blob/humble/launch/doc/source/architecture.rst#id39
+
+import rclpy # 
 from rclpy.node import Node #Humble docs - py_pubsub
 from std_msgs.msg import String #Humble docs - py_pubsub
-
-from launch import LaunchDescription #Ark Electronics
-from launch.actions import ExecuteProcess #Ark Electronics
+from launch import LaunchDescription, action #Ark Electronics
+from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, LogInfo, RegisterEventHandler, TimerAction # This action will execute a process given its path and arguments, and optionally other things like working directory or environment variables.
 from launch_ros.actions import Node #Ark Electronics
 from ament_index_python.packages import get_package_share_directory #Ark Electronics
-
 import os
+from launch.event_handlers import OnExecutionComplete, OnProcessExit, OnProcessIO, OnProcessStart, OnShutdown
 
 print('Hello from ahabp_v2.launch.py')
 print('This .launch.py file is only meant to launch the nodes after reboot.')
@@ -37,20 +38,49 @@ print('This .launch.py file is only meant to launch the nodes after reboot.')
 def generate_launch_description():
     package_dir = get_package_share_directory('ahabp_pkg')
 
-    microxrce_agent=ExecuteProcess(
-        cmd=[['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5']],
-        shell=True
-    ),
-    veh_gps_pos=ExecuteProcess(
-        cmd=[['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps']],
-        shell=True
-    ),
-    # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
+    # microxrce_agent=ExecuteProcess(
+    #     cmd=[['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5']],
+    #     shell=True
+    # ),
 
-    print('Getting into launch description.')
+    # microxrce_agent=ExecuteProcess(
+    #     cmd=['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5'],
+    #     #required=True,
+    #     shell=True
+    # ),
+
+    # veh_gps_pos=ExecuteProcess(
+    #     cmd=[['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps']],
+    #     #required=True,
+    #     shell=True
+    # ),
+    #bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
+
+    print('Getting into launch description...')
     return LaunchDescription([ # Return the LaunchDescription object, which now contains all nodes to launch. Have to run in this return or else does not work.
-        microxrce_agent,
-	    veh_gps_pos,
+        #microxrce_agent,
+	    #veh_gps_pos,
+
+        # RegisterEventHandler(
+        #     OnProcessStart(
+        #         target_action=microxrce_agent,
+        #         on_start=[
+        #             LogInfo(msg='MicroXRCEAgent started, communicating with PixRacer Pro')
+        #         ]
+        #     )
+        # ),
+        # RegisterEventHandler(
+        #     OnProcessStart(
+        #         target_action=veh_gps_pos,
+        #         on_start=[
+        #             LogInfo(msg='MicroXRCEAgent started, communicating with PixRacer Pro')
+        #         ]
+        #     )
+        # ),
+        # ExecuteProcess(
+        #     cmd=['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps'],
+        #     output='screen',
+        # ),
         Node( # This node does nothing. Just for testing
             package='ahabp_pkg',
             namespace='ahabp_pkg',
@@ -59,12 +89,19 @@ def generate_launch_description():
             prefix='gnome-terminal --',  # This will launch the node in a new terminal.
         ),
         Node( # This node activates the offboard mode
-            package='px4_ros_com',
-            namespace='px4_ros_com',
-            executable='offboard_control',
-            name='offboard_control',
+            package='ahabp_pkg',
+            namespace='ahabp_pkg',
+            executable='ahabp_node_offboard',
+            name='ahabp_node_offboard',
             prefix='gnome-terminal --',
         ),
+        # Node( # This node activates the offboard mode
+        #     package='px4_ros_com',
+        #     namespace='px4_ros_com',
+        #     executable='offboard_control',
+        #     name='offboard_control',
+        #     prefix='gnome-terminal --',
+        # ),
         Node( # This node launches Scott's code using opencv
             package='ahabp_pkg',
             namespace='ahabp_pkg',

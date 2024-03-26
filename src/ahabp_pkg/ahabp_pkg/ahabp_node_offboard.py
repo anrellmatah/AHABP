@@ -7,7 +7,7 @@ from cv_bridge import CvBridge
 import time
 
 
-print('####Hi from ahabp_node_offboard.py####')
+print('#### Hi from ahabp_node_offboard.py ####')
 
 class OffboardModePublisher(Node):
     print('In publisher node...')
@@ -73,7 +73,6 @@ class OffboardModePublisher(Node):
         self.vehicle_status = vehicle_status
 
     def arm(self): ## This commands works
-        """Send an arm command to the vehicle."""
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, 
             param1=1.0
@@ -81,7 +80,6 @@ class OffboardModePublisher(Node):
         self.get_logger().info('Arm command sent')
 
     def disarm(self):
-        """Send a disarm command to the vehicle."""
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, 
             param1=0.0
@@ -89,7 +87,6 @@ class OffboardModePublisher(Node):
         self.get_logger().info('Disarm command sent')
     
     def engage_offboard_mode(self): ## This command works
-        """Switch to offboard mode."""
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_DO_SET_MODE, 
             param1=1.0, 
@@ -98,12 +95,10 @@ class OffboardModePublisher(Node):
         self.get_logger().info("Switching to offboard mode")
 
     def land(self):
-        """Switch to land mode."""
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_LAND)
         self.get_logger().info("Switching to land mode")
 
     def publish_offboard_control_heartbeat_signal(self):
-        """Publish the offboard control mode."""
         msg = OffboardControlMode()
         msg.position = True
         msg.velocity = False
@@ -114,7 +109,6 @@ class OffboardModePublisher(Node):
         self.offboard_control_mode_publisher.publish(msg)
 
     def publish_position_setpoint(self, x: float, y: float, z: float):
-        """Publish the trajectory setpoint."""
         msg = TrajectorySetpoint()
         msg.position = [x, y, z]
         msg.yaw = 1.57079  # (90 degree)
@@ -123,7 +117,6 @@ class OffboardModePublisher(Node):
         self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
 
     def publish_vehicle_command(self, command, **params) -> None:
-        """Publish a vehicle command."""
         msg = VehicleCommand()
         msg.command = command
         msg.param1 = params.get("param1", 0.0)
@@ -141,7 +134,7 @@ class OffboardModePublisher(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vehicle_command_publisher.publish(msg)
 
-# This function is where the mission is planned
+# This function is where the script is planned
     # Callback function for the timer
     def timer_callback(self) -> None: # Needed for publishing rate
         print('In timer callback function: ', self.offboard_setpoint_counter)
@@ -167,15 +160,11 @@ class OffboardModePublisher(Node):
                 0.0, 
                 self.takeoff_height)
 
-        elif self.vehicle_local_position.z <= self.takeoff_height:
+        elif self.vehicle_local_position.z <= self.takeoff_height: # If current local position is less than the takeoff height then proceed
             print('Landing...')
             self.land()
             print('Exiting...')
             exit(0)
-            # # This is the land(self) function
-            # self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_LAND)
-            # self.get_logger().info("Switching to land mode")
-            # exit(0)
 
         if self.offboard_setpoint_counter < 11:
             print('Setpoint countering...')

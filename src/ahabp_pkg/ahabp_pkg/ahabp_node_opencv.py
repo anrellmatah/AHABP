@@ -1,8 +1,9 @@
 import cv2 as cv
 import time
 import datetime
+import os
 
-print('####Hello from ahabp_node_opencv.py')
+print('#### Hello from ahabp_node_opencv.py ####')
 print("began at", datetime.datetime.now())
 
 # camera servo can only go between 0 and 130 degrees

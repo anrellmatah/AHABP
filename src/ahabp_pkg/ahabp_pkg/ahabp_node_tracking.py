@@ -20,7 +20,7 @@ import math
 from rclpy.clock import ROSClock
 from std_msgs.msg import Header
 
-print('####Hi from ahabp_node_tracking.py')
+print('#### Hi from ahabp_node_tracking.py ####')
 
 # From Dr. Das' pitch-yaw-tracking.py. Incompatible code will be denoted with "##" at the begin.
 

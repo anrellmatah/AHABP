@@ -1,6 +1,8 @@
 import ephem
 import datetime
 
+print('#### Hi from ahabp_node_ephem.py ####')
+
 pi = 3.14159265358979323846
 
 # incorporate into video_thresholding.py for ideal tracking
