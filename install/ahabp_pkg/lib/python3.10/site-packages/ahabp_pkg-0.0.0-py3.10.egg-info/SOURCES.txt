@@ -11,11 +11,14 @@ setup.py
 ../../build/ahabp_pkg/ahabp_pkg.egg-info/zip-safe
 ahabp_pkg/__init__.py
 ahabp_pkg/ahabp_node.py
+ahabp_pkg/ahabp_node_actuator_test.py
 ahabp_pkg/ahabp_node_ephem.py
+ahabp_pkg/ahabp_node_heartbeat.py
 ahabp_pkg/ahabp_node_offboard.py
 ahabp_pkg/ahabp_node_opencv.py
 ahabp_pkg/ahabp_node_robot_upstart.py
 ahabp_pkg/ahabp_node_tracking.py
+ahabp_pkg/ahabp_node_tracking_2.py
 launch/ahabp_v2.launch.py
 resource/ahabp_pkg
 test/test_copyright.py

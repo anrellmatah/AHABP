@@ -25,110 +25,97 @@ __contact__ = "anyellmata@gmail.com"
 import rclpy # 
 from rclpy.node import Node #Humble docs - py_pubsub
 from std_msgs.msg import String #Humble docs - py_pubsub
-from launch import LaunchDescription, action #Ark Electronics
-from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, LogInfo, RegisterEventHandler, TimerAction # This action will execute a process given its path and arguments, and optionally other things like working directory or environment variables.
-from launch_ros.actions import Node #Ark Electronics
 from ament_index_python.packages import get_package_share_directory #Ark Electronics
 import os
-from launch.event_handlers import OnExecutionComplete, OnProcessExit, OnProcessIO, OnProcessStart, OnShutdown
 
-print('#### Hello from ahabp_v2.launch.py ####')
-print('This .launch.py file is only meant to launch the nodes after reboot.')
+from launch import LaunchDescription, action #Ark Electronics
+from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, LogInfo, RegisterEventHandler, TimerAction # This action will execute a process given its path and arguments, and optionally other things like working directory or environment variables.
+from launch.conditions import IfCondition
+from launch_ros.actions import Node #Ark Electronics
+from launch.event_handlers import OnExecutionComplete, OnProcessExit, OnProcessIO, OnProcessStart, OnShutdown
+from launch.events import Shutdown
+from launch.substitutions import EnvironmentVariable, FindExecutable, LaunchConfiguration, LocalSubstitution, PythonExpression
+
+print('##### Hello from ahabp_v2.launch.py #####')
 
 def generate_launch_description():
     package_dir = get_package_share_directory('ahabp_pkg')
 
-    # microxrce_agent=ExecuteProcess(
-    #     cmd=[['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5']],
-    #     shell=True
-    # ),
+    cmd_uxrce=ExecuteProcess( # pre_command = ExecuteProcess(
+        cmd=['MicroXRCEAgent', 'serial -b 921600 -D /dev/ttyAMA0 -v 5'], # cmd=['your_command', '--arguments'],
+        output='screen' # output='screen'
+    )
 
-    # microxrce_agent=ExecuteProcess(
-    #     cmd=['MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 5'],
-    #     #required=True,
-    #     shell=True
-    # ),
+    cmd_veh_gps_pos=ExecuteProcess(
+        cmd=['ros2', 'topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps'],
+        output='screen'
+    )
 
-    # veh_gps_pos=ExecuteProcess(
-    #     cmd=[['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps']],
-    #     #required=True,
-    #     shell=True
-    # ),
-    #bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
+    node_heartbeat=Node( # This node starts the necessary offboard heartbeat for the pixracer pro at 4 Hz
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_heartbeat',
+        name='ahabp_node_heartbeat',
+        prefix='gnome-terminal --',  # This will launch the node in a new terminal.
+    )
+
+    node_offboard=Node( # This node activates the offboard mode
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_offboard',
+        name='ahabp_node_offboard',
+        prefix='gnome-terminal --',
+    )
+
+    node_opencv=Node( # This node launches Scott's code using opencv
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_opencv',
+        output='screen',
+        name='ahabp_node_opencv',
+        prefix='gnome-terminal --',
+    )
+
+    node_tracking=Node( # This node uses Dr. Das' code for tracking
+        package='ahabp_pkg',
+        namespace='ahabp_pkg',
+        executable='ahabp_node_tracking',
+        name='ahabp_node_tracking',
+        prefix='gnome-terminal --',
+    )
+
+    node_listen_gps=Node( # This code uses the example script that subscribes to the gps data
+        package='px4_ros_com',
+        namespace='px4_ros_com',
+        executable='vehicle_gps_position_listener',
+        name='vehicle_gps_position_listener',
+        prefix='gnome-terminal --',
+    )
+
+    node_listen_sens=Node( # This node runs the example that listens to 'sensor_combined' uorb topic
+        package='px4_ros_com',
+        executable='sensor_combined_listener',
+        output='screen',
+        shell=True,
+    )
 
     print('Getting into launch description...')
     return LaunchDescription([ # Return the LaunchDescription object, which now contains all nodes to launch. Have to run in this return or else does not work.
-        #microxrce_agent,
-	    #veh_gps_pos,
-
-        # RegisterEventHandler(
-        #     OnProcessStart(
-        #         target_action=microxrce_agent,
-        #         on_start=[
-        #             LogInfo(msg='MicroXRCEAgent started, communicating with PixRacer Pro')
-        #         ]
-        #     )
-        # ),
-        # RegisterEventHandler(
-        #     OnProcessStart(
-        #         target_action=veh_gps_pos,
-        #         on_start=[
-        #             LogInfo(msg='MicroXRCEAgent started, communicating with PixRacer Pro')
-        #         ]
-        #     )
-        # ),
-        # ExecuteProcess(
-        #     cmd=['ros2 topic pub /fmu/out/vehicle_gps_position px4_msgs/msg/SensorGps'],
-        #     output='screen',
-        # ),
-        Node( # This node does nothing. Just for testing
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node',
-            name='ahabp_node',
-            prefix='gnome-terminal --',  # This will launch the node in a new terminal.
+        cmd_uxrce,
+        node_heartbeat,
+        RegisterEventHandler( # The OnProcessStart event handler is used to register a callback function that is executed when the node_listen_gps node starts. It logs a message to the console and executes the cmd_veh_gps_pos action when the node starts.
+            OnProcessStart(
+                target_action=node_listen_gps,
+                on_start=[
+                    LogInfo(msg='Gps node started, echoing gps topic...'),
+                    cmd_veh_gps_pos
+                ]
+            )
         ),
-        Node( # This node activates the offboard mode
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node_offboard',
-            name='ahabp_node_offboard',
-            prefix='gnome-terminal --',
-        ),
-        # Node( # This node activates the offboard mode
-        #     package='px4_ros_com',
-        #     namespace='px4_ros_com',
-        #     executable='offboard_control',
-        #     name='offboard_control',
-        #     prefix='gnome-terminal --',
-        # ),
-        Node( # This node launches Scott's code using opencv
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node_opencv',
-            output='screen',
-            name='ahabp_node_opencv',
-            prefix='gnome-terminal --',
-        ),
-        Node( # This node uses Dr. Das' code for tracking
-            package='ahabp_pkg',
-            namespace='ahabp_pkg',
-            executable='ahabp_node_tracking',
-            name='ahabp_node_tracking',
-            prefix='gnome-terminal --',
-        ),
-        Node( # This code uses the example script that subscribes to the gps data
-            package='px4_ros_com',
-            namespace='px4_ros_com',
-            executable='vehicle_gps_position_listener',
-            name='vehicle_gps_position_listener',
-            prefix='gnome-terminal --',
-        ),
-        Node( # This node runs the example that listens to 'sensor_combined' uorb topic
-            package='px4_ros_com',
-            executable='sensor_combined_listener',
-            output='screen',
-            shell=True,
-        )
-        ])
+        node_offboard,
+        node_opencv,
+        node_tracking,
+        node_listen_gps,
+        node_listen_sens
+    ])
 

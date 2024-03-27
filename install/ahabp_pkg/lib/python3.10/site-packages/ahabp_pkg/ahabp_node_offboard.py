@@ -1,13 +1,12 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are types of topics. Check 'dds_topics.yaml'
-import cv2 as cv
-from cv_bridge import CvBridge
 import time
 
-
-print('####Hi from ahabp_node_offboard.py####')
+print('##### Hi from ahabp_node_offboard.py #####')
 
 class OffboardModePublisher(Node):
     print('In publisher node...')
@@ -16,14 +15,14 @@ class OffboardModePublisher(Node):
 
         # Configure QoS profile for publishing and subscribing
         qos_profile = QoSProfile( # Relevant: https://answers.ros.org/question/332207/cant-receive-data-in-python-node/
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            durability=DurabilityPolicy.TRANSIENT_LOCAL,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=10  # Adjust the queue size as needed
+            reliability = ReliabilityPolicy.BEST_EFFORT,
+            durability  = DurabilityPolicy.TRANSIENT_LOCAL,
+            history     = HistoryPolicy.KEEP_LAST,
+            depth       = 10  # Adjust the queue size as needed
         )
 
         # Create publishers
-        self.offboard_control_mode_publisher = self.create_publisher( ### This worked for a short time
+        self.offboard_control_mode_publisher = self.create_publisher( # create publisher for offboard mode
             OffboardControlMode, # px4_msg uORB message. Check 'pX4_msgs/msg'
             '/fmu/in/offboard_control_mode', # topic type. Check 'dds_topics.yaml'
             qos_profile # QoS
@@ -53,8 +52,9 @@ class OffboardModePublisher(Node):
             qos_profile
         )
 
-        # Initialize variables
-        self.offboard_setpoint_counter = 0 
+        # Initialize internal variables
+        self.offboard_setpoint_counter = 0
+        self.local_timestamp = 0 
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
         self.takeoff_height = -1.0 # in meters [m]
@@ -176,7 +176,7 @@ def main(args=None) -> None:
     print('Initialzing arguments...')
     rclpy.init(args=args) # Starts
     print('Starting offboard mode publisher node...')
-    offboard_control = OffboardModePublisher()
+    offboard_control = OffboardModePublisher() # Delcare the class
     print('Starting rcply executor...')
     rclpy.spin(offboard_control) # Basically expands to an instantiation and invocation of the Single-Threaded Executor, which is the simplest Executor
     print('Destroying nodes...')
@@ -191,15 +191,3 @@ if __name__ == '__main__':
     except Exception as e:
         print('Print exception...')
         print(e)
-
-
-#     def publish_offboard_control_heartbeat_signal(self):
-#         """Publish the offboard control mode."""
-#         msg = OffboardControlMode()
-#         msg.position = True
-#         msg.velocity = False
-#         msg.acceleration = False
-#         msg.attitude = False
-#         msg.body_rate = False
-#         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-#         self.offboard_control_mode_publisher.publish(msg)

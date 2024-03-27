@@ -1,7 +1,7 @@
 import ephem
 import datetime
 
-print('#### Hi from ahabp_node_ephem.py ####')
+print('##### Hi from ahabp_node_ephem.py #####')
 
 pi = 3.14159265358979323846
 

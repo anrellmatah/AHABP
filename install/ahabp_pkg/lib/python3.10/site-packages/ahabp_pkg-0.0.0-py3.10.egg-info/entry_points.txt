@@ -1,8 +1,10 @@
 [console_scripts]
-ahabp_node = ahabp_pkg.ahabp_node:main
+ahabp_node_actuator_test = ahabp_pkg.ahabp_node_actuator_test:main
 ahabp_node_ephem = ahabp_pkg.ahabp_node_ephem:main
+ahabp_node_heartbeat = ahabp_pkg.ahabp_node_heartbeat:main
 ahabp_node_offboard = ahabp_pkg.ahabp_node_offboard:main
 ahabp_node_opencv = ahabp_pkg.ahabp_node_opencv:main
 ahabp_node_robot_upstart = ahabp_pkg.ahabp_node_robot_upstart:main
 ahabp_node_tracking = ahabp_pkg.ahabp_node_tracking:main
+ahabp_node_tracking_2 = ahabp_pkg.ahabp_node_tracking_2:main
 

@@ -6,7 +6,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
 
-print('#### Hi from ahabp_node.py ####')
+print('##### Hi from ahabp_node.py #####')
 
 def main():
     print('befor uxrce_cmd')

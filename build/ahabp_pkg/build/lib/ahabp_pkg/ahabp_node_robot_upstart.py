@@ -3,7 +3,7 @@
 import rospy
 from std_msgs.msg import Int64
 
-print('####Hi from ahabp_node_robot_upstart.py')
+print('#### Hi from ahabp_node_robot_upstart.py ####')
 
 # if __name__ == "__main__":
 #     rospy.init_node("counter_publisher")

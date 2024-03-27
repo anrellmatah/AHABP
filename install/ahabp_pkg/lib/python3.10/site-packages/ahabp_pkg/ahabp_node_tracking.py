@@ -1,26 +1,19 @@
 import rclpy
 from rclpy.node import Node
-##from mavros_msgs.msg import AttitudeTarget, MountControl
 from sensor_msgs.msg import Imu, Image
-
 from geometry_msgs.msg import PoseStamped  # Import for pose data
-#from apriltag_msgs.msg import AprilTagDetectionArray
-#from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from math import degrees, radians
 import cv2 as cv
 from cv_bridge import CvBridge
 from datetime import datetime, timezone
-#from pyorbital import astronomy
-#from pyorbital import planets
 import time
 import pyproj
-
 from rclpy.qos import HistoryPolicy, QoSProfile, ReliabilityPolicy, DurabilityPolicy, qos_profile_sensor_data
 import math
 from rclpy.clock import ROSClock
 from std_msgs.msg import Header
 
-print('####Hi from ahabp_node_tracking.py')
+print('#### Hi from ahabp_node_tracking.py ####')
 
 # From Dr. Das' pitch-yaw-tracking.py. Incompatible code will be denoted with "##" at the begin.
 
@@ -42,24 +35,6 @@ class PodAttitudeControl(Node):
             '/mavros/imu/data',
             self.imu_callback,
             qos_profile_sensor_data)
-        
-        self.publisher = self.create_publisher(
-            MountControl,
-            '/mavros/mount_control/command',
-            qos_profile)
-       
-        self.current_orientation = None  # Field to store current orientation
-        self.attitude_setpoint = AttitudeTarget()
-        self.attitude_setpoint.type_mask = 7
-        self.des_pitch = radians(0)
-        self.des_yaw = math.radians(90.0)
-        self.des_thrust = 0.2
-        self.yaw_rate = 0.0
-        self.timer = self.create_timer(0.1, self.publish_command)
-        self.pitch = 0.0
-        self.yaw = 0.0
-        self.K_p =0.6
-        self.K_d = 0.0
 
 
     def imu_callback(self, msg):
