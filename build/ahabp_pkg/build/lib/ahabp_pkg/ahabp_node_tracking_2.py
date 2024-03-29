@@ -14,8 +14,7 @@ import os
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are types of topics. Check 'dds_topics.yaml'
-import time
+from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are compatible .msg files. Check 'px4_msgs/msg'
 
 
 date = datetime.datetime.now()
@@ -43,52 +42,11 @@ capture = cv.VideoCapture(0)
 cx = 320
 cy = 240
 
+picture = 1
+i = 0
+
 print('##### Hi from ahabp_node_tracking_2.py #####')
 
-class GPSPublisher(Node):
-    def __init__(self):
-        super().__init__('gps_publisher') # This is the name of the node. It will appear as a oval in rqt's node graph.
-
-        # Configure QoS profile for publishing and subscribing
-        qos_profile = QoSProfile( # Relevant: https://answers.ros.org/question/332207/cant-receive-data-in-python-node/
-            reliability = ReliabilityPolicy.BEST_EFFORT,
-            durability  = DurabilityPolicy.TRANSIENT_LOCAL,
-            history     = HistoryPolicy.KEEP_LAST,
-            depth       = 10  # Adjust the queue size as needed
-        )
-
-        # Create subscribers
-        self.vehicle_local_position_subscriber = self.create_subscription(
-            VehicleLocalPosition, # px4_msg uORB message. Check 'pX4_msgs/msg'
-            '/fmu/out/vehicle_local_position', # topic type. Check 'dds_topics.yaml'
-            self.vehicle_local_position_callback, # Callback function
-            qos_profile # QoS
-        )
-
-        # Initialize internal variables
-        self.offboard_setpoint_counter = 0
-        self.local_timestamp = 0 
-        self.vehicle_local_position = VehicleLocalPosition()
-
-        # Create a timer to publish control commands
-        self.timer = self.create_timer(.5, self.timer_callback) 
-
-    # Callback function for vehicle_local_position topic subscriber.
-    def vehicle_local_position_callback(self, vehicle_local_position):
-        self.vehicle_local_position = vehicle_local_position
-
-    # Callback function for the timer
-    def timer_callback(self) -> None: # Needed for publishing rate
-        print('In timer callback function: ', self.offboard_setpoint_counter)
-        
-        if self.offboard_setpoint_counter <= 10:
-            self.offboard_setpoint_counter += 1
-
-        elif self.offboard_setpoint_counter > 10:
-            print('Setpoint resetting...')
-            self.offboard_setpoint_counter = 0
-
-        print('Leaving timer callback...')
 
 def get_compass_direction(angle):
     ''' This converts degrees to cardinal directions for ease of reading '''
@@ -97,7 +55,6 @@ def get_compass_direction(angle):
     index = round(angle / (360. / len(directions))) % len(directions)
     
     return directions[index]
-
 
 def sun_angle_and_direction(latitude, longitude, date):
     ''' This function calculates zenith, azimuth, and compass direction
@@ -125,7 +82,6 @@ def movement_needed(payload_heading, azimuth_angle, zenith_angle):
 
     return yaw, pitch
 
-
 def ephem_update():
     ''' This function calculates the zenith and azimuth of the Sun
         based on the real-time GPS and heading data from the payload '''
@@ -140,7 +96,6 @@ def ephem_update():
     yaw_ephem, pitch_ephem = movement_needed(payload_heading, azimuth_angle, zenith_angle)
 
     return yaw_ephem, pitch_ephem, latitude, longitude, altitude
-
 
 def target(frame, minimum=250, cx=320, cy=240):
     ''' This function targets the centroid of a frame and outputs
@@ -172,65 +127,118 @@ def target(frame, minimum=250, cx=320, cy=240):
 
     return yaw_target, pitch_target, frame
 
+class GPSPublisher(Node):
+    def __init__(self):
+        super().__init__('gps_publisher') # This is the name of the node. It will appear as a oval in rqt's node graph.
 
-def PID():
-    ''' This is where the proportional - integral - derivative function will go '''
-    pass
+        # Configure QoS profile for publishing and subscribing
+        qos_profile = QoSProfile( # Relevant: https://answers.ros.org/question/332207/cant-receive-data-in-python-node/
+            reliability = ReliabilityPolicy.BEST_EFFORT,
+            durability  = DurabilityPolicy.TRANSIENT_LOCAL,
+            history     = HistoryPolicy.KEEP_LAST,
+            depth       = 10  # Adjust the queue size as needed
+        )
 
+        # Create subscribers
+        self.vehicle_local_position_subscriber = self.create_subscription(
+            VehicleLocalPosition, # px4_msg uORB message. Check 'pX4_msgs/msg'
+            '/fmu/out/vehicle_local_position', # topic type. Check 'dds_topics.yaml'
+            self.vehicle_local_position_callback, # Callback function
+            qos_profile # QoS
+        )
 
-picture = 1
-i = 0
-while True:
-    istrue, frame = capture.read()
-    date = datetime.datetime.now()
-    original = frame.copy()
+        # Initialize internal variables
+        self.offboard_setpoint_counter = 0
+        self.local_timestamp = 0
+        self.picture = 0
 
-    # error calculations
-    # 'ephem' error is based on calculation with GPS/heading
-    # 'target' error is based on what's in the camera frame
-    yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()
-    yaw_target, pitch_target, targeted = target(frame)
+        self.vehicle_local_position = VehicleLocalPosition()        
 
-    
-    ### Output screens ###
-    #cv.imshow('Output', thresh)
-    #cv.imshow('Camera', frame)
+        # Create a timer to publish control commands
+        self.timer = self.create_timer(.1, self.timer_callback) 
 
-    # This is where the actuator stuff goes
-    if pitch_target > 50:
-        print("Vertical error:", pitch_target, "pitch DOWN")
-        # PITCH DOWN
-    elif pitch_target < -50:
-        print("Vertical error:", pitch_target, "pitch UP")
-        # PITCH UP
+    # Callback function for vehicle_local_position topic subscriber.
+    def vehicle_local_position_callback(self, vehicle_local_position):
+        self.vehicle_local_position = vehicle_local_position
 
-    if yaw_target > 100:
+    def PID():
+        ''' This is where the proportional - integral - derivative function will go '''
+        pass
+
+    # Callback function for the timer
+    def timer_callback(self) -> None: # Needed for publishing rate
+        print('In timer callback function: ', self.offboard_setpoint_counter)
+
+        istrue, frame = capture.read()
+        date = datetime.datetime.now()
+        original = frame.copy()
+
+        # error calculations
+        # 'ephem' error is based on calculation with GPS/heading
+        # 'target' error is based on what's in the camera frame
+        yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()
+        yaw_target, pitch_target, targeted = target(frame)
+
+        
+        ### Output screens ###
+        #cv.imshow('Output', thresh)
+        #cv.imshow('Camera', frame)
+
         # This is where the actuator stuff goes
-        print("Horizontal error:", yaw_target - cx, "pitch LEFT")
-        # PITCH DOWN
-    elif yaw_target < -100:
-        print("Horizontal error:", yaw_target - cx, "pitch RIGHT")
-        # PITCH UP
+        if pitch_target > 50:
+            print("Vertical error:", pitch_target, "pitch DOWN")
+            # PITCH DOWN
+        elif pitch_target < -50:
+            print("Vertical error:", pitch_target, "pitch UP")
+            # PITCH UP
 
-    # append the data to the log file
-#    with open(data_file, "a") as file:
-#        file.write(f"{date},{latitude},{longitude},{altitude},{zenith_angle},{azimuth_angle},{payload_heading},{camera_angle},{yaw_ephem},{pitch_ephem}\n")
-    
-    if cv.waitKey(20) & 0xFF==ord('d'):
-        break
+        if yaw_target > 100:
+            # This is where the actuator stuff goes
+            print("Horizontal error:", yaw_target - cx, "pitch LEFT")
+            # PITCH DOWN
+        elif yaw_target < -100:
+            print("Horizontal error:", yaw_target - cx, "pitch RIGHT")
+            # PITCH UP
 
-    if i >= 900:
-        # every 30 seconds, save the images
-        cv.imwrite(os.path.join(path, "raw_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), original)
-        #cv.imwrite(os.path.join(path, "threshold_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresholding)
-        cv.imwrite(os.path.join(path, "targeted_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), targeted)
-        print(f"Saved picture {picture} at {date}")
-        i = 0
-        picture += 1
-    
-    #increment i
-    i += 1
+        # append the data to the log file
+    #    with open(data_file, "a") as file:
+    #        file.write(f"{date},{latitude},{longitude},{altitude},{zenith_angle},{azimuth_angle},{payload_heading},{camera_angle},{yaw_ephem},{pitch_ephem}\n")
+        
+        # if cv.waitKey(20) & 0xFF==ord('d'):
+        #     break
+
+        if self.offboard_setpoint_counter >= 300:
+            # every 30 seconds, save the images
+            cv.imwrite(os.path.join(path, "raw_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), original)
+            #cv.imwrite(os.path.join(path, "threshold_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresholding)
+            cv.imwrite(os.path.join(path, "targeted_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), targeted)
+            print(f"Saved picture {self.picture} at {date}")
+            self.offboard_setpoint_counter = 0
+            self.picture += 1
+        
+        #increment i
+        self.offboard_setpoint_counter += 1
+
+        # if self.offboard_setpoint_counter <= 10:
+        #     self.offboard_setpoint_counter += 1
+
+        # elif self.offboard_setpoint_counter > 10:
+        #     print('Setpoint resetting...')
+        #     self.offboard_setpoint_counter = 0
+
+        print('Leaving timer callback...')
 
 
-capture.release()
-cv.destroyAllWindows
+def main(args=None) -> None:
+    rclpy.init(args=args) # Starts
+    gps_pub = GPSPublisher() # Create a publisher for the OffboardControlMode message. Stays the majority in this function.
+    rclpy.spin(gps_pub) # Keep the node alive until Ctrl+C is pressed
+    capture.release()
+    cv.destroyAllWindows
+    gps_pub.destroy_node() # Kills all the nodes
+    rclpy.shutdown() # End
+
+if __name__ == '__main__':
+    main()
+
+

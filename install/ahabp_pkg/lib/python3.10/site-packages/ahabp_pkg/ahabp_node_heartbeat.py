@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are types of topics. Check 'dds_topics.yaml'
+from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint, ActuatorTest  # These are compatible .msg files. Check 'px4_msgs/msg'
 import cv2 as cv
 from cv_bridge import CvBridge
 import time
@@ -33,11 +33,11 @@ class OffboardHeartbeatPublisher(Node): # Node. --> self.
     def publish_offboard_mode(self): # Gotta follow its format: https://github.com/PX4/px4_msgs/blob/main/msg/OffboardControlMode.msg
         self.offboard_mode = OffboardControlMode()
         # Set the desired offboard control mode
-        self.offboard_mode.position = True  # Not using position control
-        self.offboard_mode.velocity = False    # Not using velocity control
-        self.offboard_mode.acceleration = False  # Not using acceleration control
-        self.offboard_mode.attitude = False   # Not using attitude control
-        self.offboard_mode.body_rate = False  # Not using body rate control
+        self.offboard_mode.position = True  # position control
+        self.offboard_mode.velocity = False    # velocity control
+        self.offboard_mode.acceleration = False  # acceleration control
+        self.offboard_mode.attitude = False   # attitude control
+        self.offboard_mode.body_rate = False  # body rate control
         self.offboard_mode.thrust_and_torque = False
         self.offboard_mode.direct_actuator = False
         self.offboard_mode.timestamp = int(self.get_clock().now().nanoseconds / 1000)

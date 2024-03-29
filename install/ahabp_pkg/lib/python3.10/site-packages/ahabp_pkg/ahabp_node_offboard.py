@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint # These are types of topics. Check 'dds_topics.yaml'
+from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleAttitudeSetpoint  # These are compatible .msg files. Check 'px4_msgs/msg'
 import time
 
 print('##### Hi from ahabp_node_offboard.py #####')
@@ -27,6 +27,9 @@ class OffboardModePublisher(Node):
             '/fmu/in/offboard_control_mode', # topic type. Check 'dds_topics.yaml'
             qos_profile # QoS
         )
+
+        #self.offboard_control_mode_publisher.direct_actuator = True
+
         self.trajectory_setpoint_publisher = self.create_publisher(
             TrajectorySetpoint, 
             '/fmu/in/trajectory_setpoint', 
@@ -62,8 +65,7 @@ class OffboardModePublisher(Node):
         # Create a timer to publish control commands
         self.timer = self.create_timer(0.25, self.timer_callback) # 4 Hz
     
-
-##### The function definition portion #####
+#### The function definition portion ####
     # Callback function for vehicle_local_position topic subscriber.
     def vehicle_local_position_callback(self, vehicle_local_position):
         self.vehicle_local_position = vehicle_local_position
@@ -98,13 +100,16 @@ class OffboardModePublisher(Node):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_LAND)
         self.get_logger().info("Switching to land mode")
 
+
+#### The message compilers ####
     def publish_offboard_control_heartbeat_signal(self):
         msg = OffboardControlMode()
         msg.position = True
         msg.velocity = False
         msg.acceleration = False
-        msg.attitude = False
+        msg.attitude = True
         msg.body_rate = False
+        msg.direct_actuator = True
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
 
