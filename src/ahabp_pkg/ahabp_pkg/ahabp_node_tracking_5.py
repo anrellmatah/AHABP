@@ -44,78 +44,38 @@ print('##### Hi from ahabp_node_tracking_4.py #####')
 logger = logging.getLogger(__name__)            # Start logger for the debugging prints
 
 
-# Output File Declarations
-date = datetime.datetime.now()                  # Create date string for output files
-timestr = time.strftime("%m%d%-y-%H%M")         # Create time string for output files - to keep things organized
-picture = 1
 
-# Global Declarations
-pi = math.pi
-camera_angle = 0
-mag_offset = 0 # magnetometer offset in degrees
-
-# Identifies current file path and constructs a file path string for the output file
-filePath = os.getcwd()                          # It should be the current folder location
-print("The workspace file path is: ", filePath) # "/home/anyell/ahabp_v2_ws"
-imagesPath = os.path.join(filePath, 'images')
-print("Images file path is: ", imagesPath)
-
-# File to save log information as a csv file. Should not overwrite as long as it doesn't take longer than a minute.
-test_dir_name = 'test_data'                     # "test_data" is the folder the test data will be at.
-dataPath = os.path.join(filePath, test_dir_name)# Makes path
-if not os.path.exists(dataPath):                # Checks if the directory already exists
-    os.makedirs(dataPath)                       # Makes the directory if it does not exist
-print("Data file path is: ", dataPath)          # Outputs to terminal the path name; "$ pwd"
-data_file = dataPath + '/' + timestr + '_data.csv' # Makes 
-
-#dataFile = open(data_file, os.O_CREAT, 0o777)  # Creates the file and folder if it doesn't exist already.
-
-dataFile = open(data_file,'w+')                 # Write command that creates the T3P file. WILL OVERWRITE previous t3p file if it exists.
-os.chmod(data_file, 0o777)                      # Change permissions to be open to everyone
-dataFile.write("Time,Latitude,Longitude,Altitude,Zenith,Azimuth,Heading,Camera,Yaw,Pitch")
-dataFile.close()                                # Close file after writing or else corrupted file
-
-cx = 320                                        # Half of X-axis pixels for tracking image
-cy = 240                                        # Half of Y-axis pixels
-
-cap = cv.VideoCapture(0) # To capture a video, you need to create a VideoCapture object
-#cap.open()
-if cap.isOpened():                              # Checks if camera is open and prints statements accordingly
-    logger.info("Opening camera...")
-else:
-    logger.error("CANNOT OPEN CAMERA")
-ret, frame = cap.read()                         # Capture frame-by-frame
 
 #### OpenCV functions ####
-# def target(frame, minimum=250, cx=320, cy=240):
-#     ''' This function targets the centroid of a frame and outputs
-#         vector in x and y of the error between center of frame and the centroid
+def target_vector(frame, minimum=250, cx=320, cy=240):
+    ''' This function targets the centroid of a frame and outputs
+        vector in x and y of the error between center of frame and the centroid
         
-#         Raspberry Pi Camera v2 the image size is:
-#         480 rows (vertical)
-#         640 columns (horizontal)
-#     '''
+        Raspberry Pi Camera v2 the image size is:
+        480 rows (vertical)
+        640 columns (horizontal)
+    '''
     
-#     # copy and convert image to grayscale then process
-#     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-#     thresholding, thresh = cv.threshold(gray, minimum, 255, cv.THRESH_BINARY)   
-#     (minVal, maxVal, minLoc, maxLoc) = cv.minMaxLoc(gray)
-#     M = cv.moments(thresh)
+    # copy and convert image to grayscale then process
+    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+    thresholding, thresh = cv.threshold(gray, minimum, 255, cv.THRESH_BINARY)   
+    (minVal, maxVal, minLoc, maxLoc) = cv.minMaxLoc(gray)
+    M = cv.moments(thresh)
 
-#     # calculate centroid
-#     targx = int(M["m10"] / (M["m00"]+1))
-#     targy = int(M["m01"] / (M["m00"]+1))
+    # calculate centroid
+    targx = int(M["m10"] / (M["m00"]+1))
+    targy = int(M["m01"] / (M["m00"]+1))
 
-#     # calculate direction vector from center to centroid
-#     yaw_target = targx - cx
-#     pitch_target = targy - cy
+    # calculate direction vector from center to centroid
+    yaw_target = targx - cx
+    pitch_target = targy - cy
 
-#     # place vector arrow and label
-#     cv.putText(frame, "target", (targx - 45, targy + 45), cv.FONT_HERSHEY_SIMPLEX, 1, (25, 25, 255), 2)
-#     cv.circle(frame, [targx, targy], 25, (25, 25, 255), 2)
-#     cv.arrowedLine(frame, [cx, cy], [targx, targy], (25, 25, 255), 2) # center --> target
+    # place vector arrow and label
+    cv.putText(frame, "target", (targx - 45, targy + 45), cv.FONT_HERSHEY_SIMPLEX, 1, (25, 25, 255), 2)
+    cv.circle(frame, [targx, targy], 25, (25, 25, 255), 2)
+    cv.arrowedLine(frame, [cx, cy], [targx, targy], (25, 25, 255), 2) # center --> target
 
-#     return yaw_target, pitch_target, frame
+    return yaw_target, pitch_target, frame
 
 class Tracking(Node): # Node. --> self.
     def __init__(self):
@@ -419,22 +379,22 @@ class Tracking(Node): # Node. --> self.
         if self.counter == 100 or self.counter == 120:
             self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
         
-        # if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
-        #     print('## Modulo output')           
-        #     istrue, frame = cap.read()
-        #     date = datetime.datetime.now()
-        #     original = frame.copy()
+        if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
+            print('## Modulo output')           
+            istrue, frame = cap.read()
+            date = datetime.datetime.now()
+            original = frame.copy()
 
-        #     # error calculations
-        #     # 'ephem' error is based on calculation with GPS/heading
-        #     # 'target' error is based on what's in the camera frame
-        #     #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()
-        #     yaw_target, pitch_target, targeted = target(frame)
+            # error calculations
+            # 'ephem' error is based on calculation with GPS/heading
+            # 'target' error is based on what's in the camera frame
+            #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()
+            yaw_target, pitch_target, targeted = target(frame)
             
-        #     cv.imwrite(os.path.join(imagesPath, "raw_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), original)
-        #     #cv.imwrite(os.path.join(path, "threshold_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresholding)
-        #     cv.imwrite(os.path.join(imagesPath, "targeted_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), targeted)
-        #     print(f"Saved picture {picture} at {date}")
+            cv.imwrite(os.path.join(imagesPath, "raw_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), original)
+            #cv.imwrite(os.path.join(path, "threshold_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresholding)
+            cv.imwrite(os.path.join(imagesPath, "targeted_" + str(picture) + "_" + str(datetime.datetime.now()) + ".jpg"), targeted)
+            print(f"Saved picture {picture} at {date}")
 
         self.counter += 1
 
@@ -442,6 +402,45 @@ class Tracking(Node): # Node. --> self.
 def main(args=None) -> None:
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO) # Set the format and level for logging. Will output to terminal. level=logging.DEBUG 
     logger.debug('In main()')                       # Print this debug statement when level is activated in basicConfig()
+
+    # Output File Declarations
+    date = datetime.datetime.now()                  # Create date string for output files
+    timestr = time.strftime("%m%d%-y-%H%M")         # Create time string for output files - to keep things organized
+    picture = 1
+
+    # Global Declarations
+    pi = math.pi
+    camera_angle = 0
+    mag_offset = 0 # magnetometer offset in degrees
+
+    # Identifies current file path and constructs a file path string for the output file
+    filePath = os.getcwd()                          # It should be the current folder location; like "$ pwd"
+    print("The workspace file path is: ", filePath) # It should be "/home/anyell/ahabp_v2_ws"
+    imagesPath = os.path.join(filePath, 'images')   # Makes images path
+    print("Images file path is: ", imagesPath)      # IT should be "/home/anyell/ahabp_v2_ws/images"
+
+    # File to save log information as a csv file. Should not overwrite as long as it doesn't take longer than a minute.
+    test_dir_name = 'test_data'                     # "test_data" is the folder the test data will be at.
+    dataPath = os.path.join(filePath, test_dir_name)# Makes path name for data directory
+    if not os.path.exists(dataPath):                # Checks if the directory already exists
+        os.makedirs(dataPath)                       # Makes the directory if it does not exist
+    print("Data file path is: ", dataPath)          # Outputs to terminal the path name; "$ pwd"
+    data_file = dataPath + '/' + timestr + '_data.csv' # Creates path for data file based on time of start
+    dataFile = open(data_file,'w+')                 # Write command that creates the .csv file. WILL OVERWRITE previous csv file if it exists.
+    os.chmod(data_file, 0o777)                      # Change permissions to be open to everyone
+    dataFile.write("Time,Latitude,Longitude,Altitude,Zenith,Azimuth,Heading,Camera,Yaw,Pitch")
+    dataFile.close()                                # Close file after writing or else corrupted file
+
+    cx = 320                                        # Half of X-axis pixels for tracking image
+    cy = 240                                        # Half of Y-axis pixels
+
+    cap = cv.VideoCapture(0) # To capture a video, you need to create a VideoCapture object
+    #cap.open()
+    if cap.isOpened():                              # Checks if camera is open and prints statements accordingly
+        logger.info("Opening camera...")
+    else:
+        logger.error("CANNOT OPEN CAMERA")
+    ret, frame = cap.read()                         # Capture frame-by-frame
 
 ## Getting into PX4 tracking function
     logger.debug('Before init()...')
