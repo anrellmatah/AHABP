@@ -126,6 +126,8 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Mission command to safely abort an autonomous landing. |Altitude (meters)| Empty| Empty| Empty| Empty| Empty| Empty|")
       const uint16 VEHICLE_CMD_DO_GO_AROUND = 191;
+      @verbatim (language="comment", text=
+        "Reposition to specific WGS84 GPS position. |Ground speed [m/s] |Bitmask |Loiter radius [m] for planes |Yaw [deg] |Latitude |Longitude |Altitude |")
       const uint16 VEHICLE_CMD_DO_REPOSITION = 192;
       const uint16 VEHICLE_CMD_DO_PAUSE_CONTINUE = 193;
       @verbatim (language="comment", text=

@@ -20,6 +20,7 @@ extern "C"
 /// Struct defined in msg/VehicleAttitude in the package px4_msgs.
 /**
   * This is similar to the mavlink message ATTITUDE_QUATERNION, but for onboard use
+  * The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)
  */
 typedef struct px4_msgs__msg__VehicleAttitude
 {

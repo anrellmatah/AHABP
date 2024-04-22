@@ -19,6 +19,7 @@ from px4_msgs.msg._button_event import ButtonEvent  # noqa: F401
 from px4_msgs.msg._camera_capture import CameraCapture  # noqa: F401
 from px4_msgs.msg._camera_status import CameraStatus  # noqa: F401
 from px4_msgs.msg._camera_trigger import CameraTrigger  # noqa: F401
+from px4_msgs.msg._can_interface_status import CanInterfaceStatus  # noqa: F401
 from px4_msgs.msg._cellular_status import CellularStatus  # noqa: F401
 from px4_msgs.msg._collision_constraints import CollisionConstraints  # noqa: F401
 from px4_msgs.msg._collision_report import CollisionReport  # noqa: F401

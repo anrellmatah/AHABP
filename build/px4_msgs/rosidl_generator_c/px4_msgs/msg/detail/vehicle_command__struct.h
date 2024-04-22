@@ -378,6 +378,9 @@ enum
 };
 
 /// Constant 'VEHICLE_CMD_DO_REPOSITION'.
+/**
+  * Reposition to specific WGS84 GPS position. |Ground speed [m/s] |Bitmask |Loiter radius [m] for planes |Yaw [deg] |Latitude |Longitude |Altitude |
+ */
 enum
 {
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_REPOSITION = 192

@@ -105,10 +105,10 @@ class OffboardControl(Node):
         msg.param5 = params.get("param5", 0.0)
         msg.param6 = params.get("param6", 0.0)
         msg.param7 = params.get("param7", 0.0)
-        msg.target_system = 1
-        msg.target_component = 1
-        msg.source_system = 1
-        msg.source_component = 1
+        msg.target_system = 1 # System which should execute the command
+        msg.target_component = 1 # Component which should execute the command, 0 for all components
+        msg.source_system = 1 # System sending the command
+        msg.source_component = 1 # Component / mode executor sending the command
         msg.from_external = True
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vehicle_command_publisher.publish(msg)
@@ -139,7 +139,6 @@ def main(args=None) -> None:
     rclpy.spin(offboard_control)
     offboard_control.destroy_node()
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     try:

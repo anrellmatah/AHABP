@@ -266,6 +266,9 @@ CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_genera
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__type_support.h \
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__struct.h \
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.h \
+ /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__type_support.h \
+ /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__struct.h \
+ /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.h \
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/cellular_status__type_support.h \
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/cellular_status__struct.h \
  /home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.h \

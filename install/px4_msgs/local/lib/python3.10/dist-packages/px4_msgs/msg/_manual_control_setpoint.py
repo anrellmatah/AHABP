@@ -141,6 +141,7 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         '_aux5',
         '_aux6',
         '_sticks_moving',
+        '_buttons',
     ]
 
     _fields_and_field_types = {
@@ -160,6 +161,7 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         'aux5': 'float',
         'aux6': 'float',
         'sticks_moving': 'boolean',
+        'buttons': 'uint16',
     }
 
     SLOT_TYPES = (
@@ -179,6 +181,7 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -201,6 +204,7 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         self.aux5 = kwargs.get('aux5', float())
         self.aux6 = kwargs.get('aux6', float())
         self.sticks_moving = kwargs.get('sticks_moving', bool())
+        self.buttons = kwargs.get('buttons', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -262,6 +266,8 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         if self.aux6 != other.aux6:
             return False
         if self.sticks_moving != other.sticks_moving:
+            return False
+        if self.buttons != other.buttons:
             return False
         return True
 
@@ -505,3 +511,18 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
                 isinstance(value, bool), \
                 "The 'sticks_moving' field must be of type 'bool'"
         self._sticks_moving = value
+
+    @builtins.property
+    def buttons(self):
+        """Message field 'buttons'."""
+        return self._buttons
+
+    @buttons.setter
+    def buttons(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'buttons' field must be of type 'int'"
+            assert value >= 0 and value < 65536, \
+                "The 'buttons' field must be an unsigned integer in [0, 65535]"
+        self._buttons = value

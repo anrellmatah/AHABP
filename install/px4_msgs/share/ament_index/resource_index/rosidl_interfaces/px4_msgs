@@ -40,6 +40,8 @@ msg/CameraStatus.idl
 msg/CameraStatus.msg
 msg/CameraTrigger.idl
 msg/CameraTrigger.msg
+msg/CanInterfaceStatus.idl
+msg/CanInterfaceStatus.msg
 msg/CellularStatus.idl
 msg/CellularStatus.msg
 msg/CollisionConstraints.idl

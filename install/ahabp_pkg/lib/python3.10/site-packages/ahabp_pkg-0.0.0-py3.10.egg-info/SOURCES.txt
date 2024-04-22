@@ -21,6 +21,9 @@ ahabp_pkg/ahabp_node_opencv.py
 ahabp_pkg/ahabp_node_robot_upstart.py
 ahabp_pkg/ahabp_node_tracking.py
 ahabp_pkg/ahabp_node_tracking_2.py
+ahabp_pkg/ahabp_node_tracking_3.py
+ahabp_pkg/ahabp_node_tracking_4.py
+ahabp_pkg/ahabp_node_tracking_5.py
 launch/ahabp_v2.launch.py
 resource/ahabp_pkg
 test/test_copyright.py
