@@ -150,6 +150,10 @@ CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/camera_trigger.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__struct.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__traits.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/can_interface_status.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__builder.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__struct.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__traits.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/cellular_status.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__struct.hpp
@@ -955,6 +959,7 @@ rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/ms
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CameraCapture.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CameraStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CameraTrigger.idl
+rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CanInterfaceStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CellularStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CollisionConstraints.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CollisionReport.idl
@@ -1400,6 +1405,18 @@ rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__struct.hpp: rosidl_gene
 
 rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__traits.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/can_interface_status.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/can_interface_status.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__builder.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__builder.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__struct.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__struct.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__traits.hpp
 
 rosidl_generator_cpp/px4_msgs/msg/cellular_status.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/cellular_status.hpp
@@ -3727,6 +3744,7 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/button_event.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/camera_capture.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/camera_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/camera_trigger.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/can_interface_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/cellular_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_constraints.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_report.hpp
@@ -3802,6 +3820,9 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_status__traits.hp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/camera_trigger__traits.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__builder.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__struct.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/can_interface_status__traits.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__traits.hpp

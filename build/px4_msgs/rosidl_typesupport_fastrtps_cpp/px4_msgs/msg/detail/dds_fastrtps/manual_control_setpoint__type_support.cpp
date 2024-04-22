@@ -64,6 +64,8 @@ cdr_serialize(
   cdr << ros_message.aux6;
   // Member: sticks_moving
   cdr << (ros_message.sticks_moving ? true : false);
+  // Member: buttons
+  cdr << ros_message.buttons;
   return true;
 }
 
@@ -128,6 +130,9 @@ cdr_deserialize(
     cdr >> tmp;
     ros_message.sticks_moving = tmp ? true : false;
   }
+
+  // Member: buttons
+  cdr >> ros_message.buttons;
 
   return true;
 }
@@ -238,6 +243,12 @@ get_serialized_size(
   // Member: sticks_moving
   {
     size_t item_size = sizeof(ros_message.sticks_moving);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: buttons
+  {
+    size_t item_size = sizeof(ros_message.buttons);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -406,6 +417,15 @@ max_serialized_size_ManualControlSetpoint(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Member: buttons
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -414,7 +434,7 @@ max_serialized_size_ManualControlSetpoint(
     using DataType = px4_msgs::msg::ManualControlSetpoint;
     is_plain =
       (
-      offsetof(DataType, sticks_moving) +
+      offsetof(DataType, buttons) +
       last_member_size
       ) == ret_val;
   }

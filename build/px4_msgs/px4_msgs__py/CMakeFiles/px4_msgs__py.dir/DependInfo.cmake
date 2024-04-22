@@ -57,6 +57,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_trigger.py" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_can_interface_status.py" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_cellular_status.py" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_constraints.py" "/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"

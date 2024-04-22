@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Dev\" \"catkin\" \"cmake\" \"license\" \"pkgconfig\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -117,6 +117,18 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -150,394 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ASLUAV.xml-v1.0
+# Target rules for targets named generate_c_headers
 
 # Build rule for target.
-ASLUAV.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ASLUAV.xml-v1.0
-.PHONY : ASLUAV.xml-v1.0
+generate_c_headers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_c_headers
+.PHONY : generate_c_headers
 
 # fast build rule for target.
-ASLUAV.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ASLUAV.xml-v1.0.dir/build.make CMakeFiles/ASLUAV.xml-v1.0.dir/build
-.PHONY : ASLUAV.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named AVSSUAS.xml-v1.0
-
-# Build rule for target.
-AVSSUAS.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AVSSUAS.xml-v1.0
-.PHONY : AVSSUAS.xml-v1.0
-
-# fast build rule for target.
-AVSSUAS.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AVSSUAS.xml-v1.0.dir/build.make CMakeFiles/AVSSUAS.xml-v1.0.dir/build
-.PHONY : AVSSUAS.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named all.xml-v1.0
-
-# Build rule for target.
-all.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all.xml-v1.0
-.PHONY : all.xml-v1.0
-
-# fast build rule for target.
-all.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/all.xml-v1.0.dir/build.make CMakeFiles/all.xml-v1.0.dir/build
-.PHONY : all.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named ardupilotmega.xml-v1.0
-
-# Build rule for target.
-ardupilotmega.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ardupilotmega.xml-v1.0
-.PHONY : ardupilotmega.xml-v1.0
-
-# fast build rule for target.
-ardupilotmega.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ardupilotmega.xml-v1.0.dir/build.make CMakeFiles/ardupilotmega.xml-v1.0.dir/build
-.PHONY : ardupilotmega.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named common.xml-v1.0
-
-# Build rule for target.
-common.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common.xml-v1.0
-.PHONY : common.xml-v1.0
-
-# fast build rule for target.
-common.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.xml-v1.0.dir/build.make CMakeFiles/common.xml-v1.0.dir/build
-.PHONY : common.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named csAirLink.xml-v1.0
-
-# Build rule for target.
-csAirLink.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csAirLink.xml-v1.0
-.PHONY : csAirLink.xml-v1.0
-
-# fast build rule for target.
-csAirLink.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/csAirLink.xml-v1.0.dir/build.make CMakeFiles/csAirLink.xml-v1.0.dir/build
-.PHONY : csAirLink.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named cubepilot.xml-v1.0
-
-# Build rule for target.
-cubepilot.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cubepilot.xml-v1.0
-.PHONY : cubepilot.xml-v1.0
-
-# fast build rule for target.
-cubepilot.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubepilot.xml-v1.0.dir/build.make CMakeFiles/cubepilot.xml-v1.0.dir/build
-.PHONY : cubepilot.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named development.xml-v1.0
-
-# Build rule for target.
-development.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 development.xml-v1.0
-.PHONY : development.xml-v1.0
-
-# fast build rule for target.
-development.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/development.xml-v1.0.dir/build.make CMakeFiles/development.xml-v1.0.dir/build
-.PHONY : development.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named icarous.xml-v1.0
-
-# Build rule for target.
-icarous.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 icarous.xml-v1.0
-.PHONY : icarous.xml-v1.0
-
-# fast build rule for target.
-icarous.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/icarous.xml-v1.0.dir/build.make CMakeFiles/icarous.xml-v1.0.dir/build
-.PHONY : icarous.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named matrixpilot.xml-v1.0
-
-# Build rule for target.
-matrixpilot.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matrixpilot.xml-v1.0
-.PHONY : matrixpilot.xml-v1.0
-
-# fast build rule for target.
-matrixpilot.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrixpilot.xml-v1.0.dir/build.make CMakeFiles/matrixpilot.xml-v1.0.dir/build
-.PHONY : matrixpilot.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named paparazzi.xml-v1.0
-
-# Build rule for target.
-paparazzi.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paparazzi.xml-v1.0
-.PHONY : paparazzi.xml-v1.0
-
-# fast build rule for target.
-paparazzi.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/paparazzi.xml-v1.0.dir/build.make CMakeFiles/paparazzi.xml-v1.0.dir/build
-.PHONY : paparazzi.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named standard.xml-v1.0
-
-# Build rule for target.
-standard.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 standard.xml-v1.0
-.PHONY : standard.xml-v1.0
-
-# fast build rule for target.
-standard.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/standard.xml-v1.0.dir/build.make CMakeFiles/standard.xml-v1.0.dir/build
-.PHONY : standard.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named storm32.xml-v1.0
-
-# Build rule for target.
-storm32.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 storm32.xml-v1.0
-.PHONY : storm32.xml-v1.0
-
-# fast build rule for target.
-storm32.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/storm32.xml-v1.0.dir/build.make CMakeFiles/storm32.xml-v1.0.dir/build
-.PHONY : storm32.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named uAvionix.xml-v1.0
-
-# Build rule for target.
-uAvionix.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uAvionix.xml-v1.0
-.PHONY : uAvionix.xml-v1.0
-
-# fast build rule for target.
-uAvionix.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uAvionix.xml-v1.0.dir/build.make CMakeFiles/uAvionix.xml-v1.0.dir/build
-.PHONY : uAvionix.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named ualberta.xml-v1.0
-
-# Build rule for target.
-ualberta.xml-v1.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ualberta.xml-v1.0
-.PHONY : ualberta.xml-v1.0
-
-# fast build rule for target.
-ualberta.xml-v1.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ualberta.xml-v1.0.dir/build.make CMakeFiles/ualberta.xml-v1.0.dir/build
-.PHONY : ualberta.xml-v1.0/fast
-
-#=============================================================================
-# Target rules for targets named ASLUAV.xml-v2.0
-
-# Build rule for target.
-ASLUAV.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ASLUAV.xml-v2.0
-.PHONY : ASLUAV.xml-v2.0
-
-# fast build rule for target.
-ASLUAV.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ASLUAV.xml-v2.0.dir/build.make CMakeFiles/ASLUAV.xml-v2.0.dir/build
-.PHONY : ASLUAV.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named AVSSUAS.xml-v2.0
-
-# Build rule for target.
-AVSSUAS.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AVSSUAS.xml-v2.0
-.PHONY : AVSSUAS.xml-v2.0
-
-# fast build rule for target.
-AVSSUAS.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AVSSUAS.xml-v2.0.dir/build.make CMakeFiles/AVSSUAS.xml-v2.0.dir/build
-.PHONY : AVSSUAS.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named all.xml-v2.0
-
-# Build rule for target.
-all.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all.xml-v2.0
-.PHONY : all.xml-v2.0
-
-# fast build rule for target.
-all.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/all.xml-v2.0.dir/build.make CMakeFiles/all.xml-v2.0.dir/build
-.PHONY : all.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named ardupilotmega.xml-v2.0
-
-# Build rule for target.
-ardupilotmega.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ardupilotmega.xml-v2.0
-.PHONY : ardupilotmega.xml-v2.0
-
-# fast build rule for target.
-ardupilotmega.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ardupilotmega.xml-v2.0.dir/build.make CMakeFiles/ardupilotmega.xml-v2.0.dir/build
-.PHONY : ardupilotmega.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named common.xml-v2.0
-
-# Build rule for target.
-common.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common.xml-v2.0
-.PHONY : common.xml-v2.0
-
-# fast build rule for target.
-common.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.xml-v2.0.dir/build.make CMakeFiles/common.xml-v2.0.dir/build
-.PHONY : common.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named csAirLink.xml-v2.0
-
-# Build rule for target.
-csAirLink.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csAirLink.xml-v2.0
-.PHONY : csAirLink.xml-v2.0
-
-# fast build rule for target.
-csAirLink.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/csAirLink.xml-v2.0.dir/build.make CMakeFiles/csAirLink.xml-v2.0.dir/build
-.PHONY : csAirLink.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named cubepilot.xml-v2.0
-
-# Build rule for target.
-cubepilot.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cubepilot.xml-v2.0
-.PHONY : cubepilot.xml-v2.0
-
-# fast build rule for target.
-cubepilot.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubepilot.xml-v2.0.dir/build.make CMakeFiles/cubepilot.xml-v2.0.dir/build
-.PHONY : cubepilot.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named development.xml-v2.0
-
-# Build rule for target.
-development.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 development.xml-v2.0
-.PHONY : development.xml-v2.0
-
-# fast build rule for target.
-development.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/development.xml-v2.0.dir/build.make CMakeFiles/development.xml-v2.0.dir/build
-.PHONY : development.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named icarous.xml-v2.0
-
-# Build rule for target.
-icarous.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 icarous.xml-v2.0
-.PHONY : icarous.xml-v2.0
-
-# fast build rule for target.
-icarous.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/icarous.xml-v2.0.dir/build.make CMakeFiles/icarous.xml-v2.0.dir/build
-.PHONY : icarous.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named matrixpilot.xml-v2.0
-
-# Build rule for target.
-matrixpilot.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matrixpilot.xml-v2.0
-.PHONY : matrixpilot.xml-v2.0
-
-# fast build rule for target.
-matrixpilot.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrixpilot.xml-v2.0.dir/build.make CMakeFiles/matrixpilot.xml-v2.0.dir/build
-.PHONY : matrixpilot.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named paparazzi.xml-v2.0
-
-# Build rule for target.
-paparazzi.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paparazzi.xml-v2.0
-.PHONY : paparazzi.xml-v2.0
-
-# fast build rule for target.
-paparazzi.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/paparazzi.xml-v2.0.dir/build.make CMakeFiles/paparazzi.xml-v2.0.dir/build
-.PHONY : paparazzi.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named standard.xml-v2.0
-
-# Build rule for target.
-standard.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 standard.xml-v2.0
-.PHONY : standard.xml-v2.0
-
-# fast build rule for target.
-standard.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/standard.xml-v2.0.dir/build.make CMakeFiles/standard.xml-v2.0.dir/build
-.PHONY : standard.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named storm32.xml-v2.0
-
-# Build rule for target.
-storm32.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 storm32.xml-v2.0
-.PHONY : storm32.xml-v2.0
-
-# fast build rule for target.
-storm32.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/storm32.xml-v2.0.dir/build.make CMakeFiles/storm32.xml-v2.0.dir/build
-.PHONY : storm32.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named uAvionix.xml-v2.0
-
-# Build rule for target.
-uAvionix.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uAvionix.xml-v2.0
-.PHONY : uAvionix.xml-v2.0
-
-# fast build rule for target.
-uAvionix.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uAvionix.xml-v2.0.dir/build.make CMakeFiles/uAvionix.xml-v2.0.dir/build
-.PHONY : uAvionix.xml-v2.0/fast
-
-#=============================================================================
-# Target rules for targets named ualberta.xml-v2.0
-
-# Build rule for target.
-ualberta.xml-v2.0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ualberta.xml-v2.0
-.PHONY : ualberta.xml-v2.0
-
-# fast build rule for target.
-ualberta.xml-v2.0/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ualberta.xml-v2.0.dir/build.make CMakeFiles/ualberta.xml-v2.0.dir/build
-.PHONY : ualberta.xml-v2.0/fast
+generate_c_headers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_c_headers.dir/build.make CMakeFiles/generate_c_headers.dir/build
+.PHONY : generate_c_headers/fast
 
 # Help Target
 help:
@@ -548,38 +183,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ASLUAV.xml-v1.0"
-	@echo "... ASLUAV.xml-v2.0"
-	@echo "... AVSSUAS.xml-v1.0"
-	@echo "... AVSSUAS.xml-v2.0"
-	@echo "... all.xml-v1.0"
-	@echo "... all.xml-v2.0"
-	@echo "... ardupilotmega.xml-v1.0"
-	@echo "... ardupilotmega.xml-v2.0"
-	@echo "... common.xml-v1.0"
-	@echo "... common.xml-v2.0"
-	@echo "... csAirLink.xml-v1.0"
-	@echo "... csAirLink.xml-v2.0"
-	@echo "... cubepilot.xml-v1.0"
-	@echo "... cubepilot.xml-v2.0"
-	@echo "... development.xml-v1.0"
-	@echo "... development.xml-v2.0"
-	@echo "... icarous.xml-v1.0"
-	@echo "... icarous.xml-v2.0"
-	@echo "... matrixpilot.xml-v1.0"
-	@echo "... matrixpilot.xml-v2.0"
-	@echo "... paparazzi.xml-v1.0"
-	@echo "... paparazzi.xml-v2.0"
-	@echo "... standard.xml-v1.0"
-	@echo "... standard.xml-v2.0"
-	@echo "... storm32.xml-v1.0"
-	@echo "... storm32.xml-v2.0"
-	@echo "... uAvionix.xml-v1.0"
-	@echo "... uAvionix.xml-v2.0"
-	@echo "... ualberta.xml-v1.0"
-	@echo "... ualberta.xml-v2.0"
+	@echo "... generate_c_headers"
 .PHONY : help
 
 

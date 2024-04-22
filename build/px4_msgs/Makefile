@@ -909,6 +909,30 @@ rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_c.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.c.s
 .PHONY : rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.c.s
 
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.o: rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.o
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.o
+
+# target to build an object file
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_c.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.o
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.o
+
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.i: rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.i
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_c.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.i
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.i
+
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.s: rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.s
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_c.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.s
+.PHONY : rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.s
+
 rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.o: rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.c.o
 .PHONY : rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.o
 
@@ -6093,6 +6117,30 @@ rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_py.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.s
 .PHONY : rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.s
 
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.o: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.o
+
+# target to build an object file
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_py.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o
+
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.i: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_py.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i
+
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.s: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_generator_py.dir/build.make CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s
+.PHONY : rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s
+
 rosidl_generator_py/px4_msgs/msg/_cellular_status_s.o: rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o
 .PHONY : rosidl_generator_py/px4_msgs/msg/_cellular_status_s.o
 
@@ -11204,6 +11252,30 @@ rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.s: rosidl_typesup
 rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.cpp.s
+
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.o: rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.o
+
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.i: rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.i
+
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.s: rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.cpp.s
 
 rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.o: rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.o
@@ -16317,6 +16389,30 @@ rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.cpp.s
 
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.o: rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.o
+
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.i: rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.i
+
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.s: rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.cpp.s
+
 rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.o: rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.o
 
@@ -21428,6 +21524,30 @@ rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c
 rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.o: rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.i: rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.s: rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.o: rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.o
@@ -26541,6 +26661,30 @@ rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.o: rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.i: rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.s: rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.o: rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.o
 
@@ -31652,6 +31796,30 @@ rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_supp
 rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.c.s
+
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.o: rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.o
+
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.i: rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.i
+
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.s: rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.c.s
 
 rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.o: rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.o
@@ -36765,6 +36933,30 @@ rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_su
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.o: rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.i: rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.s: rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.o: rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.o
 
@@ -41467,6 +41659,9 @@ help:
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.o"
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.i"
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.s"
+	@echo "... rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.o"
+	@echo "... rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.i"
+	@echo "... rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.s"
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.o"
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.i"
 	@echo "... rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.s"
@@ -42115,6 +42310,9 @@ help:
 	@echo "... rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.o"
 	@echo "... rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.i"
 	@echo "... rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.s"
+	@echo "... rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.o"
+	@echo "... rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.i"
+	@echo "... rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.s"
 	@echo "... rosidl_generator_py/px4_msgs/msg/_cellular_status_s.o"
 	@echo "... rosidl_generator_py/px4_msgs/msg/_cellular_status_s.i"
 	@echo "... rosidl_generator_py/px4_msgs/msg/_cellular_status_s.s"
@@ -42754,6 +42952,9 @@ help:
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.o"
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.i"
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/camera_trigger__type_support.s"
+	@echo "... rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.o"
+	@echo "... rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.i"
+	@echo "... rosidl_typesupport_c/px4_msgs/msg/can_interface_status__type_support.s"
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.o"
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.i"
 	@echo "... rosidl_typesupport_c/px4_msgs/msg/cellular_status__type_support.s"
@@ -43393,6 +43594,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.o"
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.i"
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/camera_trigger__type_support.s"
+	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.o"
+	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.i"
+	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/can_interface_status__type_support.s"
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.o"
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.i"
 	@echo "... rosidl_typesupport_cpp/px4_msgs/msg/cellular_status__type_support.s"
@@ -44032,6 +44236,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/camera_trigger__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/can_interface_status__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/px4_msgs/msg/detail/cellular_status__type_support_c.s"
@@ -44671,6 +44878,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/camera_trigger__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/can_interface_status__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/detail/dds_fastrtps/cellular_status__type_support.s"
@@ -45310,6 +45520,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/camera_trigger__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/can_interface_status__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/px4_msgs/msg/detail/cellular_status__type_support.s"
@@ -45949,6 +46162,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/camera_trigger__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/can_interface_status__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/px4_msgs/msg/detail/cellular_status__type_support.s"

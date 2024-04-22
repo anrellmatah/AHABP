@@ -45,6 +45,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/px4_msgs/msg/_camera_status_s.c"
   "../rosidl_generator_py/px4_msgs/msg/_camera_trigger.py"
   "../rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c"
+  "../rosidl_generator_py/px4_msgs/msg/_can_interface_status.py"
+  "../rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c"
   "../rosidl_generator_py/px4_msgs/msg/_cellular_status.py"
   "../rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c"
   "../rosidl_generator_py/px4_msgs/msg/_collision_constraints.py"

@@ -1,0 +1,18 @@
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_generator_cpp/px4_msgs/msg/detail/wind__struct.hpp:12[m[K,
+                 from [01m[K/home/anyell/ahabp_v2_ws/build/px4_msgs/rosidl_typesupport_cpp/px4_msgs/msg/wind__type_support.cpp:7[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:[m[K In constructor ‘[01m[Kstd::_Vector_base<_Tp, _Alloc>::_Vector_impl_data::_Vector_impl_data()[m[K’:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:98:11:[m[K [01;31m[Kinternal compiler error: [m[KSegmentation fault
+   98 |         : [01;31m[K_M_start[m[K(), _M_finish(), _M_end_of_storage()
+      |           [01;31m[K^~~~~~~~[m[K
+0xffff98c773fb __libc_start_call_main
+	../sysdeps/nptl/libc_start_call_main.h:58
+0xffff98c774cb __libc_start_main_impl
+	../csu/libc-start.c:392
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <file:///usr/share/doc/gcc-11/README.Bugs> for instructions.
+gmake[2]: *** [CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/build.make:3894: CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/wind__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

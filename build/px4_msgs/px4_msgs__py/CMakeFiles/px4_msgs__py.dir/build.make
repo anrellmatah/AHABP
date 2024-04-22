@@ -90,6 +90,7 @@ px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_button_e
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_capture.py
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_status.py
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_trigger.py
+px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_can_interface_status.py
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_cellular_status.py
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_collision_constraints.py
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_collision_report.py
@@ -305,6 +306,7 @@ px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_button_e
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_status_s.c
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c
+px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c
 px4_msgs__py/CMakeFiles/px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_collision_report_s.c
@@ -532,6 +534,7 @@ rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: ros
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CameraCapture.idl
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CameraStatus.idl
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CameraTrigger.idl
+rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CanInterfaceStatus.idl
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CellularStatus.idl
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CollisionConstraints.idl
 rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/px4_msgs/msg/CollisionReport.idl
@@ -797,6 +800,9 @@ rosidl_generator_py/px4_msgs/msg/_camera_status.py: rosidl_generator_py/px4_msgs
 
 rosidl_generator_py/px4_msgs/msg/_camera_trigger.py: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_camera_trigger.py
+
+rosidl_generator_py/px4_msgs/msg/_can_interface_status.py: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_can_interface_status.py
 
 rosidl_generator_py/px4_msgs/msg/_cellular_status.py: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_cellular_status.py
@@ -1443,6 +1449,9 @@ rosidl_generator_py/px4_msgs/msg/_camera_status_s.c: rosidl_generator_py/px4_msg
 rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c
 
+rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c
+
 rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c: rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c
 
@@ -2066,6 +2075,8 @@ px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_status.py
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_status_s.c
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_trigger.py
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c
+px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_can_interface_status.py
+px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_cellular_status.py
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c
 px4_msgs__py: rosidl_generator_py/px4_msgs/msg/_collision_constraints.py

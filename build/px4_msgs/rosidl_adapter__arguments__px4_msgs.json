@@ -22,6 +22,7 @@
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CameraCapture.msg",
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CameraStatus.msg",
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CameraTrigger.msg",
+    "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CanInterfaceStatus.msg",
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CellularStatus.msg",
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CollisionConstraints.msg",
     "/home/anyell/ahabp_v2_ws/src/px4_msgs:msg/CollisionReport.msg",

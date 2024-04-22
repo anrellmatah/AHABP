@@ -81,6 +81,10 @@ module px4_msgs {
       float aux6;
 
       boolean sticks_moving;
+
+      @verbatim (language="comment", text=
+        "From uint16 buttons field of Mavlink manual_control message")
+      uint16 buttons;
     };
   };
 };

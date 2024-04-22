@@ -87,6 +87,7 @@ CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/ButtonEvent.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CameraCapture.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CameraStatus.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CameraTrigger.msg
+CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CanInterfaceStatus.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CellularStatus.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CollisionConstraints.msg
 CMakeFiles/px4_msgs: /home/anyell/ahabp_v2_ws/src/px4_msgs/msg/CollisionReport.msg
