@@ -306,6 +306,9 @@ CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/px4_msg
   rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.h \
+  rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__type_support.h \
+  rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__struct.h \
+  rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.h \
   rosidl_generator_c/px4_msgs/msg/detail/cellular_status__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/cellular_status__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.h \
@@ -1271,6 +1274,14 @@ rosidl_generator_c/px4_msgs/msg/detail/sensor_accel__type_support.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/mavlink_tunnel__type_support.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/register_ext_component_request__functions.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__functions.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__struct.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__type_support.h:
+
 rosidl_generator_c/px4_msgs/msg/detail/health_report__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/actuator_motors__type_support.h:
@@ -1483,8 +1494,6 @@ rosidl_generator_c/px4_msgs/msg/detail/landing_gear__struct.h:
 
 /usr/include/python3.10/cpython/pymem.h:
 
-/usr/include/python3.10/setobject.h:
-
 rosidl_generator_c/px4_msgs/msg/detail/action_request__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/esc_report__functions.h:
@@ -1600,8 +1609,6 @@ rosidl_generator_c/px4_msgs/msg/detail/radio_status__type_support.h:
 /usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/python3.10/listobject.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__struct.h:
 
 /usr/include/python3.10/pystrcmp.h:
 
@@ -1843,6 +1850,8 @@ rosidl_generator_c/px4_msgs/msg/detail/vehicle_air_data__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/gpio_in__type_support.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__struct.h:
+
 rosidl_generator_c/px4_msgs/msg/detail/sensors_status__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/npfg_status__type_support.h:
@@ -1926,8 +1935,6 @@ rosidl_generator_c/px4_msgs/msg/detail/vehicle_odometry__functions.h:
 rosidl_generator_c/px4_msgs/msg/detail/mission_result__type_support.h:
 
 /usr/include/python3.10/cpython/odictobject.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__type_support.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -2109,6 +2116,8 @@ rosidl_generator_c/px4_msgs/msg/detail/gimbal_manager_set_attitude__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/flight_phase_estimation__struct.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__type_support.h:
+
 rosidl_generator_c/px4_msgs/msg/detail/actuator_servos_trim__struct.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h:
@@ -2232,6 +2241,10 @@ rosidl_generator_c/px4_msgs/msg/detail/camera_status__type_support.h:
 rosidl_generator_c/px4_msgs/msg/detail/vehicle_command_ack__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__struct.h:
+
+/usr/include/python3.10/setobject.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/cellular_status__struct.h:
 
@@ -2638,7 +2651,3 @@ rosidl_generator_c/px4_msgs/msg/detail/sensor_gyro__type_support.h:
 rosidl_generator_c/px4_msgs/msg/detail/actuator_servos__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__functions.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/register_ext_component_request__functions.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__functions.h:

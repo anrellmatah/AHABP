@@ -26,6 +26,7 @@ px4_msgs/msg/_button_event.py
 px4_msgs/msg/_camera_capture.py
 px4_msgs/msg/_camera_status.py
 px4_msgs/msg/_camera_trigger.py
+px4_msgs/msg/_can_interface_status.py
 px4_msgs/msg/_cellular_status.py
 px4_msgs/msg/_collision_constraints.py
 px4_msgs/msg/_collision_report.py

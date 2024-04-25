@@ -33,8 +33,8 @@ import time
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, VehicleCommand, VehicleAttitudeSetpoint, VehicleControlMode, TrajectorySetpoint, VehicleLocalPosition, VehicleStatus # These are compatible .msg files. Check 'px4_msgs/msg'
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy, LivelinessPolicy
+from px4_msgs.msg import OffboardControlMode, VehicleCommand, VehicleAttitudeSetpoint, VehicleControlMode, TrajectorySetpoint, VehicleLocalPosition, VehicleStatus, SensorGps # These are compatible .msg files. Check 'px4_msgs/msg'
 from numpy import nan
 import cv2 as cv
 import numpy as np
@@ -91,7 +91,7 @@ def target(frame, minimum=250, cx=320, cy=240):
     cv.circle(frame, [targx, targy], 25, (25, 25, 255), 2)
     cv.arrowedLine(frame, [cx, cy], [targx, targy], (25, 25, 255), 2) # center --> target
 
-    return yaw_target, pitch_target, frame
+    return yaw_target, pitch_target, frame, thresh
 
 class Tracking(Node): # Node. --> self.
     def __init__(self, imagesPath, dataPath):
@@ -105,7 +105,22 @@ class Tracking(Node): # Node. --> self.
             depth       = 5  # Adjust the queue size as needed
         )
 
-        # Create publisher for actuator motors
+        qos_profile_sub = QoSProfile( # Relevant: https://answers.ros.org/question/332207/cant-receive-data-in-python-node/
+            reliability = ReliabilityPolicy.BEST_EFFORT,
+            history     = HistoryPolicy.UNKNOWN,
+            durability  = DurabilityPolicy.TRANSIENT_LOCAL, #.SYSTEM_DEFAULT
+            liveliness  = LivelinessPolicy.AUTOMATIC,
+            depth       = 1  # Adjust the queue size as needed
+        )
+
+        qos_profile_com = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1
+        )
+
+# Create publisher for actuator motors
         self.offboard_control_mode_publisher = self.create_publisher( # create publisher for offboard mode
             OffboardControlMode, # px4_msg uORB message. Check 'pX4_msgs/msg'
             '/fmu/in/offboard_control_mode', # topic type. Check 'dds_topics.yaml'
@@ -116,7 +131,7 @@ class Tracking(Node): # Node. --> self.
         self.vehicle_control_mode_publisher = self.create_publisher(VehicleControlMode, '/fmu/in/config_control_setpoints', qos_profile)
         self.trajectory_setpoint_publisher = self.create_publisher(TrajectorySetpoint, '/fmu/in/trajectory_setpoint', qos_profile)
 
-        # Create subscribers
+# Create subscribers
         # self.vehicle_local_position_subscriber = self.create_subscription(
         #     VehicleLocalPosition, # px4_msg uORB message. Check 'pX4_msgs/msg'
         #     '/fmu/out/vehicle_local_position', # topic type. Check 'dds_topics.yaml'
@@ -125,8 +140,16 @@ class Tracking(Node): # Node. --> self.
         # )
         # self.vehicle_local_position_subscriber  # prevent unused variable warning
 
+        self.vehicle_gps_position_subscriber = self.create_subscription(
+            SensorGps, # px4_msg uORB message. Check 'pX4_msgs/msg'
+            '/fmu/out/vehicle_gps_position', # topic type. Check 'dds_topics.yaml'
+            self.vehicle_gps_position_callback, # Callback function
+            qos_profile_com # QoS
+        )
+        self.vehicle_gps_position = SensorGps() # prevent unused variable warning
+
 #        self.vehicle_status_subscriber = self.create_subscription(VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
-        self.vehicle_status_subscriber = self.create_subscription(VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
+        #self.vehicle_status_subscriber = self.create_subscription(VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, 1)
         #   self.vehicle_status_subscriber # prevent unused variable warning
 
 
@@ -163,10 +186,23 @@ class Tracking(Node): # Node. --> self.
     #                 f'system_id: {msg.system_id}\n'
     #                 f'component_id: {msg.component_id}')
 
+
+
     def vehicle_status_callback(self, msg):
         #print(f'Received VehicleStatus: \n{msg}\n')
         logger.info("Received VehicleStatus: ")
         logger.info(msg)
+
+    # def vehicle_gps_position_callback(self, msg):
+    #     #print(f'Received VehicleStatus: \n{msg}\n')
+    #     logger.info("Received SensorGps: ")
+    #     logger.info(msg)
+
+    def vehicle_gps_position_callback(self, vehicle_gps_position):
+        """Callback function for vehicle_local_position topic subscriber."""
+        logger.info(vehicle_gps_position)
+        self.vehicle_gps_position = vehicle_gps_position
+        logger.info(self.vehicle_gps_position)
 
 #### Individual command functions ####
 
@@ -373,6 +409,9 @@ class Tracking(Node): # Node. --> self.
         print('## timer_callback_10Hz: ', self.counter)     # 10 setpoints for every second
         self.publish_offboard_control_mode()                # Has to be first because it sets up offboard control - like a heartbeat
 
+        print('## self.vehicle_gps_position: ')
+        logger.info(self.vehicle_gps_position)
+
         if self.counter == 1: 
             self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
 
@@ -400,27 +439,25 @@ class Tracking(Node): # Node. --> self.
             print('## Modulo output')
             #cap = cv.VideoCapture(-1)
             istrue, frame = cap.read()
-            print('## istrue: ', istrue)
-            print('## frame: ', frame)
+            logger.debug('## istrue: ', istrue)
+            logger.debug('## frame: ', frame)
             original = frame.copy()
-            print('## original: ', original)
+            logger.debug('## original: ', original)
             
             # error calculations
             # 'ephem' error is based on calculation with GPS/heading
             # 'target' error is based on what's in the camera frame
             #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()
-            yaw_target, pitch_target, targeted = target(frame)
-            print('## yaw_target: ', yaw_target)
+            yaw, pitch, targeted, thresh = target(frame)
+            logger.debug('## yaw_target: ', yaw)
 
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
-            #cv.imwrite(os.path.join(path, "threshold_" + str(self.picture) + "_" + str(datetime.datetime.now()) + ".jpg"), thresholding)
+            cv.imwrite(os.path.join(self.imagesPath, "thresh_" + str(self.picture) + "_" + timeString() + ".jpg"), thresh)
             cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
             self.picture += 1
             print(f"Saved picture {self.picture}")
 
         self.counter += 1
-
-
 
 #### Main function ####
 def main(args=None) -> None:
@@ -442,7 +479,9 @@ def main(args=None) -> None:
     # Identifies current file path and constructs a file path string for the output file
     wsPath = os.getcwd()                            # It should be the current folder location; like "$ pwd"
     print("The workspace path is: ", wsPath)        # It should be "/home/anyell/ahabp_v2_ws"
-    imagesPath = os.path.join(wsPath, 'images')     # Makes images path
+
+    images_path = 'images/' + timeString()
+    imagesPath = os.path.join(wsPath, images_path)     # Makes images path
     if not os.path.exists(imagesPath):                # Checks if the directory already exists
         os.makedirs(imagesPath)                       # Makes the directory if it does not exist
     print("Images directory path is: ", imagesPath) # It should be "/home/anyell/ahabp_v2_ws/images"
@@ -463,8 +502,6 @@ def main(args=None) -> None:
 
     cx = 320                                        # Half of X-axis pixels for tracking image
     cy = 240                                        # Half of Y-axis pixels
-
-
 
 ## Getting into PX4 tracking function
     logger.debug('Before init()...')
