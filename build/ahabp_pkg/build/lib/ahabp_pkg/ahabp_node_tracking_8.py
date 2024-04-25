@@ -10,10 +10,13 @@
 '''
 *** BEFORE RUNNING SCRIPT ***
 $ colcon build --event-handlers console_direct+ --executor sequential --continue-on-error
+
 $ MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 4
+
+$ sudo chmod 777 /dev/video0
 $ ros2 run v4l2_camera v4l2_camera_node -ros-args -p image_size:="[640,480]"
 '''
-# No need to run v4l2 camera command - the script does it already
+# Need to cancel v4l2 camera command - the script just needs it started
 
 '''
 *** AFTER RUNNING SCRIPT ***
@@ -43,6 +46,8 @@ import numpy as np
 print('##### Hi from ahabp_node_tracking_8.py #####')
 
 logger = logging.getLogger(__name__)            # Start logger for the debugging prints
+
+att_flag = False
 
 # This should close the video captures
 cap = cv.VideoCapture(0) # To capture a video, you need to create a VideoCapture object
@@ -166,26 +171,39 @@ class Tracking(Node): # Node. --> self.
         logger.debug(f'Received sensor_combined_callback: {msg}')
         msg_parsed = (f'timestamp: {msg.timestamp} gyro_rad: {msg.gyro_rad} accelerometer_m_s2: {msg.accelerometer_m_s2} ')
         self.sensor_combined = msg_parsed
+    # def vehicle_attitude_callback(self, msg): # WORKS - High Rate
+    #     logger.debug(f'Received vehicle_attitude_callback: {msg}')
+    #     msg_parsed = (f'q: {msg.q} delta_q_reset: {msg.delta_q_reset} ')
+    #     self.vehicle_attitude = msg_parsed
 
 #### Individual command functions ####
     def gimbal_neutral(self):
         logger.info("Sending gimbal_neutral...")
-        self.publish_vehicle_command(
-            VehicleCommand.VEHICLE_CMD_DO_GIMBAL_MANAGER_PITCHYAW , # 100 - https://mavlink.io/en/messages/common.html#MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW
-            param1 = 180.0, # [-180, 180]Pitch angle (positive to pitch up, relative to vehicle for FOLLOW mode, relative to world horizon for LOCK mode).
-            param2 = 0.0, # [-180, 180] Yaw angle (positive to yaw to the right, relative to vehicle for FOLLOW mode, absolute to North for LOCK mode).
-            #param3 = 1.0, # Pitch rate (positive to pitch up). [deg/s]
-            #param4 = 1.0, # Yaw rate (positive to yaw to the right). [deg/s]
-            param5 = 2.0, # Gimbal manager flags
-            param7 = 0.0 # Gimbal device ID
-            )
+        msg = VehicleCommand()
+        msg.command = 100       # 100 - https://mavlink.io/en/messages/common.html#MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW
+        msg.param1 = -180.0     # [-180, 180]Pitch angle (positive to pitch up, relative to vehicle for FOLLOW mode, relative to world horizon for LOCK mode).
+        #msg.param2 = 0.0       # [-180, 180] Yaw angle (positive to yaw to the right, relative to vehicle for FOLLOW mode, absolute to North for LOCK mode).
+        msg.param3 = 5.0        # Pitch rate (positive to pitch up). [deg/s]
+        #msg.param4 = 1.0       # Yaw rate (positive to yaw to the right). [deg/s]
+        msg.param5 = 2.0        # Gimbal manager flags - [1,2,4,8,16,32,64,128,256,512]
+        msg.param7 = 0.0        # Gimbal device ID 
+        msg.target_system = 1           # System which should execute the command
+        msg.target_component = 0        # Component which should execute the command, 0 for all components
+        msg.source_system = 0           # System sending the command
+        msg.source_component = 0        # Component / mode executor sending the command
+        msg.confirmation = 0            # 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)
+        msg.from_external = True
+        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
+        self.vehicle_command_publisher.publish(msg)
+        logger.info('publish_vehicle_command published:')
+        logger.debug(msg)
 
     def gimbal_manager_configure(self):
         logger.info("Sending gimbal_manager_configure...")
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_DO_GIMBAL_MANAGER_CONFIGURE, # 1001 - https://mavlink.io/en/messages/common.html#MAV_CMD_DO_GIMBAL_MANAGER_CONFIGURE
-            param1 = -2.0, # Sysid primary control
-            param2 = -2.0, # Compid primary control
+            param1 = 0.0, # Sysid primary control
+            param2 = 0.0, # Compid primary control
             param3 = 0.0, # Ssid secondary control
             param4 = 0.0, # Compid secondary control
             param7 = 0.0 # Gimbal device ID
@@ -195,7 +213,7 @@ class Tracking(Node): # Node. --> self.
         logger.info("Sending mount_pitch_stabilize...")
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_DO_MOUNT_CONFIGURE, # 204
-            param1=2.0, # Mount operation mode (see MAV_MOUNT_MODE enum)
+            param1=2.0, # Mount operation mode (see MAV_MOUNT_MODE enum) # https://mavlink.io/en/messages/common.html#MAV_MOUNT_MODE
             param2=0.0, # Stabilize roll? (1 = yes, 0 = no)
             param3=1.0, # Stabilize pitch? (1 = yes, 0 = no)
             param4=0.0 # Stabilize yaw? (1 = yes, 0 = no)
@@ -283,19 +301,45 @@ class Tracking(Node): # Node. --> self.
         logger.info('trajectory_setpoint_publisher published: ')
         logger.debug(msg)
 
+    def motor_tracking_test(self, yaw, pitch, targeted, thresh):
+            if (self.counter % 10) == 0:                    # Every 1 second, save threshold and targeted images
+                print('## Modulo output')
+                cv.imwrite(os.path.join(self.imagesPath, "thresh_" + str(self.picture) + "_" + timeString() + ".jpg"), thresh)
+                cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
+                self.picture += 1
+                logger.debug(f"Saved picture {self.picture}")
+            
+            if (pitch/10) > 0:
+                print("## pitch DOWN ")
+            elif (pitch/10) < 0:
+                print("## pitch UP ")
 
+            # Spin corresponding motor
+            if yaw > 0:
+                print("## yaw RIGHT ")
+                print(yaw)
+                logger.info("## Actuating motor #1...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.0, param2 = 0.5, param5 = 1.0,) # Use Motor 1
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = -1.0, param2 = 0.5, param5 = 3.0,) # Disarm Motor 3
+            
+            elif yaw <= 0:
+                print("## yaw LEFT ")
+                print(yaw)
+                logger.info("## Actuating motor #3...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.0, param2 = 0.5, param5 = 3.0,) # Use Motor 3
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = -1.0, param2 = 0.5, param5 = 1.0,) # Disarm Motor 1
 
-    # def vehicle_attitude_callback(self, msg): # WORKS - High Rate
-    #     logger.debug(f'Received vehicle_attitude_callback: {msg}')
-    #     msg_parsed = (f'q: {msg.q} delta_q_reset: {msg.delta_q_reset} ')
-    #     self.vehicle_attitude = msg_parsed
 #### Truman's IMU function
-    def vehicle_attitude_callback(self, msg):
-        #logger.debug(f'Received vehicle_attitude_callback: {msg}')
+    def vehicle_attitude_callback(self, msg): # High Rate
+        logger.debug(f'Received vehicle_attitude_callback: {msg}')
+        msg_parsed = (f'q: {msg.q} delta_q_reset: {msg.delta_q_reset} ')
+        logger.debug(f'msg_parsed: {msg_parsed}')
 
         # Extract yaw angle from IMU data (assuming quaternion orientation)
         orientation_q = msg.q # The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)
+        logger.info(f'orientation_q: {orientation_q}')
         euler = self.quaternion_to_euler( orientation_q[0], orientation_q[1], orientation_q[2], orientation_q[3])
+        logger.info(f'euler: {euler}')
         yaw = euler[2]  # Yaw angle in radians
 
         # Calculate yaw error
@@ -308,11 +352,14 @@ class Tracking(Node): # Node. --> self.
         # Publish attitude target with only yaw rate command
         vehicle_attitude_setpoint = VehicleAttitudeSetpoint()
         #vehicle_attitude_setpoint.type_mask = 1  # Ignore roll and pitch rates
-        vehicle_attitude_setpoint.thrust_body = [0.0, 0.0, 0.3] #self.K_p*diff_yaw_thrust  # Set a thrust
+        
+        #vehicle_attitude_setpoint.thrust_body = [0.0, 0.0, (self.K_p*diff_yaw_thrust)]  # Set a thrust
+        vehicle_attitude_setpoint.yaw_body = self.K_p*diff_yaw_thrust
         vehicle_attitude_setpoint.yaw_sp_move_rate = yaw_rate_cmd  # Set the yaw rate command
 
-        self.vehicle_attitude_setpoint_publisher.publish(vehicle_attitude_setpoint)
-        logger.info('vehicle_attitude_setpoint_publisher published:')
+        if self.counter > 40 and self.counter < 140:
+            self.vehicle_attitude_setpoint_publisher.publish(vehicle_attitude_setpoint)
+            logger.info('vehicle_attitude_setpoint_publisher published:')
 
 #### quaternion converter function ####
     def quaternion_to_euler(self, w, x, y, z):
@@ -338,12 +385,12 @@ class Tracking(Node): # Node. --> self.
     def timer_callback_10Hz(self): #-> None:
         print('## timer_callback_10Hz: ', self.counter)     # 10 setpoints for every second
 
-## Subscriber parsed message prints
-        #logger.info(f'## self.vehicle_attitude: {self.vehicle_attitude}') # Prints parsed message
-        #logger.info(f'## self.vehicle_status: {self.vehicle_status}') # DOES NOT Prints parsed message
-        #logger.info(f'## self.vehicle_global_position: {self.vehicle_global_position}') # Prints parsed message
-        #logger.info(f'## self.vehicle_control_mode: {self.vehicle_control_mode}') # Prints parsed message
-        #logger.info(f'## self.sensor_combined: {self.sensor_combined}') # Prints parsed message
+        # Subscriber parsed message prints
+        #logger.info(f'## self.vehicle_attitude: {self.vehicle_attitude}') # Prints parsed message WORKS
+        #logger.info(f'## self.vehicle_status: {self.vehicle_status}') # NOT WORKING
+        #logger.info(f'## self.vehicle_global_position: {self.vehicle_global_position}') # WORKS
+        #logger.info(f'## self.vehicle_control_mode: {self.vehicle_control_mode}') # WORKS
+        #logger.info(f'## self.sensor_combined: {self.sensor_combined}') # WORKS
         
         istrue, frame = cap.read()
         logger.debug('## istrue: ', istrue)
@@ -363,38 +410,28 @@ class Tracking(Node): # Node. --> self.
             self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
 
         if self.counter < 10:
-            self.pub_act_test()                             # Perform the actuator and servo test in the first few seconds
+           self.pub_act_test()                              # Perform the actuator and servo test in the first few seconds
 
         if self.counter > 40 and self.counter < 100:        # For the second act, the actuators will spin in direction to the tracking vector
-            if (pitch/10) > 0:
-                print("## pitch DOWN ")
-            elif (pitch/10) < 0:
-                print("## pitch UP ")
+            #print('## motor tracking placeholder')
+            self.motor_tracking_test(yaw, pitch, targeted, thresh)
 
-            # Spin corresponding motor
-            if yaw > 0:
-                print("## yaw RIGHT ")
-                print(yaw)
-                logger.info("## Actuating motor #1...")
-                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 1.0,)
+        if self.counter > 40 and self.counter < 140:        # Testing ground for stabilization will run here   
+            print('## at counter 20 < x < 200')
+            #self.publish_vehicle_attitude_setpoint_command()# Does nothing but rev up the motors
+            #self.publish_trajectory_setpoint_command()      # Revs up all the way to 1600 (1.0) max thrust for the motors
+                        
+            #self.gimbal_manager_configure()                 # Needed to setup control permissions over gimbal
+            #self.gimbal_neutral()                           # Stabilizes pitch using the servo but can't turn off the motors
             
-            elif yaw <= 0:
-                print("## yaw LEFT ")
-                print(yaw)
-                logger.info("## Actuating motor #3...")
-                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 3.0,)
-
-        if self.counter > 100 and self.counter < 200:        # The chunk of the demonstration will run here   
-            #print('## at counter 20 < x < 200')
-            self.publish_vehicle_attitude_setpoint_command()# 
-            self.publish_trajectory_setpoint_command()
-            #self.gimbal_manager_configure()
-            #self.gimbal_neutral()
-            #self.mount_pitch_stabilize()                    # 
-            # self.pub_veh_ctl_mode()
-            # self.pub_act_test_off()
-            # self.pub_traj_set()
+            #self.mount_pitch_stabilize()                    #Regardless what param1 is, the servo will stabilize pitch and motors will spin to about 1150.
         
+        if self.counter == 50 or self.counter == 60:
+            #print('## arm placeholder')
+            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
+        if self.counter == 160 or self.counter == 170:
+            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
+
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
             print('## Modulo output')
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
@@ -402,11 +439,6 @@ class Tracking(Node): # Node. --> self.
             cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
             self.picture += 1
             logger.debug(f"Saved picture {self.picture}")
-        
-        if self.counter == 120 or self.counter == 130:
-            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
-        if self.counter == 200 or self.counter == 220:
-            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
 
         self.counter += 1
 

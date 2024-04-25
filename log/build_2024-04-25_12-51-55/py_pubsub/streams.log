@@ -1,0 +1,21 @@
+[5.603s] Invoking command in '/home/anyell/ahabp_v2_ws/src/py_pubsub': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
+[8.066s] running egg_info
+[8.069s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[8.072s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[8.074s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[8.085s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[8.087s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[8.091s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[8.092s] adding license file 'LICENSE'
+[8.094s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[8.095s] running build
+[8.096s] running build_py
+[8.097s] running install
+[8.105s] running install_lib
+[8.115s] running install_data
+[8.117s] running install_egg_info
+[8.131s] removing '/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info' (and everything under it)
+[8.133s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info
+[8.147s] running install_scripts
+[8.325s] writing list of installed files to '/home/anyell/ahabp_v2_ws/build/py_pubsub/install.log'
+[8.550s] Invoked command in '/home/anyell/ahabp_v2_ws/src/py_pubsub' returned '0': PYTHONPATH=/home/anyell/ahabp_v2_ws/build/py_pubsub/prefix_override:/home/anyell/ahabp_v2_ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/anyell/ahabp_v2_ws/build/py_pubsub/build install --record /home/anyell/ahabp_v2_ws/build/py_pubsub/install.log --single-version-externally-managed install_data
