@@ -366,24 +366,6 @@ class Tracking(Node): # Node. --> self.
         #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()   
         yaw, pitch, targeted, thresh = target(frame)
 
-        if (pitch/10) > 0:
-            # if angle >= 5:
-            #     angle -= 1
-            # servo.ChangeDutyCycle(2 + (angle/18))
-            print(" pitch DOWN ")
-        elif (pitch/10) < 0:
-            # if angle <= 95:
-            #     angle += 1
-            # servo.ChangeDutyCycle(2 + (angle/18))
-            print(" pitch UP ")
-
-        if yaw > 0:
-            print(" yaw RIGHT ")
-            print(yaw)
-        elif yaw <= 0:
-            print(" yaw LEFT ")
-            print(yaw)
-
         if self.counter == 1:
             self.publish_offboard_control_mode()            # Has to be first because it enables parts for offboard control
         if self.counter == 2:
@@ -392,8 +374,26 @@ class Tracking(Node): # Node. --> self.
         if self.counter < 10:
             self.pub_act_test()                             # Perform the actuator and servo test in the first few seconds
 
-        if self.counter > 20 and self.counter < 200:        # The chunk of the demonstration will run here
-#        if self.counter == 30:            
+        if self.counter > 40 and self.counter < 100:
+            if (pitch/10) > 0:
+                print("## pitch DOWN ")
+            elif (pitch/10) < 0:
+                print("## pitch UP ")
+
+            # Spin corresponding motor
+            if yaw > 0:
+                print("## yaw RIGHT ")
+                print(yaw)
+                logger.info("## Actuating motor #1...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 1.0,)
+            
+            elif yaw <= 0:
+                print("## yaw LEFT ")
+                print(yaw)
+                logger.info("## Actuating motor #3...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 3.0,)
+
+        if self.counter > 100 and self.counter < 200:        # The chunk of the demonstration will run here   
             #print('## at counter 20 < x < 200')
             self.publish_vehicle_attitude_setpoint_command()# 
             self.publish_trajectory_setpoint_command()
@@ -403,20 +403,19 @@ class Tracking(Node): # Node. --> self.
             # self.pub_veh_ctl_mode()
             # self.pub_act_test_off()
             # self.pub_traj_set()
-
-        if self.counter == 40 or self.counter == 50:
-            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
-        if self.counter == 200 or self.counter == 220:
-            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
         
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
             print('## Modulo output')
-
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
             cv.imwrite(os.path.join(self.imagesPath, "thresh_" + str(self.picture) + "_" + timeString() + ".jpg"), thresh)
             cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
             self.picture += 1
-            print(f"Saved picture {self.picture}")
+            logger.debug(f"Saved picture {self.picture}")
+        
+        if self.counter == 120 or self.counter == 130:
+            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
+        if self.counter == 200 or self.counter == 220:
+            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
 
         self.counter += 1
 

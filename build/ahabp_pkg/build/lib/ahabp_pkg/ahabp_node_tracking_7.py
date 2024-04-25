@@ -91,17 +91,6 @@ def target(frame, minimum=250, cx=320, cy=240):
     cv.circle(frame, [targx, targy], 25, (25, 25, 255), 2)
     cv.arrowedLine(frame, [cx, cy], [targx, targy], (25, 25, 255), 2) # center --> target
 
-    if (pitch_target/10) > 0:
-        # if angle >= 5:
-        #     angle -= 1
-        # servo.ChangeDutyCycle(2 + (angle/18))
-        print(" pitch DOWN ")
-    elif (pitch_target/10) < 0:
-        # if angle <= 95:
-        #     angle += 1
-        # servo.ChangeDutyCycle(2 + (angle/18))
-        print(" pitch UP ")
-
     return yaw_target, pitch_target, frame, thresh
 
 class Tracking(Node): # Node. --> self.
@@ -113,7 +102,7 @@ class Tracking(Node): # Node. --> self.
             reliability = ReliabilityPolicy.BEST_EFFORT,
             durability  = DurabilityPolicy.TRANSIENT_LOCAL,
             history     = HistoryPolicy.KEEP_LAST,
-            depth       = 5)  # Adjust the queue size as needed
+            depth       = 10)  # Adjust the queue size as needed
 
         qos_profile_sub = QoSProfile(
             reliability = ReliabilityPolicy.BEST_EFFORT,
@@ -246,11 +235,32 @@ class Tracking(Node): # Node. --> self.
         logger.info('Sending disarm...')
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, param1 = 0.0)
 
+    def publish_vehicle_command(self, command, **params) -> None: # This defaults to nothing except for determining the targets which is redundant.
+        msg = VehicleCommand() # The most consistent, robust message - https://github.com/PX4/px4_msgs/blob/main/msg/VehicleCommand.msg
+        msg.command = command
+        msg.param1 = params.get("param1", 0.0)
+        msg.param2 = params.get("param2", 0.0)
+        msg.param3 = params.get("param3", 0.0)
+        msg.param4 = params.get("param4", 0.0)
+        msg.param5 = params.get("param5", 0.0)
+        msg.param6 = params.get("param6", 0.0)
+        msg.param7 = params.get("param7", 0.0)
+        msg.target_system = 1           # System which should execute the command
+        msg.target_component = 0        # Component which should execute the command, 0 for all components
+        msg.source_system = 0           # System sending the command
+        msg.source_component = 0        # Component / mode executor sending the command
+        msg.confirmation = 0            # 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)
+        msg.from_external = True
+        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
+        self.vehicle_command_publisher.publish(msg)
+        logger.info('publish_vehicle_command published:')
+        logger.debug(msg)
+
 #### Truman's imu stuff
     # def vehicle_attitude_callback(self, msg):
     #     # Extract yaw angle from IMU data (assuming quaternion orientation)
     #     orientation_q = msg.orientation
-    #     euler = self.quaternion_to_euler(orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w)
+    #     euler = self.quaternion_to_euler( orientation_q.w, orientation_q.x, orientation_q.y, orientation_q.z)
     #     yaw = euler[2]  # Yaw angle in radians
 
     #     # Calculate yaw error
@@ -269,10 +279,7 @@ class Tracking(Node): # Node. --> self.
     #     self.publisher.publish(attitude_target)
 
 #### The message compilers ####
-# These functions build the complete long command that the respective topics listen too. 
-# They'll either make the command or revert to a default command. I am not sure if defaulting 
-# is necessary but saw it in many examples.
-    def publish_offboard_control_mode(self):
+    def publish_offboard_control_mode(self): # This publish function enables the various subjects for offboard mode
         msg = OffboardControlMode()
         msg.position = True
         msg.velocity = True
@@ -283,43 +290,20 @@ class Tracking(Node): # Node. --> self.
         msg.direct_actuator = True
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
-        logger.debug('publish_offboard_control_mode published:')
+        logger.info('publish_offboard_control_mode published:')
         logger.debug(msg)
 
-    def publish_vehicle_command(self, command, **params) -> None: # This defaults to nothing except for determining the targets which is redundant.
-        msg = VehicleCommand()
-        msg.command = command
-        msg.param1 = params.get("param1", 0.0)
-        msg.param2 = params.get("param2", 0.0)
-        msg.param3 = params.get("param3", 0.0)
-        msg.param4 = params.get("param4", 0.0)
-        msg.param5 = params.get("param5", 0.0)
-        msg.param6 = params.get("param6", 0.0)
-        msg.param7 = params.get("param7", 0.0)
-        msg.target_system = 1           # System which should execute the command
-        msg.target_component = 0        # Component which should execute the command, 0 for all components
-        msg.source_system = 0           # System sending the command
-        msg.source_component = 0        # Component / mode executor sending the command
-        msg.confirmation = 0            # 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)
-        msg.from_external = True
-        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.vehicle_command_publisher.publish(msg)
-        logger.debug('publish_vehicle_command published:')
-        logger.debug(msg)
-
-    def publish_vehicle_attitude_setpoint_command(self, **params) -> None:
+    def publish_vehicle_attitude_setpoint_command(self):
         msg = VehicleAttitudeSetpoint()
-
-        msg.yaw_body                            = params.get("yaw_body", 0.0) ##
+        #msg.yaw_body                            = 0.0#params.get("yaw_body", 0.0) ##
         #msg.yaw_sp_move_rate                    = params.get("yaw_sp_move_rate", 0.01)
-        msg.q_d                                 = params.get("q_d", [1.0, 0.0, 0.0, 0.0])
-        msg.thrust_body                         = params.get("thrust_body", [0.0, 0.0, 0.0])
-
+        msg.q_d                                 = [1.0, 0.0, 0.0, 0.0]#params.get("q_d", [1.0, 0.0, 0.0, 0.0])
+        #msg.thrust_body                         = #params.get("thrust_body", [0.0, 0.0, 0.0])
         self.vehicle_attitude_setpoint_publisher.publish(msg)
-        logger.debug('publish_vehicle_attitude_setpoint_command published:')
+        logger.info('publish_vehicle_attitude_setpoint_command published:')
         logger.debug(msg)
 
-    def publish_trajectory_setpoint_command(self, **params) -> None:
+    def publish_trajectory_setpoint_command(self): #, **params) -> None:
         msg = TrajectorySetpoint()
         # Trajectory setpoint in NED frame
         # Input to PID position controller.
@@ -327,28 +311,20 @@ class Tracking(Node): # Node. --> self.
         # setting a value to NaN means the state should not be controlled
 
         # NED local world frame
-        msg.position    = params.get("position", [nan, nan, nan]) # in meters
-        msg.velocity    = params.get("velocity", [0.0, 0.0, 0.62585]) # in meters/second
-        msg.acceleration= params.get("acceleration", [0.0, 0.0, 0.0]) # in meters/second^2
-        msg.jerk        = params.get("jerk", [nan, nan, 0.0]) # in meters/second^3 (for logging only)
-        msg.yaw         = params.get("yaw", nan) # euler angle of desired attitude in radians -PI..+PI
-        msg.yawspeed    = params.get("yawspeed", 0.0) # angular velocity around NED frame z-axis in radians/second
+        #msg.position    = params.get("position", [nan, nan, nan]) # in meters
+        #msg.velocity    = params.get("velocity", [0.0, 0.0, 0.62585]) # in meters/second
+        #msg.acceleration= params.get("acceleration", [0.0, 0.0, 0.0]) # in meters/second^2
+        #msg.jerk        = params.get("jerk", [nan, nan, 0.0]) # in meters/second^3 (for logging only)
+        msg.yaw         = 0.0 #params.get("yaw", nan) # euler angle of desired attitude in radians -PI..+PI
+        #msg.yawspeed    = params.get("yawspeed", 0.0) # angular velocity around NED frame z-axis in radians/second
 
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
-        logger.debug('trajectory_setpoint_publisher published: ')
+        logger.info('trajectory_setpoint_publisher published: ')
         logger.debug(msg)
 
-    # def publish_position_setpoint(self, x: float, y: float, z: float):
-    #     msg = TrajectorySetpoint()
-    #     msg.position = [x, y, z]
-    #     msg.yaw = 1.57079  # (90 degree)
-    #     msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-    #     self.trajectory_setpoint_publisher.publish(msg)
-    #     logger.debug(f"Publishing position setpoints {[x, y, z]}")
-
 #### quaternion converter function ####
-    def quaternion_to_euler(self, x, y, z, w):
+    def quaternion_to_euler(self, w, x, y, z):
         """
         Convert a quaternion into Euler angles (roll, pitch, yaw)
         """
@@ -370,7 +346,6 @@ class Tracking(Node): # Node. --> self.
 # These are where the 
     def timer_callback_10Hz(self): #-> None:
         print('## timer_callback_10Hz: ', self.counter)     # 10 setpoints for every second
-        self.publish_offboard_control_mode()                # Has to be first because it sets up offboard control - like a heartbeat
 
 ## Subscriber parsed message prints
         #logger.info(f'## self.vehicle_attitude: {self.vehicle_attitude}') # Prints parsed message
@@ -390,39 +365,57 @@ class Tracking(Node): # Node. --> self.
         # 'target' error is based on what's in the camera frame
         #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update()   
         yaw, pitch, targeted, thresh = target(frame)
-        logger.debug('## yaw_target: ', yaw)
 
-        if self.counter == 1: 
+        if self.counter == 1:
+            self.publish_offboard_control_mode()            # Has to be first because it enables parts for offboard control
+        if self.counter == 2:
             self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
 
         if self.counter < 10:
             self.pub_act_test()                             # Perform the actuator and servo test in the first few seconds
 
-        if self.counter > 20 and self.counter < 100:
-#        if self.counter == 30:            
-#            print('## at counter 30')
-            self.gimbal_manager_configure()
-            self.gimbal_neutral()
-            self.mount_pitch_stabilize()                    # This works alone.
+        if self.counter > 40 and self.counter < 100:
+            if (pitch/10) > 0:
+                print("## pitch DOWN ")
+            elif (pitch/10) < 0:
+                print("## pitch UP ")
 
-        if self.counter == 40 or self.counter == 50:
-            self.arm()                                      # Arm the payload. Will disarm from auto preflight disarming. Only needs to be called once.
+            # Spin corresponding motor
+            if yaw > 0:
+                print("## yaw RIGHT ")
+                print(yaw)
+                logger.info("## Actuating motor #1...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 1.0,)
+            
+            elif yaw <= 0:
+                print("## yaw LEFT ")
+                print(yaw)
+                logger.info("## Actuating motor #3...")
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_ACTUATOR_TEST, param1 = 0.1, param2 = 0.5, param5 = 3.0,)
+
+        if self.counter > 100 and self.counter < 200:        # The chunk of the demonstration will run here   
+            #print('## at counter 20 < x < 200')
+            self.publish_vehicle_attitude_setpoint_command()# 
+            self.publish_trajectory_setpoint_command()
+            #self.gimbal_manager_configure()
+            #self.gimbal_neutral()
+            #self.mount_pitch_stabilize()                    # 
             # self.pub_veh_ctl_mode()
             # self.pub_act_test_off()
             # self.pub_traj_set()
-
-        if self.counter == 100 or self.counter == 120:
-            print('## disarm')
-            #self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
         
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
             print('## Modulo output')
-
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
             cv.imwrite(os.path.join(self.imagesPath, "thresh_" + str(self.picture) + "_" + timeString() + ".jpg"), thresh)
             cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
             self.picture += 1
-            print(f"Saved picture {self.picture}")
+            logger.debug(f"Saved picture {self.picture}")
+        
+        if self.counter == 120 or self.counter == 130:
+            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
+        if self.counter == 200 or self.counter == 220:
+            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
 
         self.counter += 1
 

@@ -26,6 +26,7 @@ ahabp_pkg/ahabp_node_tracking_4.py
 ahabp_pkg/ahabp_node_tracking_5.py
 ahabp_pkg/ahabp_node_tracking_6.py
 ahabp_pkg/ahabp_node_tracking_7.py
+ahabp_pkg/ahabp_node_tracking_8.py
 launch/ahabp_v2.launch.py
 resource/ahabp_pkg
 test/test_copyright.py
