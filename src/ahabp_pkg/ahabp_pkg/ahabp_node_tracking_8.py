@@ -337,9 +337,9 @@ class Tracking(Node): # Node. --> self.
 
         # Extract yaw angle from IMU data (assuming quaternion orientation)
         orientation_q = msg.q # The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)
-        logger.debug(f'orientation_q: {orientation_q}')
+        logger.info(f'orientation_q: {orientation_q}')
         euler = self.quaternion_to_euler( orientation_q[0], orientation_q[1], orientation_q[2], orientation_q[3])
-        logger.debug(f'euler: {euler}')
+        logger.info(f'euler: {euler}')
         yaw = euler[2]  # Yaw angle in radians
 
         # Calculate yaw error
@@ -349,18 +349,15 @@ class Tracking(Node): # Node. --> self.
         # Calculate yaw rate command using proportional control
         yaw_rate_cmd = self.K_p * yaw_error
 
-        return (diff_yaw_thrust, yaw_rate_cmd)
-        #self.veh_att_set(diff_yaw_thrust, yaw_rate_cmd, att_flag)
-
-    def veh_att_set(self, diff_yaw_thrust, yaw_rate_cmd, att_flag):
         # Publish attitude target with only yaw rate command
         vehicle_attitude_setpoint = VehicleAttitudeSetpoint()
         #vehicle_attitude_setpoint.type_mask = 1  # Ignore roll and pitch rates
         
-        vehicle_attitude_setpoint.thrust_body = [0.0, 0.0, (self.K_p*diff_yaw_thrust)]  # Set a thrust
+        #vehicle_attitude_setpoint.thrust_body = [0.0, 0.0, (self.K_p*diff_yaw_thrust)]  # Set a thrust
+        vehicle_attitude_setpoint.yaw_body = self.K_p*diff_yaw_thrust
         vehicle_attitude_setpoint.yaw_sp_move_rate = yaw_rate_cmd  # Set the yaw rate command
 
-        if att_flag == True:
+        if self.counter > 40 and self.counter < 140:
             self.vehicle_attitude_setpoint_publisher.publish(vehicle_attitude_setpoint)
             logger.info('vehicle_attitude_setpoint_publisher published:')
 
@@ -423,10 +420,7 @@ class Tracking(Node): # Node. --> self.
             print('## at counter 20 < x < 200')
             #self.publish_vehicle_attitude_setpoint_command()# Does nothing but rev up the motors
             #self.publish_trajectory_setpoint_command()      # Revs up all the way to 1600 (1.0) max thrust for the motors
-            
-            diff_yaw_thrust, yaw_rate_cmd = self.vehicle_attitude_callback()
-            self.veh_att_set(self, diff_yaw_thrust, yaw_rate_cmd, att_flag=True)
-            
+                        
             #self.gimbal_manager_configure()                 # Needed to setup control permissions over gimbal
             #self.gimbal_neutral()                           # Stabilizes pitch using the servo but can't turn off the motors
             
