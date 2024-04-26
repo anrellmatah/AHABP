@@ -1,0 +1,4 @@
+Invoking command in '/home/anyell/ahabp_v2_ws/build/mavlink': /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/mavlink -- -j4 -l4
+Invoked command in '/home/anyell/ahabp_v2_ws/build/mavlink' returned '0': /usr/bin/cmake --build /home/anyell/ahabp_v2_ws/build/mavlink -- -j4 -l4
+Invoking command in '/home/anyell/ahabp_v2_ws/build/mavlink': /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/mavlink
+Invoked command in '/home/anyell/ahabp_v2_ws/build/mavlink' returned '0': /usr/bin/cmake --install /home/anyell/ahabp_v2_ws/build/mavlink

@@ -1,8 +1,8 @@
 #!/bin/python3
 
 ################################################################
-# Title: AHABP Node Tracking V7
-# Date: 4/24/2024
+# Title: AHABP Node Tracking V10
+# Date: 4/26/2024
 # Author: Anyell Mata
 # Description: This code will incorporate Scott's OpenCV code and manual Proportional controller commands.
 ################################################################
@@ -338,7 +338,7 @@ class Tracking(Node):
         msg.yaw_body              = (self.des_quaternion[2])*(math.pi) # Range is [-PI, PI]
         msg.yaw_sp_move_rate      = self.yaw_sp_move_rate  # Set the yaw rate command. [rad/s]. A typical range is [-2.0, 2.0].
         msg.q_d                   = [self.des_quaternion[3], self.des_quaternion[0], self.des_quaternion[1], self.des_quaternion[2]] # q(w, x, y, z) # Desired quaternion for quaternion control. Range is [-1.0, 1.0]
-        msg.thrust_body           = [0.0, 0.0, 0.2] # Normalized thrust command in body NED frame [-1,1]. Make sure third parameter is negative. It is receiving
+        msg.thrust_body           = [0.0, 0.0, -0.2] # Normalized thrust command in body NED frame [-1,1]. Make sure third parameter is negative. It is receiving
         msg.reset_integral        = False
         msg.fw_control_yaw_wheel  = False
         self.vehicle_attitude_setpoint_publisher.publish(msg)
@@ -507,7 +507,6 @@ class Tracking(Node):
 
         return yaw_target, pitch_target, frame, thresh
 
-
 #### Callback functions ####
     def timer_callback_10Hz(self): #-> None:
         print('## timer_callback_10Hz: ', self.counter)     # 10 setpoints for every second
@@ -528,8 +527,11 @@ class Tracking(Node):
         #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update() # 'ephem' error is based on calculation with GPS/heading
         yaw, pitch, targeted, thresh = self.target(frame) # 'target' error is based on what's in the camera frame
 
-        if self.counter == 2 or self.counter == 3:
+        if self.counter > 2 or self.counter < 10:
             self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
+
+        # if self.counter < 10:
+        #    self.pub_act_test()                              # Perform the actuator and servo test in the first few seconds
 
         # if self.counter == 10 or self.counter == 11:
         #     #3
@@ -540,7 +542,7 @@ class Tracking(Node):
             print('## at counter 10 < x')
             
             #1
-            #self.veh_att_set()                             #
+            self.veh_att_set()                             #
 
             #2
             #self.traj_set()                                # Does not seem to exercise feedback
@@ -564,10 +566,10 @@ class Tracking(Node):
             #self.veh_cmd_do_set_roi()
   
 
-        if self.counter == 10 or self.counter == 20:
+        if self.counter == 30 or self.counter == 40:
             #print('## arm placeholder')
             self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
-        if self.counter == 110 or self.counter == 120:
+        if self.counter == 130 or self.counter == 140:
             self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
 
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
