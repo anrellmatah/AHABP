@@ -11,16 +11,17 @@
 *** BEFORE RUNNING SCRIPT ***
 $ colcon build --event-handlers console_direct+ --executor sequential --continue-on-error
 
+# Gotta start the camera then close it
 $ sudo chmod 777 /dev/video0
 $ ros2 run v4l2_camera v4l2_camera_node -ros-args -p image_size:="[640,480]"
 
+# uXRCE DDS Command
 $ MicroXRCEAgent serial -b 921600 -D /dev/ttyAMA0 -v 4
 '''
-# Need to cancel v4l2 camera command - the script just needs it started
 
 '''
 *** AFTER RUNNING SCRIPT ***
-$ ros2_graph /...
+$ ros2_graph /[Node]
 '''
 
 # Import necessary libraries
@@ -118,9 +119,12 @@ class Tracking(Node):
         # Initialize internal class variables
         self.imagesPath = imagesPath
         self.dataPath = dataPath
-        self.counter = 0
+        self.counter = 2
         self.picture = 1
         self.local_timestamp = 0
+        self.index = 0
+        self.K_p = 2.56 # 0.01*(pow(2,8)) # Proportional gain - [0.01 <--> 100.0]
+        self.once_flag = True
 
         # Create timer callbacks
         self.timer = self.create_timer(.1, self.timer_callback_10Hz) #10Hz
@@ -135,9 +139,8 @@ class Tracking(Node):
         msg_parsed = (f'timestamp: {msg.timestamp} gyro_rad: {msg.gyro_rad} accelerometer_m_s2: {msg.accelerometer_m_s2} ')
         self.sensor_combined = msg_parsed
     # Mavros equivalent IMU function
-    def vehicle_attitude_callback(self, msg): # High Rate
-        self.des_yaw = math.radians(0.0)  # [radians] Desired yaw angle in radians. 0.0 should be North -or- the starting orientation determined when the vehicle is armed.
-        self.K_p = 1 # Proportional gain
+    def vehicle_attitude_callback(self, msg): # High Rate - ~80 Hz!!
+        self.des_yaw = math.radians(0.0)  # [radians] Desired yaw angle in radians. 0.0 should be North -or- the starting orientation determined when the vehicle is armed. Unsure.
 
         logger.debug(f' Received vehicle_attitude_callback: {msg}')
         msg_parsed = (f'q: {msg.q} delta_q_reset: {msg.delta_q_reset} ')
@@ -145,28 +148,39 @@ class Tracking(Node):
 
         # Extract yaw angle from IMU data (assuming quaternion orientation)
         orientation_q = msg.q # The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)
-        logger.debug(f' orientation_q: {orientation_q}') # Quaternion rotation from the FRD body frame to the NED earth frame
-        curr_roll, curr_pitch, curr_yaw = self.quaternion_to_euler( orientation_q[0], orientation_q[1], orientation_q[2], orientation_q[3]) # Input is q(w, x, y, z)
-        logger.debug(f' roll: {curr_roll} pitch: {curr_pitch} yaw: {curr_yaw} ## [radians]')
+        logger.debug(f' orientation_q: {orientation_q} ## [quaternion]') # Quaternion rotation from the FRD body frame to the NED earth frame
+        #curr_roll, curr_pitch, curr_yaw = self.quaternion_to_euler( orientation_q[0], orientation_q[1], orientation_q[2], orientation_q[3]) # Input is q(w, x, y, z)
+        curr_roll, curr_pitch, self.curr_yaw = self.quaternion_to_euler(orientation_q[0], orientation_q[1], orientation_q[2], orientation_q[3]) # Input is q(w, x, y, z). This aligns better than "euler_from_quaternion()"
+        logger.debug(f' roll: {curr_roll} pitch: {curr_pitch} yaw: {self.curr_yaw} ## [radians]')
 
-        # 1) Calculate yaw error
-        logger.debug(f' self.des_yaw: {self.des_yaw}')
-        yaw_error = self.des_yaw - curr_yaw # [radians]
-        logger.debug(f' yaw_error: {yaw_error}') # [radians]
+        # Calculate error in radians
+        logger.debug(f' self.des_yaw: {self.des_yaw} ## [radians]')
+        yaw_error = self.curr_yaw - self.des_yaw # [radians]
+        logger.debug(f' yaw_error: {yaw_error} ## [radians]') # [radians]
 
-        # Calculate yaw speed move rate command using proportional control
-        logger.debug(f' self.K_p: {self.K_p}')
-        self.yaw_sp_move_rate = self.K_p * yaw_error # [radians]
-        logger.debug(f' self.yaw_sp_move_rate: {self.yaw_sp_move_rate}')
+        # 1) Use a for-loop to double proportional gain to see differences
+        if (self.counter % 100) == 0:                    # Every 20 seconds
+            if self.once_flag == True:
+                logger.info('## vehicle_attitude modulo output')                
+                # Double proportional gains
+                logger.debug(f'Before K_p: {self.K_p}')
+                self.K_p *= 2
+                logger.debug(f'After K_p: {self.K_p}')
+                self.once_flag = False
+                
+        # Calculate yaw speed move rate using proportional control
+        logger.info(f' self.K_p: {self.K_p}') 
+        self.yaw_sp_move_rate = self.K_p * yaw_error # [-2.084 <--> 2.084] # I don't know why this range
+        logger.info(f' self.yaw_sp_move_rate: {self.yaw_sp_move_rate} ## [radians]') # Positive should be CCW direction and Negative should be CW direction.
 
         # I'm unsure what this does
         # diff_yaw_thrust = yaw_error/math.pi # math.fabs(yaw_error/math.pi)
         # logger.info(f'diff_yaw_thrust: {diff_yaw_thrust}')
 
-        # Taken from Dr. Das code - https://github.com/darknight-007/dreams-pod-high-altitude/blob/main/test-offboard-control-pitch-yaw-tracking.py#L75
-        dir_yaw = abs(curr_yaw) - 0.2 # [degrees]
-        self.des_quaternion = quaternion_from_euler(0, 0, dir_yaw) # Outputs as q(x, y, z, w) [normalized] [-1.0,1.0]
-        logger.debug(f' self.des_quaternion: {self.des_quaternion}')
+        # # Taken from Dr. Das code - https://github.com/darknight-007/dreams-pod-high-altitude/blob/main/test-offboard-control-pitch-yaw-tracking.py#L75
+        des_yaw = self.curr_yaw - self.yaw_sp_move_rate# [degrees]
+        self.des_quaternion = quaternion_from_euler(0, 0, des_yaw) # Outputs as q(x, y, z, w) [normalized] [-1.0 <--> 1.0]
+        logger.info(f'self.des_quaternion: {self.des_quaternion}')
 
     # def vehicle_attitude_callback(self, msg): # WORKS - High Rate
     #     logger.debug(f'Received vehicle_attitude_callback: {msg}')
@@ -333,12 +347,12 @@ class Tracking(Node):
     def veh_att_set(self):
         # Publish attitude target with only yaw rate command
         msg = VehicleAttitudeSetpoint()
-        msg.roll_body             = 0.0 # math.nan # body angle in NED frame (can be NaN for FW)
-        msg.pitch_body            = 0.0 # math.nan # body angle in NED frame (can be NaN for FW)
-        msg.yaw_body              = (self.des_quaternion[2])*(math.pi) # Range is [-PI, PI]
+        msg.roll_body             = nan #0.0 # math.nan # body angle in NED frame (can be NaN for FW)
+        msg.pitch_body            = nan #0.0 # math.nan # body angle in NED frame (can be NaN for FW)
+        msg.yaw_body              = self.curr_yaw # Range is [-PI, PI]
         msg.yaw_sp_move_rate      = self.yaw_sp_move_rate  # Set the yaw rate command. [rad/s]. A typical range is [-2.0, 2.0].
-        msg.q_d                   = [self.des_quaternion[3], self.des_quaternion[0], self.des_quaternion[1], self.des_quaternion[2]] # q(w, x, y, z) # Desired quaternion for quaternion control. Range is [-1.0, 1.0]
-        msg.thrust_body           = [0.0, 0.0, -0.2] # Normalized thrust command in body NED frame [-1,1]. Make sure third parameter is negative. It is receiving
+        msg.q_d                   = [self.des_quaternion[3], self.des_quaternion[0], self.des_quaternion[1], self.des_quaternion[2]] # q(w, x, y, z) # Desired quaternion for quaternion control. Range is [-1.0, 1.0]. des_quaternion outputs as q(x, y, z, w)
+        msg.thrust_body           = [0.0, 0.0, -0.3] # Normalized thrust command in body NED frame [-1,1]. Make sure third parameter is negative. It is receiving
         msg.reset_integral        = False
         msg.fw_control_yaw_wheel  = False
         self.vehicle_attitude_setpoint_publisher.publish(msg)
@@ -527,29 +541,37 @@ class Tracking(Node):
         #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update() # 'ephem' error is based on calculation with GPS/heading
         yaw, pitch, targeted, thresh = self.target(frame) # 'target' error is based on what's in the camera frame
 
-#        if self.counter > 2 or self.counter < 10:
-#            self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
+        # if self.counter > 2 or self.counter < 20:
+        #    self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
 
         # if self.counter < 10:
         #    self.pub_act_test()                              # Perform the actuator and servo test in the first few seconds
+
+        # if self.counter > 40: # For the second act, the actuators will spin in direction to the tracking vector
+        #     self.motor_tracking_test(yaw, pitch, targeted, thresh)
 
         # if self.counter == 10 or self.counter == 11:
         #     #4
         #     self.gimbal_manager_configure()                 # Needed to setup control permissions over gimbal
         #     self.gimbal_manager_pitchyaw()                           # Stabilizes pitch using the servo but can't turn off the motors
 
-        if self.counter > 10: #and self.counter < 110:        # Testing ground for stabilization will run here - ordered to most presentable to least
-            print('## at sself.counter > 10')
-
-            #1
-            self.veh_rate_set()                 # You can see it tracking something. Would be nice if it wasn't for the drift. Also shows no feedback.
+        if self.counter >= 20: # and self.counter < 110:        # Testing ground for stabilization will run here - ordered to most presentable to least
+            if self.counter == 20 or self.counter == 30:
+                self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
+            # if self.counter == 220 or self.counter == 230:
+            #     self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
+            
+            #1 Establishes rates
+            #self.veh_rate_set()                 # You can see it tracking something. Would be nice if it wasn't for the drift. Also shows no feedback.
            
-            #2
-            #self.veh_att_set()                 # Show slow, sluggish stabilization to most likely the armed orientation.
+            #7
+            #self.veh_thrust_set()               # Reaches non-reactive steady state
+            #2 Mavros Equivalent
+            self.veh_att_set()                 # Slow, sluggish stabilization to most likely the armed orientation.
             
-            #3
+            #3 
             #self.mount_pitch_stabilize()        # Motors react to pitch and servo stabilizes to centered angle.
-            
+
             #4
             #self.man_con_set()                  # Just manual control setpoints. Currently static but potential to be dynamic based on vehicle_attitude. Easier commands.
 
@@ -559,19 +581,11 @@ class Tracking(Node):
             #6
             #self.go_to_set()                    # Once spinning, continues to spin. No feedback.
 
-            #7
-            #self.veh_thrust_set()               # Reaches non-reactive steady state
+
 
             #8
             #self.veh_cmd_do_set_roi()            # Reaches non-reactive steady state
   
-
-        if self.counter == 20 or self.counter == 30:
-            #print('## arm placeholder')
-            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
-        if self.counter == 120 or self.counter == 130:
-            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
-
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
             print('## Modulo output')
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
@@ -579,6 +593,9 @@ class Tracking(Node):
             cv.imwrite(os.path.join(self.imagesPath, "targeted_" + str(self.picture) + "_" + timeString() + ".jpg"), targeted)
             self.picture += 1
             logger.debug(f"Saved picture {self.picture}")
+
+        if (self.counter % 100) == 1:
+            self.once_flag = True
 
         self.counter += 1
 

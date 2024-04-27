@@ -137,7 +137,7 @@ class Tracking(Node):
     # Mavros equivalent IMU function
     def vehicle_attitude_callback(self, msg): # High Rate
         self.des_yaw = math.radians(0.0)  # [radians] Desired yaw angle in radians. 0.0 should be North -or- the starting orientation determined when the vehicle is armed.
-        self.K_p = 0.8 # Proportional gain
+        self.K_p = 1 # Proportional gain
 
         logger.debug(f' Received vehicle_attitude_callback: {msg}')
         msg_parsed = (f'q: {msg.q} delta_q_reset: {msg.delta_q_reset} ')
@@ -151,7 +151,7 @@ class Tracking(Node):
 
         # 1) Calculate yaw error
         logger.debug(f' self.des_yaw: {self.des_yaw}')
-        yaw_error = self.des_yaw - curr_yaw # [radians]
+        yaw_error = math.fabs(self.des_yaw - curr_yaw) # [radians]
         logger.debug(f' yaw_error: {yaw_error}') # [radians]
 
         # Calculate yaw speed move rate command using proportional control
@@ -164,7 +164,7 @@ class Tracking(Node):
         # logger.info(f'diff_yaw_thrust: {diff_yaw_thrust}')
 
         # Taken from Dr. Das code - https://github.com/darknight-007/dreams-pod-high-altitude/blob/main/test-offboard-control-pitch-yaw-tracking.py#L75
-        dir_yaw = abs(curr_yaw) - 0.1 # [degrees]
+        dir_yaw = abs(curr_yaw) - 0.2 # [degrees]
         self.des_quaternion = quaternion_from_euler(0, 0, dir_yaw) # Outputs as q(x, y, z, w) [normalized] [-1.0,1.0]
         logger.debug(f' self.des_quaternion: {self.des_quaternion}')
 
@@ -325,7 +325,7 @@ class Tracking(Node):
         msg.roll = 0.0          # move right,   positive roll rotation,  right side down
         msg.pitch = 0.0         # move forward, negative pitch rotation, nose down
         msg.yaw = 0.0           # positive yaw rotation,   clockwise when seen top down
-        msg.throttle = 0.3      # move up,      positive thrust,         -1 is minimum available 0% or -100% +1 is 100% thrust
+        msg.throttle = 0.2      # move up,      positive thrust,         -1 is minimum available 0% or -100% +1 is 100% thrust
         self.manual_control_setpoint_publisher.publish(msg)
         logger.info('manual_control_setpoint_publisher published:')
         logger.debug(msg)
@@ -390,15 +390,15 @@ class Tracking(Node):
         # Unset optional constraints default to vehicle specifications
         '''
         msg = GotoSetpoint()
-        msg.position = [0.0,0.0,0.0]                # [m] NED local world frame
+        msg.position = [0.0,0.0,0.2]                # [m] NED local world frame
         msg.flag_control_heading = True             # true if heading is to be controlled
-        msg.heading = 0.0                           # (optional) [rad] [-pi,pi] from North
+        msg.heading = 0.2                           # (optional) [rad] [-pi,pi] from North
         msg.flag_set_max_horizontal_speed = False   # true if setting a non-default horizontal speed limit
-        msg.max_horizontal_speed = 0.0              # (optional) [m/s] maximum speed (absolute) in the NE-plane
+        #msg.max_horizontal_speed = 0.0              # (optional) [m/s] maximum speed (absolute) in the NE-plane
         msg.flag_set_max_vertical_speed = False     # true if setting a non-default vertical speed limit
-        msg.max_vertical_speed = 0.0                # (optional) [m/s] maximum speed (absolute) in the D-axis
+        #msg.max_vertical_speed = 0.0                # (optional) [m/s] maximum speed (absolute) in the D-axis
         msg.flag_set_max_heading_rate = False       # true if setting a non-default heading rate limit
-        msg.max_heading_rate = 0.0                  # (optional) [rad/s] maximum heading rate (absolute)
+        #msg.max_heading_rate = 0.0                  # (optional) [rad/s] maximum heading rate (absolute)
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.goto_setpoint_publisher.publish(msg)
         logger.info('goto_setpoint_publisher published:')
@@ -527,51 +527,52 @@ class Tracking(Node):
         #yaw_ephem, pitch_ephem, latitude, longitude, altitude = ephem_update() # 'ephem' error is based on calculation with GPS/heading
         yaw, pitch, targeted, thresh = self.target(frame) # 'target' error is based on what's in the camera frame
 
-        if self.counter > 2 or self.counter < 10:
-            self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
+#        if self.counter > 2 or self.counter < 10:
+#            self.switch_offboard_mode()                     # Switches to offboard mode in the first counter. Only needs to be called once.
 
-        # if self.counter < 10:
-        #    self.pub_act_test()                              # Perform the actuator and servo test in the first few seconds
+        if self.counter < 10:
+           self.pub_act_test()                              # Perform the actuator and servo test in the first few seconds
+
+        if self.counter > 40: # For the second act, the actuators will spin in direction to the tracking vector
+            self.motor_tracking_test(yaw, pitch, targeted, thresh)
 
         # if self.counter == 10 or self.counter == 11:
-        #     #3
+        #     #4
         #     self.gimbal_manager_configure()                 # Needed to setup control permissions over gimbal
         #     self.gimbal_manager_pitchyaw()                           # Stabilizes pitch using the servo but can't turn off the motors
 
-        if self.counter > 10: #and self.counter < 110:        # Testing ground for stabilization will run here
-            print('## at counter 10 < x')
-            
-            #1
-            self.veh_att_set()                             #
+        # if self.counter == 20 or self.counter == 130:
+        #     #print('## arm placeholder')
+        #     self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
+        # if self.counter == 220 or self.counter == 230:
+        #     self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
 
+        #if self.counter > 110 and self.counter < 110:        # Testing ground for stabilization will run here - ordered to most presentable to least
+
+            #1
+            #self.veh_rate_set()                 # You can see it tracking something. Would be nice if it wasn't for the drift. Also shows no feedback.
+           
             #2
-            #self.traj_set()                                # Does not seem to exercise feedback
+            #self.veh_att_set()                 # Show slow, sluggish stabilization to most likely the armed orientation.
             
+            #3
+            #self.mount_pitch_stabilize()        # Motors react to pitch and servo stabilizes to centered angle.
+
             #4
-            #self.mount_pitch_stabilize()                    # Regardless what param1 is, the servo will stabilize pitch and motors will spin to about 1150.
-        
+            #self.man_con_set()                  # Just manual control setpoints. Currently static but potential to be dynamic based on vehicle_attitude. Easier commands.
+
             #5
-            #self.man_con_set()                              # 
+            #self.traj_set()                    # Does not react at all. Reaches non-reactive steady state
 
             #6
-            #self.go_to_set()
+            #self.go_to_set()                    # Once spinning, continues to spin. No feedback.
 
             #7
-            #self.veh_rate_set()
+            #self.veh_thrust_set()               # Reaches non-reactive steady state
 
             #8
-            #self.veh_thrust_set()
-
-            #9
-            #self.veh_cmd_do_set_roi()
+            #self.veh_cmd_do_set_roi()            # Reaches non-reactive steady state
   
-
-        if self.counter == 30 or self.counter == 40:
-            #print('## arm placeholder')
-            self.arm()                                      # Arm the payload. Can disarm from auto preflight disarming. Only needs to be called once.
-        if self.counter == 130 or self.counter == 140:
-            self.disarm()                                   # Only needs to be called once. DON'T SPAM the disarm.
-
         if (self.counter % 100) == 0:                       # Every 10 seconds, save the images
             print('## Modulo output')
             cv.imwrite(os.path.join(self.imagesPath, "raw_" + str(self.picture) + "_" + timeString() + ".jpg"), original)
